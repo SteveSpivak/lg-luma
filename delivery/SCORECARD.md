@@ -11,7 +11,7 @@
 | Full original Node baseline | Historical exit **1**, 36/37; pnpm absent; not rewritten | `BLOCKERS.json:B02` |
 | Physical TV / video | **NOT_RUN**; no device contact | `BLOCKERS.json:B07` |
 
-**Exact artifacts:** base `e5608cd053be5376a54a806129a332952dfabcef`; patch SHA-256 `8230cce60f85db4965f0731e702216dbb5fe7442ee0a33ba4768f9dc0b24a257`; previous delivery HEAD `b94cea3b43560e4bda595bc13d88d658a532331f`. Current implementation commit: `manifest.json`.
+**Exact artifacts:** base `e5608cd053be5376a54a806129a332952dfabcef`; patch SHA-256 `8230cce60f85db4965f0731e702216dbb5fe7442ee0a33ba4768f9dc0b24a257`; previous delivery HEAD `b94cea3b43560e4bda595bc13d88d658a532331f`. Current implementation commit: `47c166c70a6acae9f4ee3fd92cec5fc2098bdde1`.
 
 **Resolved:** missing offline dependency (B03); patch apply/reverse integrity (B05). **Open:** native toolchain (B01), full pnpm baseline (B02), blocked remote reference origins (B04), full JSON-Schema validator (B06), TV/media approval/evidence (B07), native latency/idle/memory instrumentation (B08).
 

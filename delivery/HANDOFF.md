@@ -1,6 +1,6 @@
 # Luma audit follow-up handoff
 
-**Base:** `e5608cd053be5376a54a806129a332952dfabcef`. **Updated handoff:** `2a40c7bb3af080981653f975b5c1e983e4f78ef5`. **Audit start HEAD:** `b94cea3b43560e4bda595bc13d88d658a532331f`. Branch: `arena/0bee657b-lg-luma` only. Implementation commit is recorded in `manifest.json`; no push/merge was performed.
+**Base:** `e5608cd053be5376a54a806129a332952dfabcef`. **Updated handoff:** `2a40c7bb3af080981653f975b5c1e983e4f78ef5`. **Audit start HEAD:** `b94cea3b43560e4bda595bc13d88d658a532331f`. Branch: `arena/0bee657b-lg-luma` only. Implementation commit: `47c166c70a6acae9f4ee3fd92cec5fc2098bdde1`; no push/merge was performed.
 
 ## Current verdict
 

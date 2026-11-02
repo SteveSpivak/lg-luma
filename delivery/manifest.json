@@ -2,8 +2,8 @@
   "schema": "luma-audit-delivery/2",
   "base_sha": "e5608cd053be5376a54a806129a332952dfabcef",
   "handoff_sha": "2a40c7bb3af080981653f975b5c1e983e4f78ef5",
-  "checkout_head_sha_at_generation": "b94cea3b43560e4bda595bc13d88d658a532331f",
-  "implementation_commit_sha": null,
+  "checkout_head_sha_at_generation": "47c166c70a6acae9f4ee3fd92cec5fc2098bdde1",
+  "implementation_commit_sha": "47c166c70a6acae9f4ee3fd92cec5fc2098bdde1",
   "commit_semantics": "implementation_commit_sha identifies the commit containing follow-up audit/tooling and the unapplied candidate; a subsequent manifest-recording commit may be HEAD.",
   "candidate_status": "GIT_INTEGRITY_VERIFIED_UNAPPLIED_NATIVE_BLOCKED",
   "native_source_unchanged": true,
@@ -365,8 +365,8 @@
       "bytes": 5543
     },
     "delivery/HANDOFF.md": {
-      "sha256": "e50b88c9bf7fb92240b9f037c7b3ba8ef594dac430160af1b427966bdeb64577",
-      "bytes": 3073
+      "sha256": "b2378865db2364af0e85c0c64ede500e3cf3d348ee6b3ad3471d2c1086ce8cf8",
+      "bytes": 3086
     },
     "delivery/PATCH-INTEGRITY.md": {
       "sha256": "5192c0703dc027d047edef740b4bae6b41a8f10260de78c29796290d0fc055ea",
@@ -377,8 +377,8 @@
       "bytes": 6626
     },
     "delivery/SCORECARD.md": {
-      "sha256": "caecaa8bfb291cb91a2c75f7bce541ce5373a09eb0eca7657cf2eda5e7a8b4f2",
-      "bytes": 2403
+      "sha256": "d5bbdb59eac57aa355b0d680717a6ee91527af7566072d43f04ab00f3caf85fd",
+      "bytes": 2430
     },
     "delivery/build-environment.json": {
       "sha256": "29f5f6fa488c204d5ebacedd67056ef0407fbaab8c82a48bdc46fc33fa4d37f9",

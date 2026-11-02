@@ -1,0 +1,13 @@
+{
+  "home-inline-expanded-hero-layout-v5.test.mjs": [
+    "expanded Details uses the existing Home hero as one left/right composition :: missing CSS rule: /#home\\\\.\\\\$\\\\{OPEN_CLASS\\\\}\\\\s+\\\\.home-modern-hero-media\\\\s*\\\\{([^}]*)\\\\}/"
+  ],
+  "lab-switch-hybrid.test.mjs": [
+    "approved list equals what production runs today :: PROD_APPROVED_FIXES is not iterable",
+    "nuvioLabOff still turns a fix off in both packages",
+    "production package: today's fixes stay on, new experiments are off"
+  ],
+  "migration-isolation.test.mjs": [
+    "# crash: TypeError: isLabPackage is not a function"
+  ]
+}

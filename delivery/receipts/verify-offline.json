@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "verify-offline",
+  "evidence_class": "BLOCKED",
+  "caveat": "Verifier ran once; Python/JSON passed, Node import failed before assertions.",
+  "command_argv": [],
+  "exit_code": 1,
+  "status": null,
+  "started_utc": "2026-11-02T14:56:48.513849+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "72f9b12304a7892e52e74a0b9b7ae620e917035af80ff065c306e35d1b87aead"
+}

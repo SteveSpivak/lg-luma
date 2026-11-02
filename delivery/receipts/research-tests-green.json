@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "research-tests-green",
+  "evidence_class": "FAIL",
+  "caveat": "Combined suite: 17 passed, same candidate apply failure; retry loop stopped.",
+  "command_argv": [],
+  "exit_code": 1,
+  "status": null,
+  "started_utc": "2026-11-02T15:17:05.320502+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "7b7f9b62f5b034fc572ee56f5cff4435d54b76837672c1e9243739591595970c"
+}

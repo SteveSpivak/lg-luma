@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "build-audit-corrected",
+  "evidence_class": "OBSERVED",
+  "caveat": "Pinned source/test inventory and protection checks; no native execution.",
+  "command_argv": [],
+  "exit_code": 0,
+  "status": null,
+  "started_utc": "2026-11-02T15:26:14.488728+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "e683f05f211346a18ff41a07ded800d5476489616d4a6dde9217dbda43c20ed5"
+}

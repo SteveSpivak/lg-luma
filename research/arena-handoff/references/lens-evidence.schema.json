@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webos-lens.invalid/contracts/lens-evidence.schema.json",
+  "title": "webos-lens normalized evidence package",
+  "description": "Versioned, privacy-preserving evidence exported from a legacy webos-lens scan. UNKNOWN and NOT_RUN are explicit; absent measurements are never represented as zero.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "collected_at", "specimen", "firmware", "agent", "source_environment", "collection_capabilities", "sensor_availability", "measurements", "read_only_command_provenance", "data_quality_warnings", "sanitization", "source_report"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "collected_at": {"type": "object", "required": ["timestamp", "clock_source"], "properties": {"timestamp": {"type": ["string", "null"], "format": "date-time"}, "clock_source": {"type": "string", "minLength": 1}}, "additionalProperties": false},
+    "specimen": {"type": "object", "required": ["device_identity", "identity_confidence"], "properties": {"device_identity": {"type": "string"}, "identity_confidence": {"type": "string", "enum": ["verified", "unverified", "UNKNOWN"]}}, "additionalProperties": false},
+    "firmware": {"type": "object", "required": ["identity", "verification_confidence"], "properties": {"identity": {"type": ["string", "null"]}, "verification_confidence": {"type": "string", "enum": ["verified", "inferred_from_os_release", "unverified", "UNKNOWN"]}}, "additionalProperties": false},
+    "agent": {"type": "object", "required": ["name", "version", "commit_sha"], "properties": {"name": {"const": "webos-lens"}, "version": {"type": "string"}, "commit_sha": {"type": "string", "pattern": "^(UNKNOWN|[0-9a-f]{40})$"}}, "additionalProperties": false},
+    "source_environment": {"enum": ["mock", "desktop", "emulator", "physical_tv", "unknown"]},
+    "collection_capabilities": {"type": "object", "additionalProperties": {"type": "boolean"}},
+    "sensor_availability": {"type": "object", "additionalProperties": {"type": "string", "enum": ["AVAILABLE", "UNAVAILABLE", "NOT_RUN", "UNKNOWN", "OBSERVED", "MEASURED", "FAILED_OR_DENIED"]}},
+    "measurements": {"type": "array", "items": {"type": "object", "required": ["id", "value", "unit", "source", "evidence_class", "status"], "properties": {"id": {"type": "string", "minLength": 1}, "value": {"type": ["number", "integer", "string", "boolean", "null"]}, "unit": {"type": "string", "minLength": 1}, "source": {"type": "string", "minLength": 1}, "evidence_class": {"enum": ["OBSERVED", "MEASURED", "NOT_RUN", "UNKNOWN", "HOST", "INFERRED"]}, "status": {"enum": ["AVAILABLE", "UNKNOWN", "NOT_RUN"]}}, "additionalProperties": false}},
+    "read_only_command_provenance": {"type": "array", "items": {"type": "object", "required": ["operation", "command", "read_only"], "properties": {"operation": {"type": "string"}, "command": {"type": "string"}, "read_only": {"const": true}}, "additionalProperties": false}},
+    "data_quality_warnings": {"type": "array", "items": {"type": "string"}},
+    "sanitization": {"type": "object", "required": ["applied", "policy"], "properties": {"applied": {"const": true}, "policy": {"type": "string"}}, "additionalProperties": false},
+    "source_report": {"type": "object"}
+  }
+}

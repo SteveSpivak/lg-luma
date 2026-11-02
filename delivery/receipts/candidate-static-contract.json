@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "candidate-static-contract",
+  "evidence_class": "OBSERVED",
+  "caveat": "Bounded/default-off patch text contract only; apply check not repeated.",
+  "command_argv": [],
+  "exit_code": 0,
+  "status": null,
+  "started_utc": "2026-11-02T15:26:15.895986+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "a6211cc2052bfd02d656c07361bdd4f4076b822f6d2cb066a79a65ed88ee8260"
+}

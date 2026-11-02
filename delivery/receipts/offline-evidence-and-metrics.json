@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "offline-evidence-and-metrics",
+  "evidence_class": "FAIL",
+  "caveat": "Initial synthetic suite exposed one wrong hand-computed arithmetic expectation.",
+  "command_argv": [],
+  "exit_code": 1,
+  "status": null,
+  "started_utc": "2026-11-02T15:10:06.105848+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "4bb4b6f16a2bf0625c3619a5d77fb3dd417a954d8114290b2ededb0708e979c0"
+}

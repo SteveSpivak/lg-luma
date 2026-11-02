@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "release-node-supported",
+  "evidence_class": "MEASURED_HOST",
+  "caveat": "Supported release subset only; not full baseline.",
+  "command_argv": [],
+  "exit_code": 0,
+  "status": null,
+  "started_utc": "2026-11-02T14:19:53.614965+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "9e64928c8beeea4e9ed738b1c93e837d08d934f4efe41f1bea1e99c8a2d0f93a"
+}

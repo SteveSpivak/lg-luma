@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "supported-node",
+  "evidence_class": "MEASURED_HOST",
+  "caveat": "Dependency-free companion suites only; not full pnpm test.",
+  "command_argv": [],
+  "exit_code": 0,
+  "status": null,
+  "started_utc": "2026-11-02T14:19:52.489906+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "1a495d859767ad7f87397f6dbcdce32cca1361489a8162625ebec67e418043c6"
+}

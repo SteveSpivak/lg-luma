@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "build-audit",
+  "evidence_class": "FAIL",
+  "caveat": "First inventory generator lacked output directory; corrected separately.",
+  "command_argv": [],
+  "exit_code": 1,
+  "status": null,
+  "started_utc": "2026-11-02T15:17:05.004962+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "02da029828218c47fac05772788428790c8811cbcaa0096db71c7869cdc9ad96"
+}

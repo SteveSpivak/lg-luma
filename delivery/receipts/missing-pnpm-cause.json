@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "missing-pnpm-cause",
+  "evidence_class": "OBSERVED",
+  "caveat": "Diagnostic reproduced child pnpm ENOENT; not a repaired baseline.",
+  "command_argv": [],
+  "exit_code": 0,
+  "status": null,
+  "started_utc": "2026-11-02T14:19:53.822362+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "89433f3c024cf54bd40830ad0ba9c47b5aa94e82370116dcbc168710788b6ede"
+}

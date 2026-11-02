@@ -1,0 +1,105 @@
+{
+  "schema": "luma-audit-calculations/1",
+  "evidence_class": "INFERRED",
+  "not_measurements": true,
+  "frame_budgets": [
+    {
+      "refresh_hz": 24,
+      "period_ms": 41.666666666666664
+    },
+    {
+      "refresh_hz": 30,
+      "period_ms": 33.333333333333336
+    },
+    {
+      "refresh_hz": 50,
+      "period_ms": 20.0
+    },
+    {
+      "refresh_hz": 60,
+      "period_ms": 16.666666666666668
+    },
+    {
+      "refresh_hz": 75,
+      "period_ms": 13.333333333333334
+    },
+    {
+      "refresh_hz": 90,
+      "period_ms": 11.11111111111111
+    },
+    {
+      "refresh_hz": 120,
+      "period_ms": 8.333333333333334
+    }
+  ],
+  "renderer_soft_budgets_bytes": {
+    "glyph_cpu_geometry": 8388608,
+    "text_gpu_geometry": 33554432,
+    "texture_rgba_payload": 50331648,
+    "arithmetic_sum_mib": 88
+  },
+  "budget_caveat": "Different ownership/memory classes; not total GPU/process memory. Current-frame entries can exceed soft budgets; vector meshes, fonts, decoder memory, driver allocations and framebuffers are additional.",
+  "surface_color_payload_scenarios": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "buffers_assumed": 2,
+      "samples_assumed": 1,
+      "rgba_color_payload_bytes": 16588800,
+      "rgba_color_payload_mib": 15.8203125
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "buffers_assumed": 2,
+      "samples_assumed": 4,
+      "rgba_color_payload_bytes": 66355200,
+      "rgba_color_payload_mib": 63.28125
+    },
+    {
+      "width": 3840,
+      "height": 2160,
+      "buffers_assumed": 2,
+      "samples_assumed": 1,
+      "rgba_color_payload_bytes": 66355200,
+      "rgba_color_payload_mib": 63.28125
+    },
+    {
+      "width": 3840,
+      "height": 2160,
+      "buffers_assumed": 2,
+      "samples_assumed": 4,
+      "rgba_color_payload_bytes": 265420800,
+      "rgba_color_payload_mib": 253.125
+    }
+  ],
+  "surface_caveat": "RGBA8 arithmetic only, not actual EGL config/AFBC/MSAA implementation allocation. Excludes resolve/depth/stencil/compositor copies. 4K is experimental.",
+  "decoded_icon_max_mib": 0.25,
+  "video_rgba_three_buffer_cpu_mib": {
+    "1920x1080": 23.73046875,
+    "3840x2160": 94.921875
+  },
+  "video_nv12_three_buffer_payload_mib": {
+    "1920x1080": 8.89892578125,
+    "3840x2160": 35.595703125
+  },
+  "video_caveat": "Hypothetical payloads only. No decoder, zero-copy import, overlay API, protected route or runtime allocation is established.",
+  "home_card": {
+    "face": [
+      256,
+      154.4
+    ],
+    "pitch": 281.6,
+    "gap": 25.600000000000023,
+    "baseline_focus_shadow_bounds": [
+      326,
+      224.4
+    ],
+    "candidate_focus_shadow_bounds": [
+      342,
+      240.4
+    ],
+    "candidate_extra_width_height": 16,
+    "candidate_shadow_area_ratio": 1.1238804501164659
+  }
+}

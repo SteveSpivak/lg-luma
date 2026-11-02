@@ -1,0 +1,13 @@
+{
+  "schema": "device-preflight/1",
+  "generated_at": "2026-11-02T00:00:00Z",
+  "mode": "offline-fixture",
+  "device_identity": {"model_name": null, "status": "UNKNOWN"},
+  "firmware_identity": {"webos_version": null, "supported": null, "status": "UNKNOWN"},
+  "connection_capabilities": {"reachable": null, "ssh22": null, "devmode9922": null, "status": "UNKNOWN"},
+  "recovery_readiness": {"native_recovery_available": null, "hbc_present": null, "known_good_ipk_cached": null, "home_owner_conflict": null, "verified": false, "status": "UNKNOWN"},
+  "protected_functions": {"home_launcher": "UNKNOWN", "home_button": "UNKNOWN", "magic_remote_dpad_back": "UNKNOWN", "independent_recovery": "UNKNOWN", "network_control_lan": "UNKNOWN"},
+  "forbidden_ops": {"requested": [], "refused": [], "executed": []},
+  "blockers": [{"code": "NO_DEVICE_APPROVAL_OR_VERIFIED_RECOVERY", "severity": "blocker", "detail": "Synthetic planning fixture only. No device was contacted; unknown is not readiness.", "field": null}],
+  "verdict": "NOT-READY"
+}

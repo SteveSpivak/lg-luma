@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "offline-evidence-and-metrics-corrected",
+  "evidence_class": "MEASURED_HOST",
+  "caveat": "16 synthetic evidence/arithmetic tests passed; no device or native rendering.",
+  "command_argv": [],
+  "exit_code": 0,
+  "status": null,
+  "started_utc": "2026-11-02T15:26:15.789006+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "4d1b738c88d9088d880198b0f621d59e91be619e7f7d67b61f0da3a40b239c8b"
+}

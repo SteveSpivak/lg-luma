@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "baseline-git",
+  "evidence_class": "OBSERVED",
+  "caveat": "Checkout/remote base identity only.",
+  "command_argv": [],
+  "exit_code": 0,
+  "status": null,
+  "started_utc": "2026-11-02T14:06:24.171495+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "f4842a5e2d1b4a3c0289cf54cc3248ada9abf94a62af3a913ac668b0f1afc9b1"
+}

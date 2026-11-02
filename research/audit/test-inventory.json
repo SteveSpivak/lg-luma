@@ -1,0 +1,2346 @@
+{
+  "schema": "luma-test-inventory/1",
+  "base_sha": "e5608cd053be5376a54a806129a332952dfabcef",
+  "count": 334,
+  "method": "Static #[test] attribute inventory; cfg-gated tests included; not a cargo test listing",
+  "tests": [
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "inventory_metadata_resolves_absolute_relative_and_manifest_fallback_paths",
+      "line": 41,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "supported_icons_decode_to_bounded_pixels_and_runtime_card_colours",
+      "line": 85,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "transparent_logos_get_a_contrasting_gradient_in_their_own_hue",
+      "line": 136,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "transparent_edges_keep_the_logo_colour_when_scaled",
+      "line": 176,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "transparent_logos_reaching_the_edges_keep_the_neutral_card",
+      "line": 197,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "local_reads_fall_back_from_a_corrupt_large_icon_to_manifest_artwork",
+      "line": 230,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "refresh_discards_old_worker_results_and_reloads_changed_artwork",
+      "line": 260,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "the_worker_keeps_decoding_while_the_ui_is_idle",
+      "line": 284,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "a_refresh_keeps_unchanged_icons_and_reads_updated_apps_again",
+      "line": 314,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "a_refresh_during_a_load_keeps_its_result",
+      "line": 341,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "unavailable_icons_are_not_retried_on_every_redraw",
+      "line": 359,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "hundreds_of_apps_stay_within_the_cache_bounds_across_refreshes",
+      "line": 385,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "decoded_cache_evicts_old_icons_when_scrolling_through_many_apps",
+      "line": 415,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "favorite_badge_uses_the_local_gradient_and_maximum_black_white_contrast",
+      "line": 451,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "grid_and_options_use_matching_adaptive_hearts_without_a_backing_circle",
+      "line": 472,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "visible_cards_switch_from_fallback_to_a_single_composited_installed_surface",
+      "line": 542,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "prefetch_decodes_every_icon_although_the_request_queue_is_short",
+      "line": 610,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "visible_requests_and_promoted_prefetches_run_before_background_backlog",
+      "line": 642,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-artwork-tests.rs",
+      "name": "reset_discards_prefetch_backlog_and_queued_requests",
+      "line": 684,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-subscription-tests.rs",
+      "name": "delivers_replies_skips_noise_and_ends_on_request",
+      "line": 98,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-subscription-tests.rs",
+      "name": "a_refused_first_reply_ends_unregistered",
+      "line": 121,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-subscription-tests.rs",
+      "name": "no_reply_within_the_timeout_ends_unregistered",
+      "line": 131,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-subscription-tests.rs",
+      "name": "a_child_that_exits_first_ends_unregistered",
+      "line": 139,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-subscription-tests.rs",
+      "name": "a_registration_lost_later_ends_registered",
+      "line": 146,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/app-subscription-tests.rs",
+      "name": "thread_start_failures_kill_the_child",
+      "line": 171,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/branding.rs",
+      "name": "every_curated_id_is_unique_and_selects_its_brand_without_title_matching",
+      "line": 157,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/branding.rs",
+      "name": "now_tv_aliases_select_now_without_rebranding_other_sky_or_now_apps",
+      "line": 179,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/branding.rs",
+      "name": "desktop_demo_contains_every_bundled_logo_and_no_duplicate_apps",
+      "line": 194,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/damage-tests.rs",
+      "name": "the_first_frame_and_unknown_buffer_ages_redraw_everything",
+      "line": 27,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/damage-tests.rs",
+      "name": "an_unchanged_scene_has_no_damage",
+      "line": 40,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/damage-tests.rs",
+      "name": "a_moved_shape_damages_its_old_and_new_place_only",
+      "line": 49,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/damage-tests.rs",
+      "name": "an_inserted_focus_ring_realigns_instead_of_redrawing_everything",
+      "line": 59,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/damage-tests.rs",
+      "name": "older_back_buffers_need_every_change_since_their_frame",
+      "line": 77,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/damage-tests.rs",
+      "name": "changed_clip_or_fade_state_redraws_everything",
+      "line": 89,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/damage-tests.rs",
+      "name": "text_damages_the_full_width_of_its_line",
+      "line": 105,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/damage-tests.rs",
+      "name": "shadows_include_their_blur",
+      "line": 131,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/damage-tests.rs",
+      "name": "culling_covers_every_pixel_the_damage_clears",
+      "line": 142,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/damage-tests.rs",
+      "name": "an_unchanged_frame_names_a_pixel_inside_the_drawable",
+      "line": 182,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/diagnostics.rs",
+      "name": "profiling_excludes_warmup_and_capture_stalls",
+      "line": 89,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/i18n.rs",
+      "name": "traditional_chinese_follows_simplified_and_preserves_locale_preferences",
+      "line": 508,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/i18n.rs",
+      "name": "bundled_cjk_font_covers_every_traditional_chinese_message",
+      "line": 535,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/i18n.rs",
+      "name": "homebrew_description_lists_every_supported_language",
+      "line": 559,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/i18n.rs",
+      "name": "every_message_has_all_languages_and_no_empty_values",
+      "line": 584,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/i18n.rs",
+      "name": "every_translation_preserves_the_english_message_placeholders",
+      "line": 597,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/i18n.rs",
+      "name": "localization_keeps_user_provided_names_intact",
+      "line": 623,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/i18n.rs",
+      "name": "clock_and_date_follow_the_selected_locale",
+      "line": 677,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/i18n.rs",
+      "name": "portuguese_dates_include_accented_names_and_handle_leap_days",
+      "line": 706,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/i18n.rs",
+      "name": "french_dates_use_the_ordinal_first_day_and_accented_months",
+      "line": 718,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/i18n.rs",
+      "name": "vietnamese_dates_cover_leap_days_and_weekend_names",
+      "line": 731,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/i18n.rs",
+      "name": "dutch_dates_cover_leap_days_and_month_boundaries",
+      "line": 744,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/input-refresh-tests.rs",
+      "name": "signal_never_overrides_the_official_cable_state_or_auto_visibility",
+      "line": 14,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/input-refresh-tests.rs",
+      "name": "live_signal_keeps_card_geometry_names_apps_and_preferences",
+      "line": 89,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/input-refresh-tests.rs",
+      "name": "disconnect_reconciles_home_focus_and_preserves_visibility_overrides",
+      "line": 137,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/input-refresh-tests.rs",
+      "name": "a_removed_port_restores_valid_input_settings_focus",
+      "line": 174,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/input-refresh-tests.rs",
+      "name": "polling_only_runs_on_visible_focused_tv_input_screens_outside_interactions",
+      "line": 202,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/input-refresh-tests.rs",
+      "name": "slow_reads_are_bounded_and_errors_preserve_the_last_valid_snapshot",
+      "line": 239,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/input-refresh-tests.rs",
+      "name": "snapshots_wait_for_release_and_yield_to_a_newer_full_inventory",
+      "line": 262,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/input-refresh-tests.rs",
+      "name": "a_disconnect_snapshot_cannot_move_the_pressed_card_before_release",
+      "line": 280,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/input-refresh-tests.rs",
+      "name": "hidden_screens_cancel_scheduled_reads_without_duplicating_in_flight_requests",
+      "line": 312,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/platform-install.rs",
+      "name": "normal_launch_keeps_its_own_package_even_with_another_installation",
+      "line": 114,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/platform-install.rs",
+      "name": "home_mount_selects_its_source_for_both_developer_and_production_installs",
+      "line": 131,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/platform-install.rs",
+      "name": "missing_or_unrelated_package_never_silently_uses_another_installation",
+      "line": 151,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/platform-install.rs",
+      "name": "home_mount_requires_the_matching_native_package_manifest",
+      "line": 162,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/platform.rs",
+      "name": "installer_variables_are_escaped_and_printf_formats_are_preserved",
+      "line": 883,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/platform.rs",
+      "name": "exec_shell_preserves_systemd_escapes_and_argument_boundaries",
+      "line": 894,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/platform.rs",
+      "name": "executable_identity_has_priority_over_conflicting_launch_metadata",
+      "line": 916,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/platform.rs",
+      "name": "both_home_variants_are_hidden_from_application_inventory",
+      "line": 946,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/raster.rs",
+      "name": "a_letterboxed_drawable_uses_its_fitted_density",
+      "line": 79,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/raster.rs",
+      "name": "requested_resolution_is_validated_separately_from_the_actual_drawable",
+      "line": 87,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "system_history_preserves_order_and_inputs_and_rejects_invalid_entries",
+      "line": 13,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "actions_match_stock_home_without_synthetic_process_kills",
+      "line": 37,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "back_distinguishes_taps_holds_delayed_releases_and_cancelled_presses",
+      "line": 67,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "native_home_survives_an_unmapped_or_layout_dependent_keycode",
+      "line": 124,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "native_back_and_exit_survive_an_unmapped_or_layout_dependent_keycode",
+      "line": 142,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "back_dismissal_consumes_repeats_native_exit_and_release_without_quitting",
+      "line": 181,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "native_hold_opens_once_and_the_next_physical_back_press_dismisses",
+      "line": 215,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "a_short_back_on_home_opens_recents_and_the_next_press_restores_the_app",
+      "line": 267,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "home_header_has_only_navigation_and_tv_settings",
+      "line": 305,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "recents_has_only_cards_without_action_buttons_or_footer",
+      "line": 320,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "youtube_recents_uses_the_apps_vector_and_the_same_relative_logo_geometry",
+      "line": 350,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "recents_is_modal_and_restores_the_exact_settings_parent",
+      "line": 387,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "closing_is_serialized_refreshes_on_success_and_keeps_a_neighbor_focused",
+      "line": 413,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "failed_actions_keep_history_and_stale_replies_cannot_reopen_or_replace_a_session",
+      "line": 462,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "recents_pointer_focus_never_moves_hit_regions_and_reduced_motion_snaps",
+      "line": 504,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "recents_crossfade_reverses_without_jumping_and_restores_parent_input_immediately",
+      "line": 544,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "pointer_interruption_freezes_cards_without_freezing_the_crossfade",
+      "line": 623,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "closing_recent_cards_keeps_the_close_and_follow_up_refresh_quiet",
+      "line": 653,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "dismissing_an_initial_read_does_not_flash_loading_or_an_unconfirmed_empty_state",
+      "line": 692,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "stacked_cards_hit_the_front_card_in_overlaps_and_rear_cards_only_where_exposed",
+      "line": 741,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "closing_lifts_the_card_and_fills_its_slot_without_a_refresh_jump",
+      "line": 762,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "a_failed_close_returns_the_same_card_and_restores_its_hit_target",
+      "line": 806,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "closing_the_last_slot_brings_the_previous_card_forward_and_reduced_motion_snaps",
+      "line": 833,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "close_selects_the_hovered_cards_neighbor_and_preserves_browsing_during_the_request",
+      "line": 866,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "the_last_card_exits_before_the_empty_state_and_reduced_motion_skips_the_exit",
+      "line": 889,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/recents-tests.rs",
+      "name": "empty_recents_has_no_explanatory_subtitle",
+      "line": 918,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/storage.rs",
+      "name": "root_home_reuses_each_existing_app_storage_destination",
+      "line": 283,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/storage.rs",
+      "name": "existing_app_preferences_rank_before_root_fallbacks_without_changing_normal_order",
+      "line": 312,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/storage.rs",
+      "name": "normal_app_still_rejects_foreign_owned_directories",
+      "line": 322,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/storage.rs",
+      "name": "root_and_normal_app_both_reject_symlink_storage_directories",
+      "line": 332,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/storage.rs",
+      "name": "existing_corrupt_app_preferences_are_not_replaced_with_defaults",
+      "line": 350,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/storage.rs",
+      "name": "root_home_can_still_import_installation_local_preferences_once",
+      "line": 362,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/storage.rs",
+      "name": "atomic_saves_keep_private_app_owned_files_and_clean_up_failed_writes",
+      "line": 385,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "home_relaunch_returns_from_apps_and_settings",
+      "line": 25,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "home_relaunch_dismisses_overlays_without_cancelling_mutations",
+      "line": 53,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "home_relaunch_commits_keyboard_edits_before_clearing_the_subpage",
+      "line": 94,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "home_relaunch_dismisses_recents_and_ignores_its_pending_reply",
+      "line": 122,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "favorites_edge_fragments_share_draw_hit_and_wheel_viewports",
+      "line": 169,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "widening_favorites_does_not_widen_apps_or_unclip_offscreen_rows",
+      "line": 205,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "remote_routes_from_header_and_back_through_settings",
+      "line": 233,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "hiding_restores_nearest_app_and_hidden_filter_can_restore_it",
+      "line": 261,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "reorder_persists_order_and_keeps_selected_identity",
+      "line": 282,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "keyboard_is_modal_and_back_preserves_then_clears_search",
+      "line": 300,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "partial_refresh_preserves_valid_inputs_and_never_invents_tv_apps",
+      "line": 324,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "inventory_filters_system_apps_duplicates_and_unsafe_identifiers",
+      "line": 336,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "inventory_visibility_cases_match_the_launcher_filters",
+      "line": 364,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "asset_loading_and_unknown_app_cards_do_not_require_collected_artwork",
+      "line": 382,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "auto_input_visibility_requires_a_positive_connection_report",
+      "line": 414,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "preferences_round_trip_and_corrupt_data_is_not_silently_overwritten",
+      "line": 438,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "gallery_and_grid_navigation_scroll_to_keep_focus_visible",
+      "line": 460,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "cancelling_options_preserves_identity_and_does_not_save",
+      "line": 497,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "pointer_focus_does_not_scroll_the_clicked_control",
+      "line": 509,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "gallery_right_crosses_rows_in_gallery_order",
+      "line": 520,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "reordering_skips_hidden_and_unavailable_favorite_slots",
+      "line": 530,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "focused_navigation_tabs_switch_pages_immediately",
+      "line": 550,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "greeting_subpage_opens_the_keyboard_and_back_restores_its_parent",
+      "line": 561,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "greeting_name_replacement_commits_on_every_keyboard_completion_route",
+      "line": 594,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "remote_can_clear_a_saved_greeting_name_without_moving_the_controls",
+      "line": 632,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "app_name_settings_use_independent_defaults_including_with_legacy_preferences",
+      "line": 659,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "home_and_apps_render_only_their_own_caption_preference",
+      "line": 694,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "input_name_actions_only_highlight_the_focused_row_and_keep_the_saved_mode",
+      "line": 721,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "clock_choices_only_highlight_focus_while_preserving_saved_checkmarks",
+      "line": 766,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "clock_format_subpage_saves_and_restores_its_parent_row",
+      "line": 803,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "time_format_selects_seconds_without_changing_the_hour_format",
+      "line": 841,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "system_version_is_inside_the_update_status_card_without_a_separate_row",
+      "line": 882,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "system_category_owns_refresh_and_quit_and_restores_sidebar_focus",
+      "line": 905,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "text_rendering_preferences_default_to_msaa_and_recover_invalid_values",
+      "line": 940,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "text_rendering_choices_persist_and_back_restores_the_system_row",
+      "line": 957,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "input_visibility_has_explicit_choices_and_returns_to_the_same_input",
+      "line": 996,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "background_sidebar_right_focuses_upload_and_ok_restores_the_applied_background",
+      "line": 1019,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "categories_and_search_have_clear_actions_and_conditional_hidden_control",
+      "line": 1048,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "a_notice_does_not_escape_modal_focus_and_closing_restores_the_app",
+      "line": 1077,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "delete_confirmation_defaults_to_cancel_and_back_restores_side_popup",
+      "line": 1096,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "opening_side_popup_preserves_card_artwork_geometry_with_or_without_captions",
+      "line": 1174,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "protected_apps_cannot_be_deleted_through_ui_or_worker",
+      "line": 1236,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "deletion_is_single_flight_and_only_success_cleans_up_preferences",
+      "line": 1298,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "deletion_completion_does_not_steal_focus_after_dismissal",
+      "line": 1373,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "app_activation_opens_options_with_open_focused_and_next_ok_launches",
+      "line": 1384,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "uncertain_deletion_uses_complete_inventory_instead_of_visible_app_filtering",
+      "line": 1404,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "failed_deletion_refreshes_inventory_and_closes_stale_confirmation",
+      "line": 1420,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "remote_toolbar_focus_normalizes_scroll_but_hover_does_not",
+      "line": 1443,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "long_captions_expand_rows_without_overlapping_the_next_row",
+      "line": 1454,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "reduced_motion_disables_panel_wallpaper_and_notification_animation",
+      "line": 1473,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "pinning_a_hidden_app_restores_it_and_leaves_hidden_when_empty",
+      "line": 1488,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "weather_location_keyboard_back_and_sidebar_routes_restore_focus",
+      "line": 1510,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "weather_units_save_without_replacing_celsius_cache_and_hide_keeps_city",
+      "line": 1544,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "home_weather_setup_returns_through_the_widgets_weather_parent",
+      "line": 1587,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "removing_weather_location_clears_cache_and_cancels_pending_results",
+      "line": 1606,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "language_selection_restores_its_parent_and_is_saved_with_preferences",
+      "line": 1628,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "remote_can_select_and_restore_every_language",
+      "line": 1648,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "settings_order_language_sort_and_shortcut_empty_card",
+      "line": 1688,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "unsupported_language_preferences_recover_without_losing_other_choices",
+      "line": 1731,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "unrelated_app_ids_and_titles_keep_their_installed_artwork",
+      "line": 1742,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "curated_branding_does_not_use_title_words_or_partial_id_matches",
+      "line": 1768,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "known_app_ids_preserve_the_curated_brands_and_categories",
+      "line": 1791,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "hdmi_plug_in_reports_the_cable_state_when_connected_only_means_present",
+      "line": 1822,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "inputs_without_hdmi_plug_in_keep_the_connected_report",
+      "line": 1854,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "input_names_are_sanitized_and_old_preferences_load_without_them",
+      "line": 1867,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "custom_input_names_keep_the_label_port_and_status_as_detail",
+      "line": 1902,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "remote_renames_and_resets_an_input_from_its_settings_page",
+      "line": 1932,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "keyboard_done_saves_a_typed_input_name",
+      "line": 1977,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "home_lifecycle_replies_map_for_both_registration_versions",
+      "line": 1999,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "foreground_check_needs_focus_after_a_relaunch_from_the_background",
+      "line": 2035,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "prewarm_waits_while_recents_replaces_the_page",
+      "line": 2066,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "failed_first_inventory_keeps_loading_until_retries_are_used_up",
+      "line": 2103,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "inventory_success_resets_failures_and_later_failures_show_at_once",
+      "line": 2126,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "tile_urls_need_a_host_the_request_client_accepts",
+      "line": 2140,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "custom_tiles_are_sanitized_and_get_stable_unique_ids",
+      "line": 2184,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "shortcut_settings_offer_qr_editing_and_a_test_remove_popup",
+      "line": 2243,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "widgets_group_existing_settings_and_restore_each_parent_without_changing_preferences",
+      "line": 2336,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "companion_removal_updates_the_shortcut_list_on_close",
+      "line": 2408,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "widgets_are_localized_without_legacy_sidebar_entries",
+      "line": 2439,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "shortcut_list_scroll_and_pointer_focus_preserve_control_positions",
+      "line": 2477,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "settings_lists_keep_bottom_padding_for_remote_and_wheel_scrolling",
+      "line": 2518,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "language_list_scrolls_under_fixed_ui_without_clipping_or_fades",
+      "line": 2567,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "apps_scroll_behind_navigation_without_a_top_cutoff_or_fade",
+      "line": 2620,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "apps_toolbar_stays_fixed_above_scrolling_cards_and_keeps_pointer_priority",
+      "line": 2662,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "app_categories_and_search_use_matching_pills_and_larger_heavier_labels",
+      "line": 2714,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "category_focus_active_and_clear_button_share_the_pill_style",
+      "line": 2739,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "clock_date_and_home_input_descriptions_use_larger_text",
+      "line": 2772,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "tv_settings_button_is_centered_alongside_navigation",
+      "line": 2807,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "greeting_visibility_toggle_persists_without_clearing_name_or_hiding_date",
+      "line": 2826,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "date_widget_settings_persist_and_restore_parent_focus",
+      "line": 2891,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "date_formats_preserve_localized_default_and_pad_numeric_dates",
+      "line": 2952,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "update_card_shows_both_versions_and_explicitly_starts_installation",
+      "line": 2973,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "update_status_card_only_claims_latest_after_success_and_allows_single_flight_retry",
+      "line": 3028,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "shortcut_tiles_keep_apps_options_and_never_launch_or_uninstall_a_platform_app",
+      "line": 3065,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "shortcut_tiles_alone_do_not_stop_inventory_retries",
+      "line": 3112,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "shortcut_tiles_open_a_modal_editor_for_another_device",
+      "line": 3130,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "tiles_edited_elsewhere_join_and_leave_home_like_tv_edits",
+      "line": 3156,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tests.rs",
+      "name": "update_card_shows_progress_restores_retry_and_ignores_presses_while_busy",
+      "line": 3205,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/text_rendering.rs",
+      "name": "old_style_defaults_keep_no_emboldening_even_on_single_sample_fallbacks",
+      "line": 74,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/text_rendering.rs",
+      "name": "environment_overrides_take_precedence_over_both_saved_modes",
+      "line": 84,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tile-editor-tests.rs",
+      "name": "reopening_preserves_unacknowledged_saves_and_removals",
+      "line": 97,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tile-editor-tests.rs",
+      "name": "saving_adds_a_tile_with_a_unique_id_and_edits_keep_it",
+      "line": 177,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tile-editor-tests.rs",
+      "name": "saving_uses_the_tv_editors_rules",
+      "line": 203,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tile-editor-tests.rs",
+      "name": "every_choosable_icon_ships_its_markup",
+      "line": 230,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tile-editor-tests.rs",
+      "name": "page_assets_and_the_tile_list_are_served_under_the_token",
+      "line": 242,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tile-editor-tests.rs",
+      "name": "only_the_session_origin_token_and_json_allow_changes",
+      "line": 268,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tile-editor-tests.rs",
+      "name": "a_real_http_save_and_removal_change_the_list",
+      "line": 312,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tile-editor-tests.rs",
+      "name": "a_test_request_is_sent_without_saving",
+      "line": 346,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/tile-editor-tests.rs",
+      "name": "session_closure_revokes_the_socket_and_reopening_rotates_the_capability",
+      "line": 382,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/update.rs",
+      "name": "interactive_checks_are_live_but_scripts_and_simulations_stay_offline",
+      "line": 157,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/update.rs",
+      "name": "preview_requires_a_valid_current_or_newer_version",
+      "line": 164,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/update.rs",
+      "name": "compares_numeric_versions_and_never_offers_equal_or_older_releases",
+      "line": 175,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/update.rs",
+      "name": "rejects_invalid_prerelease_and_foreign_metadata",
+      "line": 190,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/update.rs",
+      "name": "disabled_service_never_contacts_the_network",
+      "line": 213,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/update.rs",
+      "name": "local_http_checks_bound_responses_and_report_errors",
+      "line": 226,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/update.rs",
+      "name": "attempt_paths_are_private_unique_and_results_are_terminal_only_when_finished",
+      "line": 591,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/update.rs",
+      "name": "versions_compare_numerically",
+      "line": 621,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/update.rs",
+      "name": "disabled_installer_rejects_downloads_without_network_or_platform_calls",
+      "line": 633,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/update.rs",
+      "name": "installer_rejects_foreign_and_ambiguous_manifests",
+      "line": 647,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/update.rs",
+      "name": "only_luma_release_assets_with_a_checksum_are_accepted",
+      "line": 657,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/view.rs",
+      "name": "settings_breadcrumbs_use_equal_gaps_and_only_highlight_the_leaf",
+      "line": 3581,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/view.rs",
+      "name": "upload_button_padding_tracks_the_label_in_every_language",
+      "line": 3641,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/view.rs",
+      "name": "auto_rotation_keeps_a_compact_gap_and_right_aligned_state",
+      "line": 3672,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/view.rs",
+      "name": "short_greetings_keep_their_original_style_and_geometry",
+      "line": 3720,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/view.rs",
+      "name": "long_localized_greetings_fit_on_one_line_without_changing_the_name",
+      "line": 3747,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/view.rs",
+      "name": "fitting_remeasures_when_shrinking_changes_the_optical_font",
+      "line": 3770,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/view.rs",
+      "name": "shrinking_a_greeting_preserves_weather_favorites_and_control_positions",
+      "line": 3780,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/view.rs",
+      "name": "hidden_home_widgets_collapse_without_moving_favorites_or_inputs",
+      "line": 3834,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpaper_cycle.rs",
+      "name": "every_available_background_participates_in_order_and_wraps",
+      "line": 43,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpaper_cycle.rs",
+      "name": "cycling_is_due_only_when_enabled_after_fifteen_minutes",
+      "line": 54,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpaper_cycle.rs",
+      "name": "enabled_rotation_advances_once_after_startup_catalog_or_timeout",
+      "line": 63,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpaper_cycle.rs",
+      "name": "on_off_preferences_default_off_round_trip_and_load_legacy_modes",
+      "line": 72,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "generated_ids_are_safe_and_selection_survives_preferences_reload",
+      "line": 57,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "upload_tokens_are_eight_unbiased_alphanumeric_characters",
+      "line": 82,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "uploads_retain_full_resolution_unshaded_images_and_discover_legacy_fallbacks",
+      "line": 93,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "deletion_protects_selected_and_bundled_backgrounds_and_only_removes_the_requested_upload",
+      "line": 110,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "deletion_rejects_symlink_roots_and_entries_and_never_follows_internal_symlinks",
+      "line": 129,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "worker_reports_deletion_before_the_updated_catalog",
+      "line": 151,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "uploads_are_unnamed_normalized_immutable_and_discoverable_after_restart",
+      "line": 169,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "validation_and_cancellation_leave_no_partial_gallery_entries",
+      "line": 194,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "cancellation_before_commit_cleans_only_the_new_staging_files",
+      "line": 216,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "gallery_capacity_is_checked_before_decoding_or_creating_another_upload",
+      "line": 228,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "decoder_enforces_transport_dimensions_and_composites_transparent_pngs",
+      "line": 261,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "protocol_rejects_oversized_ambiguous_and_chunked_requests",
+      "line": 281,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "only_the_session_origin_host_token_and_upload_header_allow_writes",
+      "line": 306,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "slashless_session_urls_redirect_to_the_local_asset_base",
+      "line": 345,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "browser_assets_are_local_and_a_real_http_upload_needs_no_name",
+      "line": 372,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "legacy_named_uploads_keep_their_ids_and_load_without_names",
+      "line": 418,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "symlink_storage_and_gallery_entries_are_never_followed",
+      "line": 436,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "qr_generation_is_deterministic_and_has_a_reasonable_size",
+      "line": 448,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "session_closure_revokes_the_socket_and_reopening_rotates_the_capability",
+      "line": 459,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-tests.rs",
+      "name": "cancelling_a_slow_request_releases_the_worker_without_waiting_for_the_body",
+      "line": 520,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "upload_sits_left_of_rotation_and_both_remain_fixed_in_every_language",
+      "line": 12,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "cycling_button_toggles_on_off_without_opening_a_page_or_moving_controls",
+      "line": 59,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "gradient_toggle_is_saved_stable_and_switches_bundled_and_uploaded_images",
+      "line": 139,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "cycling_uses_all_uploaded_ids_but_not_deleted_or_pending_deletion_entries",
+      "line": 192,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "automatic_changes_preserve_manual_splash_across_saves_and_restart_and_manual_selection_resets_time",
+      "line": 217,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "former_exclusions_are_ignored_and_only_the_on_off_state_is_saved",
+      "line": 253,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "upload_is_modal_and_close_restores_its_exact_parent",
+      "line": 268,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "upload_stays_active_without_desktop_focus_but_requires_tv_focus",
+      "line": 293,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "upload_instructions_are_ordered_and_only_the_displayed_url_loses_its_slash",
+      "line": 324,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "upload_button_is_compact_and_rotation_is_right_aligned_in_every_language",
+      "line": 372,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "gallery_scrolls_behind_fixed_controls_without_clipping_or_fades",
+      "line": 411,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "scrolled_backgrounds_cannot_capture_upload_or_sidebar_pointer_hits",
+      "line": 480,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "remote_background_focus_stays_below_the_fixed_upload_action",
+      "line": 508,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "custom_gallery_navigation_reveals_whole_cards_in_incomplete_rows",
+      "line": 534,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "upload_discovery_does_not_apply_and_custom_selection_uses_immutable_paths",
+      "line": 562,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "catalog_updates_keep_the_focused_image_and_pointer_geometry_stationary",
+      "line": 603,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "background_popup_is_modal_lifts_the_same_thumbnail_and_restores_its_parent",
+      "line": 628,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "selected_background_has_no_delete_action_and_rejects_forced_confirmation",
+      "line": 671,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "every_unselected_bundled_background_can_be_removed_and_stays_removed_after_reload",
+      "line": 700,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "uploaded_deletion_is_single_flight_handles_failures_and_keeps_unrelated_focus",
+      "line": 731,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "filtered_bundled_entries_do_not_misidentify_custom_thumbnails_or_popup_parents",
+      "line": 775,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/wallpapers-ui-tests.rs",
+      "name": "removed_popup_entry_closes_safely_and_preference_sanitizing_protects_the_selection",
+      "line": 803,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/weather-service.rs",
+      "name": "mock_origins_are_loopback_only_and_never_follow_redirects",
+      "line": 295,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/weather-service.rs",
+      "name": "cache_writes_are_ordered_and_flushed_before_shutdown",
+      "line": 310,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/weather-tests.rs",
+      "name": "search_results_are_validated_normalized_and_deduplicated",
+      "line": 34,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/weather-tests.rs",
+      "name": "temperatures_convert_the_unrounded_reading_and_use_web_rounding",
+      "line": 48,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/weather-tests.rs",
+      "name": "api_readings_and_conditions_cover_invalid_data_and_night",
+      "line": 56,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/weather-tests.rs",
+      "name": "cache_reuse_and_units_do_not_trigger_another_request",
+      "line": 89,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/weather-tests.rs",
+      "name": "no_requests_without_a_location_enabled_widget_and_visible_home",
+      "line": 106,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/weather-tests.rs",
+      "name": "weather_failure_keeps_valid_cache_labels_it_saved_and_retries_later",
+      "line": 119,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/weather-tests.rs",
+      "name": "removed_disabled_or_changed_locations_reject_in_flight_results",
+      "line": 140,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/weather-tests.rs",
+      "name": "returning_home_retries_stale_weather_without_waiting_for_the_old_retry_timer",
+      "line": 192,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/weather-tests.rs",
+      "name": "editing_query_invalidates_old_results_and_short_queries_do_not_search",
+      "line": 207,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/weather-tests.rs",
+      "name": "malformed_weather_preferences_do_not_lose_existing_favorites",
+      "line": 223,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/webos-compat.rs",
+      "name": "preserves_kernel_values_including_zero",
+      "line": 93,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/webos-compat.rs",
+      "name": "rejects_terminator_and_incomplete_records",
+      "line": 102,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "src/webos-compat.rs",
+      "name": "exposes_real_page_size_and_libc_errno_contract",
+      "line": 112,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "home_methods_reject_unknown_firmware_or_lifecycle",
+      "line": 260,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "only_luma_mounts_are_owned_even_after_package_replacement",
+      "line": 283,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "executable_apply_mounts_marks_and_launches_then_restore_unmounts",
+      "line": 294,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "fullhome_round_trip_and_persisted_target_keep_their_identity",
+      "line": 307,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "installation_under_a_symlinked_temporary_parent_stays_inside_the_root",
+      "line": 328,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "copied_recovery_binary_and_shell_survive_package_removal",
+      "line": 344,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "boot_apply_does_not_take_another_apps_screen",
+      "line": 353,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "package_update_replaces_the_old_bound_inode",
+      "line": 363,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "foreign_mounts_are_left_untouched",
+      "line": 376,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "failed_launch_retries_once_then_restores_stock_files",
+      "line": 390,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "restoration_works_even_when_foreground_query_fails",
+      "line": 407,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "busy_mounts_use_lazy_unmount_and_restore_reports_stuck_processes",
+      "line": 417,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "changing_an_enabled_target_or_using_a_foreign_hook_is_rejected",
+      "line": 431,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "old_configuration_without_method_or_target_is_readable",
+      "line": 453,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "manifest_takeover_rereads_staged_metadata_and_restores_the_stock_manifest",
+      "line": 465,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "release_is_attempted_even_when_the_block_request_times_out",
+      "line": 480,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "normal_tile_is_closed_by_app_id_and_an_exiting_instance_is_tolerated",
+      "line": 497,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "normal_close_denials_and_stuck_instances_prevent_mounting",
+      "line": 509,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "process_matching_never_kills_a_normal_luma_or_unrelated_native_app",
+      "line": 517,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "icon_discovery_uses_live_installation_then_manifest_and_default_fallbacks",
+      "line": 552,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "icon_limits_are_aggregate_and_duplicate_paths_are_not_read_twice",
+      "line": 572,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "icon_paths_cannot_escape_but_shell_punctuation_remains_literal",
+      "line": 592,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "invalid_ids_and_unrelated_manifests_cannot_select_private_artwork",
+      "line": 624,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "splash_updates_tile_and_only_the_enabled_own_manifest_stage",
+      "line": 643,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "executable_other_or_disabled_stages_are_never_written",
+      "line": 667,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "missing_or_invalid_splash_sources_preserve_previous_images",
+      "line": 681,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "failed_atomic_write_cleans_its_private_temporary_file",
+      "line": 690,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "stage_uses_persistent_selection_and_retains_manual_background_over_rotation",
+      "line": 703,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "null_manual_selection_falls_back_to_saved_background",
+      "line": 713,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "malformed_missing_and_unavailable_preferences_use_package_splash",
+      "line": 723,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "symlink_storage_directories_are_not_used_as_root_preferences",
+      "line": 743,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "uninstall_requires_matching_completion_not_just_acceptance",
+      "line": 756,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "uninstall_parser_handles_split_pretty_unicode_and_braces_in_strings",
+      "line": 763,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "uninstall_rejects_failures_wrong_identity_and_resource_exhaustion",
+      "line": 774,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "uninstall_protects_system_apps_and_does_not_spawn_when_denied",
+      "line": 793,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "input_verification_failure_rolls_back_and_existing_registration_is_preserved",
+      "line": 808,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "root_mutations_reject_non_root_callers",
+      "line": 836,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "process_runner_enforces_combined_output_and_deadline",
+      "line": 844,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "restoring_a_background_home_never_opens_over_another_app",
+      "line": 869,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "a_stuck_home_process_is_reported_after_unmount_recovery",
+      "line": 879,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "accepted_close_waits_boundedly_and_a_close_race_can_succeed",
+      "line": 892,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "developer_and_production_splash_precedence_matches_native_storage",
+      "line": 913,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    },
+    {
+      "file": "tv-helper/src/tests.rs",
+      "name": "persistent_preferences_win_over_package_local_migration_and_active_stages_refresh",
+      "line": 931,
+      "status": "NOT_RUN",
+      "blocker": "Rust/Cargo/SDL toolchain unavailable"
+    }
+  ]
+}

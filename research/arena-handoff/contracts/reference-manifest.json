@@ -1,0 +1,57 @@
+{
+  "schema": "tv-lab-reference-manifest/1",
+  "target": {
+    "repo": "SteveSpivak/lg-luma",
+    "observed_ref": "e5608cd053be5376a54a806129a332952dfabcef",
+    "role": "native Rust SDL GLES2 launcher"
+  },
+  "sources": [
+    {
+      "repo": "SteveSpivak/lg-luma",
+      "ref": "e5608cd053be5376a54a806129a332952dfabcef",
+      "use": "authoritative native architecture"
+    },
+    {
+      "repo": "SteveSpivak/nuvio-perf-lab",
+      "ref": "fe27abf4df1b13cc5eb910733325db63934eb33a",
+      "use": "statistics, integrity tests and evidence"
+    },
+    {
+      "repo": "SteveSpivak/nuvio-perf-lab",
+      "ref": "8acd6c9809adc1ecc5eb901a7e81f3596c765088",
+      "use": "V5 UX patterns, not native code"
+    },
+    {
+      "repo": "NuvioMedia/NuvioTVSmart",
+      "ref": "657c8a308d0c36aca1625a5e9293b3ba651f017b",
+      "use": "official application behavior"
+    },
+    {
+      "repo": "SteveSpivak/webos-lens",
+      "ref": "e5811544ec464666401e5306a420f5363076f88e",
+      "use": "read-only evidence and correlation"
+    },
+    {
+      "repo": "SteveSpivak/LG-TV",
+      "ref": "96eec049febc366eb02a97f4cf769d40fb401f22",
+      "use": "read-only recovery contract only"
+    },
+    {
+      "repo": "SteveSpivak/lg-webos-firmware-lab",
+      "ref": "8ba1bea19743",
+      "use": "static firmware dependency evidence"
+    }
+  ],
+  "labels": [
+    "PROVEN",
+    "OBSERVED",
+    "MEASURED",
+    "INFERRED",
+    "PROPOSED",
+    "UNKNOWN",
+    "NOT_RUN",
+    "FAIL",
+    "BLOCKED"
+  ],
+  "boundary": "read-only external references; no proprietary binaries, credentials, HARs, protected media or live-device mutation"
+}

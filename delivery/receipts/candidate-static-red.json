@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "candidate-static-red",
+  "evidence_class": "OBSERVED",
+  "caveat": "Intentional red contract before candidate generation.",
+  "command_argv": [],
+  "exit_code": 1,
+  "status": null,
+  "started_utc": "2026-11-02T15:10:05.949455+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "220d9e13cf092b868516a9f92b4e7a739b82f6d6d11522dfcf879dd921e1f67c"
+}

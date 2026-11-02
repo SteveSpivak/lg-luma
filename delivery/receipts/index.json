@@ -1,0 +1,159 @@
+{
+  "schema": "luma-receipt-index/1",
+  "receipts": [
+    {
+      "label": "baseline-git",
+      "path": "receipts/baseline-git.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "toolchain",
+      "path": "receipts/toolchain.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "baseline-node",
+      "path": "receipts/baseline-node.json",
+      "exit_code": 1,
+      "status": null,
+      "evidence_class": "MEASURED_HOST"
+    },
+    {
+      "label": "pnpm-test",
+      "path": "receipts/pnpm-test.json",
+      "exit_code": 127,
+      "status": null,
+      "evidence_class": "BLOCKED"
+    },
+    {
+      "label": "pnpm-check",
+      "path": "receipts/pnpm-check.json",
+      "exit_code": 127,
+      "status": null,
+      "evidence_class": "BLOCKED"
+    },
+    {
+      "label": "pnpm-format-check",
+      "path": "receipts/pnpm-format-check.json",
+      "exit_code": 127,
+      "status": null,
+      "evidence_class": "BLOCKED"
+    },
+    {
+      "label": "cargo-test",
+      "path": "receipts/cargo-test.json",
+      "exit_code": 127,
+      "status": null,
+      "evidence_class": "BLOCKED"
+    },
+    {
+      "label": "supported-node",
+      "path": "receipts/supported-node.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "MEASURED_HOST"
+    },
+    {
+      "label": "release-node-supported",
+      "path": "receipts/release-node-supported.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "MEASURED_HOST"
+    },
+    {
+      "label": "missing-pnpm-cause",
+      "path": "receipts/missing-pnpm-cause.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "handoff-pin-local",
+      "path": "receipts/handoff-pin-local.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "handoff-integrity",
+      "path": "receipts/handoff-integrity.json",
+      "exit_code": null,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "verify-offline",
+      "path": "receipts/verify-offline.json",
+      "exit_code": 1,
+      "status": null,
+      "evidence_class": "BLOCKED"
+    },
+    {
+      "label": "candidate-static-red",
+      "path": "receipts/candidate-static-red.json",
+      "exit_code": 1,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "candidate-apply-check",
+      "path": "receipts/candidate-apply-check.json",
+      "exit_code": 1,
+      "status": null,
+      "evidence_class": "FAIL"
+    },
+    {
+      "label": "research-tests-green",
+      "path": "receipts/research-tests-green.json",
+      "exit_code": 1,
+      "status": null,
+      "evidence_class": "FAIL"
+    },
+    {
+      "label": "build-audit",
+      "path": "receipts/build-audit.json",
+      "exit_code": 1,
+      "status": null,
+      "evidence_class": "FAIL"
+    },
+    {
+      "label": "build-audit-corrected",
+      "path": "receipts/build-audit-corrected.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "offline-evidence-and-metrics",
+      "path": "receipts/offline-evidence-and-metrics.json",
+      "exit_code": 1,
+      "status": null,
+      "evidence_class": "FAIL"
+    },
+    {
+      "label": "offline-evidence-and-metrics-corrected",
+      "path": "receipts/offline-evidence-and-metrics-corrected.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "MEASURED_HOST"
+    },
+    {
+      "label": "candidate-static-contract",
+      "path": "receipts/candidate-static-contract.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "protected-source-diff",
+      "path": "receipts/protected-source-diff.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    }
+  ]
+}

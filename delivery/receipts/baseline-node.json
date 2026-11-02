@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "baseline-node",
+  "evidence_class": "MEASURED_HOST",
+  "caveat": "Host test run only; pnpm-dependent release case failed.",
+  "command_argv": [],
+  "exit_code": 1,
+  "status": null,
+  "started_utc": "2026-11-02T14:06:24.648599+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "a5aea01c1ce32d6ad1f5730cb3ac0e7b12bbab0b398d8b40501924034e397b65"
+}

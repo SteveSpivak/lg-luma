@@ -1,0 +1,550 @@
+{
+  "schema": "luma-audit-delivery/1",
+  "base_sha": "e5608cd053be5376a54a806129a332952dfabcef",
+  "handoff_sha": "0aa7bd6ac099fc457179debbf749f0227c714158",
+  "checkout_head_sha_at_generation": "e5608cd053be5376a54a806129a332952dfabcef",
+  "implementation_commit_sha": null,
+  "commit_semantics": "implementation_commit_sha identifies the commit containing the unapplied candidate patch and audit; a subsequent manifest-recording commit may be HEAD.",
+  "candidate_status": "PROPOSED_UNAPPLIED_NATIVE_BLOCKED",
+  "native_source_unchanged": true,
+  "protected_files_checked": 220,
+  "physical_tv_commands": 0,
+  "physical_tv_evidence": "NOT_RUN",
+  "handoff_integrity": {
+    "all_match": true,
+    "files": 17,
+    "report": "research/audit/handoff-integrity.json"
+  },
+  "native_test_inventory": {
+    "static_attributes": 334,
+    "status": "NOT_RUN",
+    "blocker": "Rust/Cargo/SDL toolchain unavailable"
+  },
+  "test_results": [
+    {
+      "id": "baseline-node",
+      "exit": 1,
+      "passed": 36,
+      "total": 37,
+      "status": "FAIL_ENVIRONMENT",
+      "scope": "Named Node baseline; release case could not spawn pnpm"
+    },
+    {
+      "id": "supported-node",
+      "exit": 0,
+      "passed": 19,
+      "total": 19,
+      "status": "PASS_HOST",
+      "scope": "Dependency-free companion suites only"
+    },
+    {
+      "id": "release-node-supported",
+      "exit": 0,
+      "passed": 17,
+      "total": 17,
+      "status": "PASS_HOST",
+      "scope": "Supported release subset only"
+    },
+    {
+      "id": "verify-offline",
+      "exit": 1,
+      "status": "BLOCKED",
+      "scope": "Python/JSON parse passed; Node stats import missing streamMetrics.mjs"
+    },
+    {
+      "id": "offline-evidence-and-metrics-corrected",
+      "exit": 0,
+      "passed": 16,
+      "total": 16,
+      "status": "PASS_HOST_SYNTHETIC",
+      "scope": "Unchanged bundled evidence processor + independent arithmetic/static contracts"
+    },
+    {
+      "id": "candidate-static-contract",
+      "exit": 0,
+      "passed": 1,
+      "total": 1,
+      "status": "PASS_STATIC",
+      "scope": "Bounded/default-off patch text only"
+    },
+    {
+      "id": "candidate-apply-check",
+      "exit": 1,
+      "status": "FAIL_STOPPED",
+      "scope": "Missing new-file mode header; generator corrected, apply not rechecked after two failures"
+    },
+    {
+      "id": "native-regressions",
+      "exit": 127,
+      "status": "BLOCKED",
+      "scope": "cargo test unavailable"
+    }
+  ],
+  "candidate_patch": {
+    "path": "delivery/patches/focus-depth.patch",
+    "sha256": "8230cce60f85db4965f0731e702216dbb5fe7442ee0a33ba4768f9dc0b24a257",
+    "default": "OFF",
+    "enable": "LUMA_FOCUS_DEPTH=1",
+    "persistent_preference": false,
+    "paths": [
+      "src/main.rs",
+      "src/view.rs",
+      "src/focus_experiment.rs"
+    ],
+    "apply_verified": false,
+    "native_tests": "NOT_RUN"
+  },
+  "reference_provenance": {
+    "report": "research/luma-audit/references.md",
+    "machine_readable": "research/audit/reference-provenance.json"
+  },
+  "blockers": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08"
+  ],
+  "receipts": [
+    {
+      "label": "baseline-git",
+      "path": "receipts/baseline-git.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "toolchain",
+      "path": "receipts/toolchain.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "baseline-node",
+      "path": "receipts/baseline-node.json",
+      "exit_code": 1,
+      "status": null,
+      "evidence_class": "MEASURED_HOST"
+    },
+    {
+      "label": "pnpm-test",
+      "path": "receipts/pnpm-test.json",
+      "exit_code": 127,
+      "status": null,
+      "evidence_class": "BLOCKED"
+    },
+    {
+      "label": "pnpm-check",
+      "path": "receipts/pnpm-check.json",
+      "exit_code": 127,
+      "status": null,
+      "evidence_class": "BLOCKED"
+    },
+    {
+      "label": "pnpm-format-check",
+      "path": "receipts/pnpm-format-check.json",
+      "exit_code": 127,
+      "status": null,
+      "evidence_class": "BLOCKED"
+    },
+    {
+      "label": "cargo-test",
+      "path": "receipts/cargo-test.json",
+      "exit_code": 127,
+      "status": null,
+      "evidence_class": "BLOCKED"
+    },
+    {
+      "label": "supported-node",
+      "path": "receipts/supported-node.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "MEASURED_HOST"
+    },
+    {
+      "label": "release-node-supported",
+      "path": "receipts/release-node-supported.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "MEASURED_HOST"
+    },
+    {
+      "label": "missing-pnpm-cause",
+      "path": "receipts/missing-pnpm-cause.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "handoff-pin-local",
+      "path": "receipts/handoff-pin-local.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "handoff-integrity",
+      "path": "receipts/handoff-integrity.json",
+      "exit_code": null,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "verify-offline",
+      "path": "receipts/verify-offline.json",
+      "exit_code": 1,
+      "status": null,
+      "evidence_class": "BLOCKED"
+    },
+    {
+      "label": "candidate-static-red",
+      "path": "receipts/candidate-static-red.json",
+      "exit_code": 1,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "candidate-apply-check",
+      "path": "receipts/candidate-apply-check.json",
+      "exit_code": 1,
+      "status": null,
+      "evidence_class": "FAIL"
+    },
+    {
+      "label": "research-tests-green",
+      "path": "receipts/research-tests-green.json",
+      "exit_code": 1,
+      "status": null,
+      "evidence_class": "FAIL"
+    },
+    {
+      "label": "build-audit",
+      "path": "receipts/build-audit.json",
+      "exit_code": 1,
+      "status": null,
+      "evidence_class": "FAIL"
+    },
+    {
+      "label": "build-audit-corrected",
+      "path": "receipts/build-audit-corrected.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "offline-evidence-and-metrics",
+      "path": "receipts/offline-evidence-and-metrics.json",
+      "exit_code": 1,
+      "status": null,
+      "evidence_class": "FAIL"
+    },
+    {
+      "label": "offline-evidence-and-metrics-corrected",
+      "path": "receipts/offline-evidence-and-metrics-corrected.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "MEASURED_HOST"
+    },
+    {
+      "label": "candidate-static-contract",
+      "path": "receipts/candidate-static-contract.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "protected-source-diff",
+      "path": "receipts/protected-source-diff.json",
+      "exit_code": 0,
+      "status": null,
+      "evidence_class": "OBSERVED"
+    }
+  ],
+  "files": {
+    "delivery/BLOCKERS.json": {
+      "sha256": "e959acddb78ac375698152d14a2a94d0aa078330318a23ccce301ad45ae388f8",
+      "bytes": 4460
+    },
+    "delivery/HANDOFF.md": {
+      "sha256": "c8030e974241241139c80f65f71edc6ee1264caa847d3976a16eb8c58343555c",
+      "bytes": 3522
+    },
+    "delivery/patches/focus-depth.patch": {
+      "sha256": "8230cce60f85db4965f0731e702216dbb5fe7442ee0a33ba4768f9dc0b24a257",
+      "bytes": 3779
+    },
+    "delivery/receipts/baseline-git.json": {
+      "sha256": "744654b84c92c9212570d2811b7129d183d076227b77a948b635d3ec858b8af9",
+      "bytes": 497
+    },
+    "delivery/receipts/baseline-node.json": {
+      "sha256": "2986914ca62532e45aee7e456262367cff20933867e7c24463030d7186e7e76c",
+      "bytes": 523
+    },
+    "delivery/receipts/build-audit-corrected.json": {
+      "sha256": "0791dd3776350dff1a455dc0cc207846087971133345e99950daf4ac86c24faf",
+      "bytes": 543
+    },
+    "delivery/receipts/build-audit.json": {
+      "sha256": "ba9b8093eea289e6dd16fb58da6c4bc42a2f591a61c60c0b4fe55b68873c1547",
+      "bytes": 529
+    },
+    "delivery/receipts/candidate-apply-check.json": {
+      "sha256": "80d2f2130c99533046abe137c02bcf999144357a74a399b9cc5cc770b338268e",
+      "bytes": 547
+    },
+    "delivery/receipts/candidate-static-contract.json": {
+      "sha256": "7c8a3f74ca409fdd17e24dfa1ee943dc0a9b2397cdec5396b1ed788fd9037d72",
+      "bytes": 546
+    },
+    "delivery/receipts/candidate-static-red.json": {
+      "sha256": "ed3367fb2f767d1ea524bfc65887a11bf64abc7f37e38d703492d783bb9793d6",
+      "bytes": 523
+    },
+    "delivery/receipts/cargo-test.json": {
+      "sha256": "a57b684df7cfe39e884db96735f89307d843881c08ca94e24bfb6bd52fccae79",
+      "bytes": 512
+    },
+    "delivery/receipts/handoff-integrity.json": {
+      "sha256": "de3074de4d0e8a863d84b2b80168d3802f82520bb1751caf622840ea7ac41e88",
+      "bytes": 498
+    },
+    "delivery/receipts/handoff-pin-local.json": {
+      "sha256": "8356dc6594430823b27c14e7a8e2c59797764eb38ef31192390fd54e62bb5d7b",
+      "bytes": 559
+    },
+    "delivery/receipts/index.json": {
+      "sha256": "5a43df31b2bd90bbec47315c4e55a4f03ca27e5ca14f671f17848490721c0492",
+      "bytes": 3989
+    },
+    "delivery/receipts/missing-pnpm-cause.json": {
+      "sha256": "821590f6b700255bc972ee8fb8f163b14ddc2547a2f3f86db5676702878fb570",
+      "bytes": 533
+    },
+    "delivery/receipts/offline-evidence-and-metrics-corrected.json": {
+      "sha256": "2dfbe70b04f4268b239dc30c4d311e72f126ed2a4fb6caf31b1f9a41ff2cf1c2",
+      "bytes": 570
+    },
+    "delivery/receipts/offline-evidence-and-metrics.json": {
+      "sha256": "a34ae1e5bf1647f7d4e9f7e7a4539855cc0df73348508266aceb9a695d50d0b4",
+      "bytes": 553
+    },
+    "delivery/receipts/pnpm-check.json": {
+      "sha256": "bf696d28345d41d08efdd7b9b8114a6f9f60611990edf0ca3d2d9620909eb305",
+      "bytes": 501
+    },
+    "delivery/receipts/pnpm-format-check.json": {
+      "sha256": "339e62dce6fb32031f507d3773dc31da02c3f955423754bbc5e5130b52f7d9ae",
+      "bytes": 513
+    },
+    "delivery/receipts/pnpm-test.json": {
+      "sha256": "ae991c00bcfcb5682a5e979c199fddd00ef2f2039c201f43621726865ae3cc93",
+      "bytes": 500
+    },
+    "delivery/receipts/protected-source-diff.json": {
+      "sha256": "bae05837733a130126cbe49249fab501818f373cd7cb717676a6b5ebca0599c3",
+      "bytes": 517
+    },
+    "delivery/receipts/release-node-supported.json": {
+      "sha256": "b55f975ced923f0c3f240467b4785dca673661a9c2bfe3039502d10faa35586c",
+      "bytes": 526
+    },
+    "delivery/receipts/research-tests-green.json": {
+      "sha256": "41e3b30801ac8442c5643a62d0f43672b266e48aa1674736b65a3fd06f08c297",
+      "bytes": 542
+    },
+    "delivery/receipts/supported-node.json": {
+      "sha256": "33d8522d8af7d344f3dcce0283fe841265de82fbcd2fe5be31d7894deeca5214",
+      "bytes": 527
+    },
+    "delivery/receipts/toolchain.json": {
+      "sha256": "b8359af08f0247e9e73a31f37314aef5ad7561174000460d9a1e473276abb75f",
+      "bytes": 521
+    },
+    "delivery/receipts/verify-offline.json": {
+      "sha256": "8425aae6a01b672517bd9faff0cd67a5c9dff0f2ee89131eb29ac004b249eff8",
+      "bytes": 539
+    },
+    "delivery/rollback.md": {
+      "sha256": "056dd138f323a3544de2b15b29e917d8c62e5dd5c777d00d8b9aeb908bd577ed",
+      "bytes": 2337
+    },
+    "research/arena-handoff/AGENT_ASSIGNMENT.md": {
+      "sha256": "65cf3f9aad2d08a9c03774aed42a24ac42ebcf60ff093c85d9513acedd60b329",
+      "bytes": 5519
+    },
+    "research/arena-handoff/OFFLINE-TOOLS.md": {
+      "sha256": "86de35ced99deecf44520d311350e98186a30631bc00330866b63936168a9836",
+      "bytes": 854
+    },
+    "research/arena-handoff/REFERENCES-README.md": {
+      "sha256": "3af05f6be21ced6386d618c40c304f9eca7e9d5ebfcfbe5ab831fff870ac2a3b",
+      "bytes": 3191
+    },
+    "research/arena-handoff/contracts/reference-manifest.json": {
+      "sha256": "bb959d07e6444cc91b729d0bfc559d953e7fb36d52a032cda66c6c8d3ed46595",
+      "bytes": 1613
+    },
+    "research/arena-handoff/docs/TRANSFER-PLAN.md": {
+      "sha256": "9aa3b1cb8815d0523fd94a047ac5708225736777360ed39900c78b8dde7f082b",
+      "bytes": 2167
+    },
+    "research/arena-handoff/offline-lab/cli/correlate.py": {
+      "sha256": "c46840b50645730dd65a708ee7c9847731ea90502f5766e5fae05e5afccae2bf",
+      "bytes": 1252
+    },
+    "research/arena-handoff/offline-lab/cli/evidence_tools.py": {
+      "sha256": "bc2c637ace6dc46b85a2285f2db686d9faa803ea2016f6421bc5ab140303603a",
+      "bytes": 13971
+    },
+    "research/arena-handoff/offline-lab/lab/checks/experiment-stats.test.mjs": {
+      "sha256": "ec31db56407bef10cf9b7cf0a18076a15412dccf432896b874a9394c423101c9",
+      "bytes": 13606
+    },
+    "research/arena-handoff/offline-lab/lab/perf/stats.mjs": {
+      "sha256": "fe8dfa97d9a06f0c982c73713c835a5716e0bc4c7dc003d55d44184b62d99f7b",
+      "bytes": 28561
+    },
+    "research/arena-handoff/references/firmware-lab-readme.md": {
+      "sha256": "0cd9c08d981324a9dad2c884b2f8992ddaf6e73875c3e587b05da1a7a30abb15",
+      "bytes": 2891
+    },
+    "research/arena-handoff/references/lens-evidence.schema.json": {
+      "sha256": "c312154e55a8252b877a9df267ccb78be36a2e78662b3fc0667a323938e1ed3c",
+      "bytes": 3340
+    },
+    "research/arena-handoff/references/lg-device-preflight.schema.json": {
+      "sha256": "223e6ffb147fb2fed264d283c2c7c62b57b6424da9b479eee6d5316eb16c9d3a",
+      "bytes": 3829
+    },
+    "research/arena-handoff/references/lg-feature-dependencies.json": {
+      "sha256": "35acfa5f191eae76bd6851c7d031c13975479944d9ad02b52e913ed0316622d5",
+      "bytes": 9122
+    },
+    "research/arena-handoff/references/nuvio-known-fail-signatures.json": {
+      "sha256": "5e40e53e150b7934f3f1157c40ed0fc84abceae3a74b86109eafad4654060f38",
+      "bytes": 618
+    },
+    "research/arena-handoff/references/nuvio-perf-stats.mjs": {
+      "sha256": "fe8dfa97d9a06f0c982c73713c835a5716e0bc4c7dc003d55d44184b62d99f7b",
+      "bytes": 28561
+    },
+    "research/arena-handoff/scripts/collect-references.sh": {
+      "sha256": "c7730bfea59cf6d03d64084cf3ed610bf4c67b5e61c36e862b1f370d44590816",
+      "bytes": 997
+    },
+    "research/arena-handoff/scripts/verify-offline.sh": {
+      "sha256": "2d81129950304d0da92b84ac51422474b64101415a634bc9cfaec4a693d884e6",
+      "bytes": 1163
+    },
+    "research/audit/calculations.json": {
+      "sha256": "b7a092cf98728849137b2b02644a9e1427f8e1b3696572e251a79510b6bea1b7",
+      "bytes": 2786
+    },
+    "research/audit/handoff-integrity.json": {
+      "sha256": "e1385fbd49a3a1eea7be3040de93891346b674edb597a23d2fdf1b4481ea5a8f",
+      "bytes": 4662
+    },
+    "research/audit/reference-provenance.json": {
+      "sha256": "467bc522d3d6520e1b290d5ecca17f7e0d5e972e4fe1d1e0170ce3cbeca60603",
+      "bytes": 6347
+    },
+    "research/audit/source-inventory.json": {
+      "sha256": "b0648205c812d7df8d8c267b8f8f3bdf82d89496920b3b9ca19982727f770794",
+      "bytes": 13129
+    },
+    "research/audit/source-protection.json": {
+      "sha256": "61302543875e36ffc8a652f3f0df3c99cfd35fb68d6a84ee29a7bccd157133fc",
+      "bytes": 206
+    },
+    "research/audit/test-inventory.json": {
+      "sha256": "645b3460be9394e1635946535121190c10bac1ecce2565e4a02f0c7b69894265",
+      "bytes": 77006
+    },
+    "research/fixtures/device-preflight-not-ready.json": {
+      "sha256": "8215c40ce2a52cc14ebcaf06672b4cb48818c67baedfa5c3d5b7a9604a99d69e",
+      "bytes": 1035
+    },
+    "research/luma-audit/architecture.md": {
+      "sha256": "8fe3b114a69a98e7d7a737f7c7122bab957d99f578513c5fd8e2bffd1b959b85",
+      "bytes": 8211
+    },
+    "research/luma-audit/capability-ledger.json": {
+      "sha256": "9d5107e10d6e7d742f61ba032da2f28399163714dc0dd6943ed39e4b43247674",
+      "bytes": 12884
+    },
+    "research/luma-audit/device-validation-plan.md": {
+      "sha256": "a4b8c8dec658cae85d78e0c50d7aa5e2eafd1c3663a59d1043b1fea45c1c2612",
+      "bytes": 5513
+    },
+    "research/luma-audit/focus-experiment.md": {
+      "sha256": "ab4e78080093feaf4f135a59d242a8dd241b6f1f461195e55c5a95cd8e415cc9",
+      "bytes": 3804
+    },
+    "research/luma-audit/references.md": {
+      "sha256": "191f9eb2c82ee83011cebe351d15b6d57c05d45e1b850320a1fd85d9d69f3fa4",
+      "bytes": 4565
+    },
+    "research/luma-audit/rendering-performance.md": {
+      "sha256": "f00a2df5a1f7d83ff56a886bead350c033f314196f4024cc1b46b2075d85c5a9",
+      "bytes": 7281
+    },
+    "research/luma-audit/ux-settings.md": {
+      "sha256": "34ef9d597811698f41c2fca9430b7b00531bac3dfbe934aeb6131ae93a795164",
+      "bytes": 7336
+    },
+    "research/luma-audit/video-feasibility.md": {
+      "sha256": "02be42c00dc5fc7726b0837baada40a2bd05425e784084b78d8fa14d17f57560",
+      "bytes": 7199
+    },
+    "research/scripts/build_audit.py": {
+      "sha256": "86bac4d7c420f574ceb5c985bc71f0a51985016633880a729f2ba93d76030fa4",
+      "bytes": 3559
+    },
+    "research/scripts/build_manifest.py": {
+      "sha256": "089631181d717461a5ef21d53c6c2530bdaafae9846acc20251c098fce501fa8",
+      "bytes": 4408
+    },
+    "research/scripts/collect_receipts.py": {
+      "sha256": "a03960fb4b8d7b532f6ca613ea5c434304f9e41310b3a9529c46dc66acbfb138",
+      "bytes": 4581
+    },
+    "research/scripts/collect_reference_provenance.py": {
+      "sha256": "e4d3ebd24e8dc17bdf0f3c75acdd5ae39f538a033679b04c34559956ea6cf4de",
+      "bytes": 2627
+    },
+    "research/scripts/make_candidate.py": {
+      "sha256": "46ecbf38d6af0a15ddfe65609a93673f27de97ddae61e252e9710cf7753e35ef",
+      "bytes": 4616
+    },
+    "research/scripts/native_metrics.py": {
+      "sha256": "73a72cac1ef35220282a95bbdb6d44e791c36955316817c108d4dff7c474c1eb",
+      "bytes": 3382
+    },
+    "research/scripts/pin_reference.py": {
+      "sha256": "f1638cfd4c1ae966e17186b219054a310f8e4cb39ed2d5a8a2623cf58a361eb1",
+      "bytes": 5111
+    },
+    "research/scripts/receipt.py": {
+      "sha256": "37ed55fe7913d6c6be4217d6265573dd0597e1bc2608509567c1234c0790ed8e",
+      "bytes": 3691
+    },
+    "research/tests/test_candidate_patch.py": {
+      "sha256": "eeaf3bc293f4bb8c2359d0d8b34fdd34013d3da02412b5642405bece58a1cab8",
+      "bytes": 1583
+    },
+    "research/tests/test_native_metrics.py": {
+      "sha256": "e7dd44c8f82cf52b70fa99222e1b17f4c83dac8e7f7e51b50aff4b702feca9fc",
+      "bytes": 1718
+    },
+    "research/tests/test_offline_evidence.py": {
+      "sha256": "fc6afc0b3e536a9781c45712a974be05f4a30d706854fc00a6f9a0efbdf49bad",
+      "bytes": 5837
+    }
+  },
+  "evidence_policy": "OBSERVED source != MEASURED runtime. Host/synthetic/static results are not TV performance, GPU memory, native compilation or physical recovery evidence."
+}

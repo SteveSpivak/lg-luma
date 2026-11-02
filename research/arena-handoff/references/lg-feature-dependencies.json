@@ -1,0 +1,119 @@
+{
+  "schema": "feature-dependencies/1",
+  "generated": "2026-11-02",
+  "scope": "SteveSpivak/LG-TV service-to-feature dependency map. Cloud-inspection only; every edge carries the strongest classification the in-repo evidence supports.",
+  "classification_policy": {
+    "PROVEN": "in-repo runtime receipts/captures demonstrate the edge on the physical TV",
+    "OBSERVED": "repo scripts/docs target or describe the edge on the physical TV, but no committed runtime receipt",
+    "INFERRED": "standard webOS platform knowledge; not demonstrated in this repo",
+    "UNKNOWN": "no usable evidence in this repo; treat as not demonstrable and NOT disposable",
+    "rule": "a service/daemon is NEVER disposable from its name; only a PROVEN-OFF experiment could downgrade, and none exists"
+  },
+  "protected_functions": {
+    "definition": "functions whose loss bricks the owner's daily use or removes the independent recovery path; any experiment touching them must hold a verified recovery route first",
+    "list": ["home_launcher", "home_button", "magic_remote_dpad_back", "independent_recovery", "network_control_lan"],
+    "stop_rule": "preflight must STOP (blocker, severity=blocker) unless every protected function is verified present/healthy; UNKNOWN counts as not-verified"
+  },
+  "edges": [
+    {
+      "feature": "home_launcher",
+      "depends_on": [
+        {"service": "com.webos.app.home / SAM launch points", "operation": "launch+keepAlive", "classification": "OBSERVED", "evidence": "docs/TV_OPERATIONS_GUIDE.md; scripts/forensics/tv-diagnostics.sh (foreground-app reads)"},
+        {"service": "org.webosbrew.hbchannel.service", "operation": "startup/elevate/control/install", "classification": "OBSERVED", "evidence": "scripts/root/install-hbc.sh; scripts/apps/install-ipk.sh (hbchannel.service/install path)"}
+      ],
+      "protected": true,
+      "notes": "HBC-as-default-home is a known customization; home owner conflict (both stock home and HBC claiming home) must be detected before experiments."
+    },
+    {
+      "feature": "home_button",
+      "depends_on": [
+        {"service": "com.webos.service.networkinput/getPointerInputSocket", "operation": "control", "classification": "OBSERVED", "evidence": "scripts/ (getPointerInputSocket usage) — remote button injection channel; write-capable"},
+        {"service": "SSAP remote socket", "operation": "control", "classification": "OBSERVED", "evidence": "scripts/automation/ssap-remote.mjs (hardened, HOME button usage documented)"}
+      ],
+      "protected": true,
+      "notes": "Gitignored ssap-key.txt (see .gitignore) — credential surface, never committed; SSAP close is 403-denied on this TV, HOME is the documented safe exit (README, TV_OPERATIONS_GUIDE)."
+    },
+    {
+      "feature": "magic_remote_dpad_back",
+      "depends_on": [
+        {"service": "com.webos.service.networkinput", "operation": "control", "classification": "OBSERVED", "evidence": "scripts/ networkinput handle usage; LG-TV/bin/lgtv guarded verbs (probe-before-scroll)"}
+      ],
+      "protected": true,
+      "notes": "Back from player restores origin screen (acceptance case); losing Back = losing owner navigation. Probe-before-scroll discipline documented in bin/lgtv header."
+    },
+    {
+      "feature": "airplay",
+      "depends_on": [
+        {"service": "AirPlay stack (tv-managed)", "operation": "n/a", "classification": "OBSERVED", "evidence": "docs/research/webos-debloat-forensic-20261024/REPORT.md; docs/research/agent-control-20261026/SIRI-AND-LOCAL-AGENTS.md — discussed, no committed runtime receipt here"},
+        {"service": "mDNS/Bonjour advertisement", "operation": "n/a", "classification": "INFERRED", "evidence": "standard platform behavior; not demonstrated in this repo"}
+      ],
+      "protected": false,
+      "notes": "Never disable on inference; local network blocking experiments must whitelist discovery or AirPlay/HomeKit die silently."
+    },
+    {
+      "feature": "homekit",
+      "depends_on": [
+        {"service": "HomeKit pairing stack (tv-managed)", "operation": "n/a", "classification": "OBSERVED", "evidence": "docs/research/agent-control-20261026/SIRI-AND-LOCAL-AGENTS.md"},
+        {"service": "iCloud/Home hub reachability", "operation": "n/a", "classification": "INFERRED", "evidence": "standard platform behavior; blocking experiments must not blanket-block"}
+      ],
+      "protected": false,
+      "notes": "Telemetry blocking (scripts/blocking/*) must not capture HomeKit control domains; verify-blocking.sh is the read-only check."
+    },
+    {
+      "feature": "hdmi_cec_input_switching",
+      "depends_on": [
+        {"service": "HDMI/CEC input stack", "operation": "read+control", "classification": "OBSERVED", "evidence": "docs/TV_OPERATIONS_GUIDE.md; docs/research/webos-debloat-forensic-20261024/REPORT.md"},
+        {"service": "com.webos.service.tvpower family", "operation": "control", "classification": "OBSERVED", "evidence": "com.webos.service.tv.power/turnOff seen in script surface — power mutation, never allowlisted"}
+      ],
+      "protected": false,
+      "notes": "Input switching is HDMI-CEC-driven; no repo evidence ties CEC to any debloat edge — dependencies remain INFERRED at most."
+    },
+    {
+      "feature": "audio_voice",
+      "depends_on": [
+        {"service": "audio pipeline (incl. lossless/volume paths)", "operation": "n/a", "classification": "INFERRED", "evidence": "no in-repo service handle; platform knowledge only"},
+        {"service": "voice (ThinQ/assistant)", "operation": "n/a", "classification": "OBSERVED", "evidence": "docs/research/webos-debloat-forensic-20261024/REPORT.md debloat discussion"}
+      ],
+      "protected": false,
+      "notes": "Debloat temptations around voice services must stay OUT unless PROVEN safe; classification here is deliberately weak."
+    },
+    {
+      "feature": "settings_software_updates",
+      "depends_on": [
+        {"service": "Settings app + software update channel", "operation": "n/a", "classification": "OBSERVED", "evidence": "docs/research/webos-debloat-forensic-20261024/REPORT.md (update-blocking decisions documented)"},
+        {"service": "LG update domains", "operation": "network", "classification": "INFERRED", "evidence": "scripts/blocking/update-blocklists.sh touches update-facing lists; domain set not enumerated in repo"}
+      ],
+      "protected": false,
+      "notes": "Blocking LG update domains changes patch availability — a product decision, never an experiment default."
+    },
+    {
+      "feature": "streaming_drm",
+      "depends_on": [
+        {"service": "Widevine/PlayReady DRM stack", "operation": "n/a", "classification": "UNKNOWN", "evidence": "only UX-handoff docs mention (docs/cloud/nuvio-trailer-ux-handoff-20261021/*); no service handle, no receipt"},
+        {"service": "netflix/vudu DRM ESN", "operation": "n/a", "classification": "UNKNOWN", "evidence": "none"}
+      ],
+      "protected": false,
+      "notes": "Hard UNKNOWN by policy. No DRM bypass instrumentation exists or may be added; absorbing third-party DRM findings requires owner statement."
+    },
+    {
+      "feature": "network_control_lan",
+      "depends_on": [
+        {"service": "LAN reachability + port 22 root SSH", "operation": "read+control", "classification": "OBSERVED", "evidence": "README (port 9922 offline; root SSH on 22); scripts/root/post-root-verify.sh; scripts/forensics/* ssh paths"},
+        {"service": "Developer Mode SSH 9922", "operation": "control", "classification": "OBSERVED", "evidence": "scripts/root/root-autoroot.sh (ares-shell -r dev profile); README: currently OFFLINE on the owner's TV"},
+        {"service": "iptables on-TV DNS block hooks", "operation": "control", "classification": "OBSERVED", "evidence": "scripts/tv/deploy-tv-blocks.sh (iptables -D teardown), scripts/tv/init.d/ boot hooks, scripts/blocking/verify-blocking.sh (iptables -L read-only)"}
+      ],
+      "protected": true,
+      "notes": "Losing LAN control with a broken dashboard removes the soft recovery lane; deploy-tv-blocks rollback must stay signed and reachable."
+    },
+    {
+      "feature": "independent_recovery",
+      "depends_on": [
+        {"service": "physical input (Magic Remote + backup path) independent of network", "operation": "n/a", "classification": "INFERRED", "evidence": "magic button physical independence not demonstrated in repo scripts"},
+        {"service": "Homebrew Channel + root SSH + cached signed IPKs", "operation": "control", "classification": "OBSERVED", "evidence": "scripts/root/install-hbc.sh, scripts/apps/install-ipk.sh (sha256-verified hbchannel install path)"},
+        {"service": "native TV recovery (physical)", "operation": "n/a", "classification": "UNKNOWN", "evidence": "no repo evidence for firmware-level recovery mode on this model; MUST remain UNKNOWN until owner-proven"}
+      ],
+      "protected": true,
+      "notes": "The stop-gate of this whole assignment: preflight refuses any experiment unless an independent recovery route is verified. UNKNOWN is not acceptable for experiments touching protected functions."
+    }
+  ]
+}

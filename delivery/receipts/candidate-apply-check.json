@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "candidate-apply-check",
+  "evidence_class": "FAIL",
+  "caveat": "First apply check failed on missing new-file mode header; not native validation.",
+  "command_argv": [],
+  "exit_code": 1,
+  "status": null,
+  "started_utc": "2026-11-02T15:17:04.961639+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "c8fb4476525db920ac13a2b6fcea8a8dea9009bdccfcf1f9444e4685d111fe39"
+}

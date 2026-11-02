@@ -1,0 +1,143 @@
+{
+  "schema": "luma-reference-provenance/1",
+  "access_policy": "No network requests; summarizes prior verified collections only. Blocked repositories remain BLOCKED in references.md.",
+  "verified_repositories": [
+    {
+      "repo": "SteveSpivak/webos-lens",
+      "requested_sha": "e5811544ec464666401e5306a420f5363076f88e",
+      "verified_commit": "e5811544ec464666401e5306a420f5363076f88e",
+      "tree_sha": "3bd9c7e50f945afda1f1755ca34f09951825f7cf",
+      "collected_utc": "2026-11-02T14:15:34.265766+00:00",
+      "metadata_sha256": {
+        "commit.json": "365f3d8a140a7aef9311716a0a426bda9afff7b5fc5bc13367da67c8f1b738a8",
+        "tree.json": "44a16d6f89480351498bf8ee78b7a1c20203c86951725af3fce83f01176a3fa0"
+      },
+      "files": [
+        {
+          "path": "contracts/lens-evidence.schema.json",
+          "git_blob_sha1": "aa3867a1be2195fd9c2fda92786b0ffc6cb6e180",
+          "sha256": "c312154e55a8252b877a9df267ccb78be36a2e78662b3fc0667a323938e1ed3c",
+          "bytes": 3340
+        },
+        {
+          "path": "cli/correlate.py",
+          "git_blob_sha1": "b460531d116fb9bbba95c93c33cebf2b47729757",
+          "sha256": "c46840b50645730dd65a708ee7c9847731ea90502f5766e5fae05e5afccae2bf",
+          "bytes": 1252
+        },
+        {
+          "path": "delivery/HANDOFF.md",
+          "git_blob_sha1": "d225bc2ffa5e6211543ded8e5cb7c73e2eb110dc",
+          "sha256": "30393c88a900143b6c2c7388e3275694af80b841b15846ea1d048d8569ae7612",
+          "bytes": 3525
+        },
+        {
+          "path": "delivery/manifest.json",
+          "git_blob_sha1": "f9e776e2dcef7e160a5253ad2f8cc749331b26be",
+          "sha256": "475ba50aa1b9215a04ea6ab5e20a38895e3afb6a68c9d7c18cd1dc97b1da0b64",
+          "bytes": 6446
+        }
+      ]
+    },
+    {
+      "repo": "NuvioMedia/NuvioTVSmart",
+      "requested_sha": "657c8a308d0c36aca1625a5e9293b3ba651f017b",
+      "verified_commit": "657c8a308d0c36aca1625a5e9293b3ba651f017b",
+      "tree_sha": "3b66a63989722d6fbb69d10ecbfdefc5e6e369da",
+      "collected_utc": "2026-11-02T14:19:48.474956+00:00",
+      "metadata_sha256": {
+        "commit.json": "8fb6eebbaf53cacbe50fba351546b24b85cf94097129e062d4e62e0a61bf2a2e",
+        "tree.json": "bce3127f96c1cfd3c756fa3fb72e14816963d594c54c7af0d48094bffddf41de"
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha1": "91cdc00f954d842791c34ec92c3418c370de2e6f",
+          "sha256": "2ce3de6e204342708720d7d2e87bb650bd8680387b56e360f96ad7e1262180c7",
+          "bytes": 3566
+        },
+        {
+          "path": "js/ui/screens/home/homeFocusPolicy.js",
+          "git_blob_sha1": "3c151392a96a0c25dacaab6f7614447607fbaa4e",
+          "sha256": "30bb44bb736f1d491230097c04e344c3f470fa33de81d9f60682e9bb453710c9",
+          "bytes": 1396
+        },
+        {
+          "path": "js/ui/navigation/focusEngine.js",
+          "git_blob_sha1": "836a0b4dbb710d48d2cb5043f83aadf2bacdbeb5",
+          "sha256": "d977e909f94135857a10b89e05fe95371ecdc5e91fd3773c6c33b9671dc80cf7",
+          "bytes": 12620
+        },
+        {
+          "path": "js/ui/screens/home/homeScreenMethods-15-schedule-focused-poster-flow.js",
+          "git_blob_sha1": "9179f269a6a6f2140a0ca74b7fc83120b3b66535",
+          "sha256": "c91dbd0f5f5d22bd72f0ef26cd50d5e076a3969a303326d16510c21165c116de",
+          "bytes": 13158
+        },
+        {
+          "path": "js/ui/screens/home/homeScreenMethods-13-mount-trailer-layer.js",
+          "git_blob_sha1": "d160cc36090161d5e17f47f51e0ff861b9849541",
+          "sha256": "e71cce871f5d2f958d9bdc8423c3f96f71a82b28b73376a539f05c045d049723",
+          "bytes": 11733
+        },
+        {
+          "path": "js/ui/ambient/ambientPlaybackPolicy.js",
+          "git_blob_sha1": "82c751d0d5b72c924ea05745fa881b9d0e751287",
+          "sha256": "2afc6d52485c6d3fe356d61ab6a36eab1bcfa2db8047692c9389f84de77dd74e",
+          "bytes": 720
+        },
+        {
+          "path": "js/ui/screens/home/modernHomeLayout.js",
+          "git_blob_sha1": "6c38ad26d8c34489975e54f81718b22002efad95",
+          "sha256": "dc2e5b2a6d21108f2d46e789a678ec0f51cb948037efca9c3040f343c6f4a4c8",
+          "bytes": 12511
+        },
+        {
+          "path": "js/ui/navigation/routerMethods-03-back.js",
+          "git_blob_sha1": "3c751763450965b869ac49e8882c9c74da1ae9cb",
+          "sha256": "594687511b18ec32b62cf8f7e7616280ef7f68e6cf01f73ccd346893da054954",
+          "bytes": 2539
+        },
+        {
+          "path": "js/ui/screens/home/homePosterSettings.test.mjs",
+          "git_blob_sha1": "1c409a90ce0dcd4c671a5a2079bac23ae4d5409e",
+          "sha256": "5cad2fee67a70bbde0df2c6a774fc52f698e47967410c3ee52beaa0f85a355e4",
+          "bytes": 8476
+        },
+        {
+          "path": "scripts/test-home-focus-scroll-policy.mjs",
+          "git_blob_sha1": "c4e96b4118607c7fc431b87b33e359a24c02e3e6",
+          "sha256": "9a8c8ef73a5f4df044403611863252cbcc05779475538d14e6a435ac5b56671c",
+          "bytes": 4371
+        },
+        {
+          "path": "js/ui/screens/settings/settingsScreenHelpers-10-create-default-expanded-state.js",
+          "git_blob_sha1": "ecfc6d4e1d41acd8e4dd8e05deb655abd9fb33c6",
+          "sha256": "040fd037de7e486325188c9051d797f4da227aac2f4b35c7d8528357c5ce4bf1",
+          "bytes": 6590
+        }
+      ]
+    }
+  ],
+  "bundled_webos_lens_snapshot": [
+    {
+      "path": "research/arena-handoff/offline-lab/cli/evidence_tools.py",
+      "git_blob_sha1": "eded286e7fe860e400d8d186da65f6bab47fbccf",
+      "sha256": "bc2c637ace6dc46b85a2285f2db686d9faa803ea2016f6421bc5ab140303603a",
+      "matches_verified_webos_lens_tree": true
+    },
+    {
+      "path": "research/arena-handoff/offline-lab/cli/correlate.py",
+      "git_blob_sha1": "b460531d116fb9bbba95c93c33cebf2b47729757",
+      "sha256": "c46840b50645730dd65a708ee7c9847731ea90502f5766e5fae05e5afccae2bf",
+      "matches_verified_webos_lens_tree": true
+    },
+    {
+      "path": "research/arena-handoff/references/lens-evidence.schema.json",
+      "git_blob_sha1": "aa3867a1be2195fd9c2fda92786b0ffc6cb6e180",
+      "sha256": "c312154e55a8252b877a9df267ccb78be36a2e78662b3fc0667a323938e1ed3c",
+      "matches_verified_webos_lens_tree": true
+    }
+  ],
+  "caveat": "Bundled snapshot integrity is separate from upstream origin proof. evidence_tools exporter agent SHA is checkout provenance, not lens origin."
+}

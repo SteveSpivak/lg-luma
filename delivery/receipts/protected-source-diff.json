@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "protected-source-diff",
+  "evidence_class": "OBSERVED",
+  "caveat": "Native/protected paths unchanged against base.",
+  "command_argv": [],
+  "exit_code": 0,
+  "status": null,
+  "started_utc": "2026-11-02T15:47:23.315041+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "db6224907616332a679b90e60368b210018be451d10d45ab374a6a922bdb946e"
+}

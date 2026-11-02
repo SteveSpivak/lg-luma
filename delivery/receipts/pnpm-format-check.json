@@ -1,0 +1,17 @@
+{
+  "schema": "luma-sanitized-receipt/1",
+  "label": "pnpm-format-check",
+  "evidence_class": "BLOCKED",
+  "caveat": "Command unavailable; no formatting check ran.",
+  "command_argv": [],
+  "exit_code": 127,
+  "status": null,
+  "started_utc": "2026-11-02T14:06:26.345732+00:00",
+  "duration_ms": null,
+  "stdout_sha256": null,
+  "stdout_bytes": null,
+  "stderr_sha256": null,
+  "stderr_bytes": null,
+  "head_sha": null,
+  "raw_receipt_sha256": "1be8638cda27e112c2768cfdaaf12fab973a793c27e313ec02727771be12d21b"
+}

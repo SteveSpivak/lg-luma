@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "device-preflight.schema.json",
+  "title": "device-preflight",
+  "description": "tv-doctor preflight output envelope. Read-only evaluation of an LG webOS TV observation. UNKNOWN values are first-class and fail closed.",
+  "type": "object",
+  "required": ["schema", "generated_at", "mode", "device_identity", "firmware_identity", "connection_capabilities", "recovery_readiness", "protected_functions", "forbidden_ops", "blockers", "verdict"],
+  "properties": {
+    "schema": {"const": "device-preflight/1"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "mode": {"enum": ["offline-fixture", "live-readonly"]},
+    "input_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "device_identity": {
+      "type": "object",
+      "required": ["model_name", "status"],
+      "properties": {
+        "model_name": {"type": ["string", "null"]},
+        "status": {"$ref": "#/definitions/tristate"}
+      }
+    },
+    "firmware_identity": {
+      "type": "object",
+      "required": ["webos_version", "supported", "status"],
+      "properties": {
+        "webos_version": {"type": ["string", "null"]},
+        "supported": {"type": ["boolean", "null"], "description": "null => UNKNOWN (never assume supportability)"},
+        "status": {"$ref": "#/definitions/tristate"}
+      }
+    },
+    "connection_capabilities": {
+      "type": "object",
+      "required": ["reachable", "ssh22", "devmode9922", "status"],
+      "properties": {
+        "reachable": {"type": ["boolean", "null"]},
+        "ssh22": {"type": ["boolean", "null"]},
+        "devmode9922": {"type": ["boolean", "null"], "description": "Developer Mode port; documented OFFLINE on the owner TV (README) — absence is not a blocker"},
+        "status": {"$ref": "#/definitions/tristate"}
+      }
+    },
+    "recovery_readiness": {
+      "type": "object",
+      "required": ["native_recovery_available", "hbc_present", "known_good_ipk_cached", "home_owner_conflict", "verified", "status"],
+      "properties": {
+        "native_recovery_available": {"type": ["boolean", "null"], "description": "independent of Home and LAN; NEVER assumed"},
+        "hbc_present": {"type": ["boolean", "null"]},
+        "known_good_ipk_cached": {"type": ["boolean", "null"]},
+        "home_owner_conflict": {"type": ["boolean", "null"]},
+        "verified": {"type": "boolean", "description": "true ONLY if every recovery input is true/false-verified and no protected function is UNKNOWN"},
+        "status": {"$ref": "#/definitions/tristate"}
+      }
+    },
+    "protected_functions": {
+      "type": "object",
+      "description": "key = feature name from contracts/feature-dependencies.json protected_functions.list; value = tristate",
+      "additionalProperties": {"$ref": "#/definitions/tristate"}
+    },
+    "forbidden_ops": {
+      "type": "object",
+      "required": ["requested", "refused", "executed"],
+      "properties": {
+        "requested": {"type": "array", "items": {"type": "string"}},
+        "refused": {"type": "array", "items": {"type": "string"}},
+        "executed": {"type": "array", "items": {"type": "string"}, "description": "MUST be empty for anything not on the read-only allowlist; fail closed"}
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "severity", "detail"],
+        "properties": {
+          "code": {"type": "string"},
+          "severity": {"enum": ["info", "warn", "blocker"]},
+          "detail": {"type": "string"},
+          "field": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "verdict": {"enum": ["READY", "READY-WITH-WARNINGS", "NOT-READY", "REFUSED"]}
+  },
+  "definitions": {
+    "tristate": {"enum": ["PROVEN", "OBSERVED", "INFERRED", "UNKNOWN"]}
+  }
+}

@@ -1,6 +1,6 @@
 # Luma audit follow-up handoff
 
-**Base:** `e5608cd053be5376a54a806129a332952dfabcef`. **Updated handoff:** `2a40c7bb3af080981653f975b5c1e983e4f78ef5`. **Audit start HEAD:** `b94cea3b43560e4bda595bc13d88d658a532331f`. Branch: `arena/0bee657b-lg-luma` only. Implementation commit: `47c166c70a6acae9f4ee3fd92cec5fc2098bdde1`. The dedicated branch was pushed and remote-verified at `921d92fb26e4defe0f5e5c3a1b114f2151822908`; no merge was performed. Native desktop validation is prepared in `NATIVE-VALIDATION.md` and currently BLOCKED by missing tools.
+**Base:** `e5608cd053be5376a54a806129a332952dfabcef`. **Updated handoff:** `2a40c7bb3af080981653f975b5c1e983e4f78ef5`. **Audit start HEAD:** `b94cea3b43560e4bda595bc13d88d658a532331f`. Branch: `arena/0bee657b-lg-luma` only. Implementation commit: `47c166c70a6acae9f4ee3fd92cec5fc2098bdde1`. The dedicated branch was pushed and remote-verified at `921d92fb26e4defe0f5e5c3a1b114f2151822908`; no merge was performed. Native validation prep commit: `bb0c2e4bacc232cde50c9c6e88dbc09abe56ddcf`. Native desktop validation is prepared in `NATIVE-VALIDATION.md` and currently BLOCKED by missing tools.
 
 ## Current verdict
 

@@ -50,6 +50,8 @@ LABELS = {
  "dedicated-branch-push":("OBSERVED","Pushed only arena/0bee657b-lg-luma; no main push or merge."),
  "remote-branch-verify":("OBSERVED","Remote dedicated branch SHA verified after push."),
  "native-preflight":("BLOCKED","Read-only native desktop preflight; required tools/inputs missing. No installs or native tests."),
+ "dedicated-branch-push-final":("OBSERVED","Pushed only dedicated branch after native-validation prep; no main push or merge."),
+ "remote-branch-verify-final":("OBSERVED","Final remote dedicated branch SHA verified after prep push."),
 }
 RAW_NAMES={"pnpm-test":"gate-pnpm_test","pnpm-check":"gate-pnpm_check","pnpm-format-check":"gate-pnpm_format_check","cargo-test":"gate-cargo_test_--locked_--workspace_--all-features"}
 

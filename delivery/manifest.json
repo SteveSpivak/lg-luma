@@ -2,8 +2,8 @@
   "schema": "luma-audit-delivery/2",
   "base_sha": "e5608cd053be5376a54a806129a332952dfabcef",
   "handoff_sha": "2a40c7bb3af080981653f975b5c1e983e4f78ef5",
-  "checkout_head_sha_at_generation": "921d92fb26e4defe0f5e5c3a1b114f2151822908",
-  "implementation_commit_sha": null,
+  "checkout_head_sha_at_generation": "bb0c2e4bacc232cde50c9c6e88dbc09abe56ddcf",
+  "implementation_commit_sha": "bb0c2e4bacc232cde50c9c6e88dbc09abe56ddcf",
   "commit_semantics": "implementation_commit_sha identifies the commit containing follow-up audit/tooling and the unapplied candidate; a subsequent manifest-recording commit may be HEAD.",
   "candidate_status": "GIT_INTEGRITY_VERIFIED_UNAPPLIED_NATIVE_BLOCKED",
   "native_source_unchanged": true,
@@ -405,8 +405,8 @@
       "bytes": 5543
     },
     "delivery/HANDOFF.md": {
-      "sha256": "22d71f0af0aa70d58d75987168020d7ad04064d2783920d7f7a67fc1f8fdcaba",
-      "bytes": 3284
+      "sha256": "6472ab1bd4919174006056ba2a7c9593812fc55ce833e99c7aceb33abc9e0482",
+      "bytes": 3359
     },
     "delivery/NATIVE-VALIDATION.md": {
       "sha256": "e242b52c0f27dac0bf4b76bde75a77c591400743f5d8e21ebd1865b3f3791d61",
@@ -745,8 +745,8 @@
       "bytes": 8785
     },
     "research/scripts/collect_receipts.py": {
-      "sha256": "baeb35785b077e660c0250b03fa03a9c450740aaa44ea0415e4312cb94934850",
-      "bytes": 7220
+      "sha256": "0e471d0d3b29f7fc1460d3cd74edd50f16cd18fd1abd9bf232aca1da60b2a988",
+      "bytes": 7455
     },
     "research/scripts/collect_reference_provenance.py": {
       "sha256": "e4d3ebd24e8dc17bdf0f3c75acdd5ae39f538a033679b04c34559956ea6cf4de",

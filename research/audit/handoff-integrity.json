@@ -1,109 +1,265 @@
 {
-  "schema": "luma-handoff-integrity/1",
-  "commit_sha": "0aa7bd6ac099fc457179debbf749f0227c714158",
+  "schema": "luma-handoff-integrity/2",
+  "commit_sha": "2a40c7bb3af080981653f975b5c1e983e4f78ef5",
+  "tree_sha": "dbe46438e237818787375b3eb1a909a8be345dc1",
+  "verified_ref": "refs/remotes/origin/arena/luma-research-handoff-20261102",
+  "file_count": 18,
   "all_match": true,
+  "mismatches": [],
+  "untracked_extra_files": [],
   "files": [
     {
       "path": "research/arena-handoff/AGENT_ASSIGNMENT.md",
-      "sha256": "65cf3f9aad2d08a9c03774aed42a24ac42ebcf60ff093c85d9513acedd60b329",
-      "git_blob_sha1": "fa8b181db923f9a88f8ceb1b654f0f45794f2d1f",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "65cf3f9aad2d08a9c03774aed42a24ac42ebcf60ff093c85d9513acedd60b329",
+        "git_blob_sha1": "fa8b181db923f9a88f8ceb1b654f0f45794f2d1f",
+        "bytes": 5519
+      },
+      "actual": {
+        "sha256": "65cf3f9aad2d08a9c03774aed42a24ac42ebcf60ff093c85d9513acedd60b329",
+        "git_blob_sha1": "fa8b181db923f9a88f8ceb1b654f0f45794f2d1f",
+        "bytes": 5519
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/OFFLINE-TOOLS.md",
-      "sha256": "86de35ced99deecf44520d311350e98186a30631bc00330866b63936168a9836",
-      "git_blob_sha1": "4d2019613b51e2bdd6e37f5a7a6d66824ef83153",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "86de35ced99deecf44520d311350e98186a30631bc00330866b63936168a9836",
+        "git_blob_sha1": "4d2019613b51e2bdd6e37f5a7a6d66824ef83153",
+        "bytes": 854
+      },
+      "actual": {
+        "sha256": "86de35ced99deecf44520d311350e98186a30631bc00330866b63936168a9836",
+        "git_blob_sha1": "4d2019613b51e2bdd6e37f5a7a6d66824ef83153",
+        "bytes": 854
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/REFERENCES-README.md",
-      "sha256": "3af05f6be21ced6386d618c40c304f9eca7e9d5ebfcfbe5ab831fff870ac2a3b",
-      "git_blob_sha1": "b2e87ba309edd1925053dfb4cceaddad0cd40b5a",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "3af05f6be21ced6386d618c40c304f9eca7e9d5ebfcfbe5ab831fff870ac2a3b",
+        "git_blob_sha1": "b2e87ba309edd1925053dfb4cceaddad0cd40b5a",
+        "bytes": 3191
+      },
+      "actual": {
+        "sha256": "3af05f6be21ced6386d618c40c304f9eca7e9d5ebfcfbe5ab831fff870ac2a3b",
+        "git_blob_sha1": "b2e87ba309edd1925053dfb4cceaddad0cd40b5a",
+        "bytes": 3191
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/contracts/reference-manifest.json",
-      "sha256": "bb959d07e6444cc91b729d0bfc559d953e7fb36d52a032cda66c6c8d3ed46595",
-      "git_blob_sha1": "b0f15b8e2985c86caf9ec46180b6b7b25ae3d815",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "bb959d07e6444cc91b729d0bfc559d953e7fb36d52a032cda66c6c8d3ed46595",
+        "git_blob_sha1": "b0f15b8e2985c86caf9ec46180b6b7b25ae3d815",
+        "bytes": 1613
+      },
+      "actual": {
+        "sha256": "bb959d07e6444cc91b729d0bfc559d953e7fb36d52a032cda66c6c8d3ed46595",
+        "git_blob_sha1": "b0f15b8e2985c86caf9ec46180b6b7b25ae3d815",
+        "bytes": 1613
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/docs/TRANSFER-PLAN.md",
-      "sha256": "9aa3b1cb8815d0523fd94a047ac5708225736777360ed39900c78b8dde7f082b",
-      "git_blob_sha1": "c0ba8ed8bc6f4bce4ba3a17c3cf3a799620dc3b0",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "9aa3b1cb8815d0523fd94a047ac5708225736777360ed39900c78b8dde7f082b",
+        "git_blob_sha1": "c0ba8ed8bc6f4bce4ba3a17c3cf3a799620dc3b0",
+        "bytes": 2167
+      },
+      "actual": {
+        "sha256": "9aa3b1cb8815d0523fd94a047ac5708225736777360ed39900c78b8dde7f082b",
+        "git_blob_sha1": "c0ba8ed8bc6f4bce4ba3a17c3cf3a799620dc3b0",
+        "bytes": 2167
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/offline-lab/cli/correlate.py",
-      "sha256": "c46840b50645730dd65a708ee7c9847731ea90502f5766e5fae05e5afccae2bf",
-      "git_blob_sha1": "b460531d116fb9bbba95c93c33cebf2b47729757",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "c46840b50645730dd65a708ee7c9847731ea90502f5766e5fae05e5afccae2bf",
+        "git_blob_sha1": "b460531d116fb9bbba95c93c33cebf2b47729757",
+        "bytes": 1252
+      },
+      "actual": {
+        "sha256": "c46840b50645730dd65a708ee7c9847731ea90502f5766e5fae05e5afccae2bf",
+        "git_blob_sha1": "b460531d116fb9bbba95c93c33cebf2b47729757",
+        "bytes": 1252
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/offline-lab/cli/evidence_tools.py",
-      "sha256": "bc2c637ace6dc46b85a2285f2db686d9faa803ea2016f6421bc5ab140303603a",
-      "git_blob_sha1": "eded286e7fe860e400d8d186da65f6bab47fbccf",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "bc2c637ace6dc46b85a2285f2db686d9faa803ea2016f6421bc5ab140303603a",
+        "git_blob_sha1": "eded286e7fe860e400d8d186da65f6bab47fbccf",
+        "bytes": 13971
+      },
+      "actual": {
+        "sha256": "bc2c637ace6dc46b85a2285f2db686d9faa803ea2016f6421bc5ab140303603a",
+        "git_blob_sha1": "eded286e7fe860e400d8d186da65f6bab47fbccf",
+        "bytes": 13971
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/offline-lab/lab/checks/experiment-stats.test.mjs",
-      "sha256": "ec31db56407bef10cf9b7cf0a18076a15412dccf432896b874a9394c423101c9",
-      "git_blob_sha1": "d4e1e40a2e9144a4c7f4d6529920d1a8142de1df",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "ec31db56407bef10cf9b7cf0a18076a15412dccf432896b874a9394c423101c9",
+        "git_blob_sha1": "d4e1e40a2e9144a4c7f4d6529920d1a8142de1df",
+        "bytes": 13606
+      },
+      "actual": {
+        "sha256": "ec31db56407bef10cf9b7cf0a18076a15412dccf432896b874a9394c423101c9",
+        "git_blob_sha1": "d4e1e40a2e9144a4c7f4d6529920d1a8142de1df",
+        "bytes": 13606
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/offline-lab/lab/perf/stats.mjs",
-      "sha256": "fe8dfa97d9a06f0c982c73713c835a5716e0bc4c7dc003d55d44184b62d99f7b",
-      "git_blob_sha1": "585bdec91336e3c1466be873efd3bdfe20cbd320",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "fe8dfa97d9a06f0c982c73713c835a5716e0bc4c7dc003d55d44184b62d99f7b",
+        "git_blob_sha1": "585bdec91336e3c1466be873efd3bdfe20cbd320",
+        "bytes": 28561
+      },
+      "actual": {
+        "sha256": "fe8dfa97d9a06f0c982c73713c835a5716e0bc4c7dc003d55d44184b62d99f7b",
+        "git_blob_sha1": "585bdec91336e3c1466be873efd3bdfe20cbd320",
+        "bytes": 28561
+      },
+      "matches": true
+    },
+    {
+      "path": "research/arena-handoff/offline-lab/lab/techniques/streamMetrics.mjs",
+      "expected": {
+        "sha256": "bb42e7e0e9630287c3678dd1535f09092ce353b84aec64d095ac45697aacd97e",
+        "git_blob_sha1": "e95e1b66ff8a25b7f6003079097e6e2f9bddb82e",
+        "bytes": 3550
+      },
+      "actual": {
+        "sha256": "bb42e7e0e9630287c3678dd1535f09092ce353b84aec64d095ac45697aacd97e",
+        "git_blob_sha1": "e95e1b66ff8a25b7f6003079097e6e2f9bddb82e",
+        "bytes": 3550
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/references/firmware-lab-readme.md",
-      "sha256": "0cd9c08d981324a9dad2c884b2f8992ddaf6e73875c3e587b05da1a7a30abb15",
-      "git_blob_sha1": "168d8d4f9663a61e336949859f75c8b94be831b4",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "0cd9c08d981324a9dad2c884b2f8992ddaf6e73875c3e587b05da1a7a30abb15",
+        "git_blob_sha1": "168d8d4f9663a61e336949859f75c8b94be831b4",
+        "bytes": 2891
+      },
+      "actual": {
+        "sha256": "0cd9c08d981324a9dad2c884b2f8992ddaf6e73875c3e587b05da1a7a30abb15",
+        "git_blob_sha1": "168d8d4f9663a61e336949859f75c8b94be831b4",
+        "bytes": 2891
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/references/lens-evidence.schema.json",
-      "sha256": "c312154e55a8252b877a9df267ccb78be36a2e78662b3fc0667a323938e1ed3c",
-      "git_blob_sha1": "aa3867a1be2195fd9c2fda92786b0ffc6cb6e180",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "c312154e55a8252b877a9df267ccb78be36a2e78662b3fc0667a323938e1ed3c",
+        "git_blob_sha1": "aa3867a1be2195fd9c2fda92786b0ffc6cb6e180",
+        "bytes": 3340
+      },
+      "actual": {
+        "sha256": "c312154e55a8252b877a9df267ccb78be36a2e78662b3fc0667a323938e1ed3c",
+        "git_blob_sha1": "aa3867a1be2195fd9c2fda92786b0ffc6cb6e180",
+        "bytes": 3340
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/references/lg-device-preflight.schema.json",
-      "sha256": "223e6ffb147fb2fed264d283c2c7c62b57b6424da9b479eee6d5316eb16c9d3a",
-      "git_blob_sha1": "0a5116ae81d7aab8ac1bdf1db7cfee0d78ba5a32",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "223e6ffb147fb2fed264d283c2c7c62b57b6424da9b479eee6d5316eb16c9d3a",
+        "git_blob_sha1": "0a5116ae81d7aab8ac1bdf1db7cfee0d78ba5a32",
+        "bytes": 3829
+      },
+      "actual": {
+        "sha256": "223e6ffb147fb2fed264d283c2c7c62b57b6424da9b479eee6d5316eb16c9d3a",
+        "git_blob_sha1": "0a5116ae81d7aab8ac1bdf1db7cfee0d78ba5a32",
+        "bytes": 3829
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/references/lg-feature-dependencies.json",
-      "sha256": "35acfa5f191eae76bd6851c7d031c13975479944d9ad02b52e913ed0316622d5",
-      "git_blob_sha1": "66903c51e476867a5bbeb029f9561c60eef60e04",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "35acfa5f191eae76bd6851c7d031c13975479944d9ad02b52e913ed0316622d5",
+        "git_blob_sha1": "66903c51e476867a5bbeb029f9561c60eef60e04",
+        "bytes": 9122
+      },
+      "actual": {
+        "sha256": "35acfa5f191eae76bd6851c7d031c13975479944d9ad02b52e913ed0316622d5",
+        "git_blob_sha1": "66903c51e476867a5bbeb029f9561c60eef60e04",
+        "bytes": 9122
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/references/nuvio-known-fail-signatures.json",
-      "sha256": "5e40e53e150b7934f3f1157c40ed0fc84abceae3a74b86109eafad4654060f38",
-      "git_blob_sha1": "1c1dd0a9adbc6a97d67a8e805d9f41ff47dbb4fe",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "5e40e53e150b7934f3f1157c40ed0fc84abceae3a74b86109eafad4654060f38",
+        "git_blob_sha1": "1c1dd0a9adbc6a97d67a8e805d9f41ff47dbb4fe",
+        "bytes": 618
+      },
+      "actual": {
+        "sha256": "5e40e53e150b7934f3f1157c40ed0fc84abceae3a74b86109eafad4654060f38",
+        "git_blob_sha1": "1c1dd0a9adbc6a97d67a8e805d9f41ff47dbb4fe",
+        "bytes": 618
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/references/nuvio-perf-stats.mjs",
-      "sha256": "fe8dfa97d9a06f0c982c73713c835a5716e0bc4c7dc003d55d44184b62d99f7b",
-      "git_blob_sha1": "585bdec91336e3c1466be873efd3bdfe20cbd320",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "fe8dfa97d9a06f0c982c73713c835a5716e0bc4c7dc003d55d44184b62d99f7b",
+        "git_blob_sha1": "585bdec91336e3c1466be873efd3bdfe20cbd320",
+        "bytes": 28561
+      },
+      "actual": {
+        "sha256": "fe8dfa97d9a06f0c982c73713c835a5716e0bc4c7dc003d55d44184b62d99f7b",
+        "git_blob_sha1": "585bdec91336e3c1466be873efd3bdfe20cbd320",
+        "bytes": 28561
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/scripts/collect-references.sh",
-      "sha256": "c7730bfea59cf6d03d64084cf3ed610bf4c67b5e61c36e862b1f370d44590816",
-      "git_blob_sha1": "c476c3e774a857c1d1f9af8d1d36a234d2763b7a",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "c7730bfea59cf6d03d64084cf3ed610bf4c67b5e61c36e862b1f370d44590816",
+        "git_blob_sha1": "c476c3e774a857c1d1f9af8d1d36a234d2763b7a",
+        "bytes": 997
+      },
+      "actual": {
+        "sha256": "c7730bfea59cf6d03d64084cf3ed610bf4c67b5e61c36e862b1f370d44590816",
+        "git_blob_sha1": "c476c3e774a857c1d1f9af8d1d36a234d2763b7a",
+        "bytes": 997
+      },
+      "matches": true
     },
     {
       "path": "research/arena-handoff/scripts/verify-offline.sh",
-      "sha256": "2d81129950304d0da92b84ac51422474b64101415a634bc9cfaec4a693d884e6",
-      "git_blob_sha1": "19c788cad78550b2ae7feb154023cc236e14554b",
-      "matches_handoff": true
+      "expected": {
+        "sha256": "2d81129950304d0da92b84ac51422474b64101415a634bc9cfaec4a693d884e6",
+        "git_blob_sha1": "19c788cad78550b2ae7feb154023cc236e14554b",
+        "bytes": 1163
+      },
+      "actual": {
+        "sha256": "2d81129950304d0da92b84ac51422474b64101415a634bc9cfaec4a693d884e6",
+        "git_blob_sha1": "19c788cad78550b2ae7feb154023cc236e14554b",
+        "bytes": 1163
+      },
+      "matches": true
     }
-  ]
+  ],
+  "scope": "Local Git blob identity only; not upstream-origin or execution proof."
 }

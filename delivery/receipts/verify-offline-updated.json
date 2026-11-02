@@ -1,0 +1,23 @@
+{
+  "schema": "luma-sanitized-receipt/2",
+  "label": "verify-offline-updated",
+  "evidence_class": "MEASURED_HOST",
+  "caveat": "Updated verifier exited 0; 11/11 Node assertions and Python/JSON parses passed. Native/TV NOT_RUN.",
+  "command_argv": [
+    "bash",
+    "research/arena-handoff/scripts/verify-offline.sh"
+  ],
+  "exit_code": 0,
+  "status": "PASS",
+  "started_utc": "2026-11-02T16:48:25.713342+00:00",
+  "finished_utc": "2026-11-02T16:48:25.932544+00:00",
+  "duration_ms": 219.199,
+  "timed_out": false,
+  "stdout_sha256": "ff3f210429db00f980f215266d8a842b756ac53bfe1dfda9f9c94fdfa71ddba3",
+  "stdout_bytes": 2650,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "b94cea3b43560e4bda595bc13d88d658a532331f",
+  "raw_receipt_sha256": "f32ce108824df7fea10350c825c6ac3e4598340bdac95a0649b88e823c2ccf4a",
+  "evidence_scope": "host command only; not physical-TV evidence"
+}

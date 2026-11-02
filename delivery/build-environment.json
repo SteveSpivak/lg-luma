@@ -1,0 +1,530 @@
+{
+  "schema": "luma-build-environment/1",
+  "base_sha": "e5608cd053be5376a54a806129a332952dfabcef",
+  "automatic_install": false,
+  "network_requests": 0,
+  "native_builds": 0,
+  "device_commands": 0,
+  "source_hashes": {
+    "Cargo.toml": "e91e20f328b64e5e7a46ee077d411367e040f2cf4262ffa49bae7810f7d8d7ce",
+    "Cargo.lock": "fbf07183c160f269b15569a7598b531c60692859b01b40cbe9e4f832f9935fd9",
+    "package.json": "368c7d56fe8592adb11b0293c0b24fc03fb2efc8a929e2aa2dc355efc1c8401c",
+    "pnpm-lock.yaml": "14ac7df97ce6b63e16d9517209d92ec81971d8a3f5aa6a42fabeaa5c2efc8f3a",
+    "pnpm-workspace.yaml": "249db79dcbc925f10091e2c6d9fb22ce8d2bd401bcd58b5674b7d625676667c9",
+    "flake.nix": "5fa4496730c1f20005c9c7a0cc5fb0c1ea3994636378b7a2eb5e6b3ffb7a3be1",
+    "flake.lock": "e78c1c9d3486bbb3c7c132bd78e049b9258dbf7cefdcf1d938a3ad7811806d09",
+    ".github/workflows/ci.yml": "4063b21569a2bcd4699ea99165d36adc297d09ecb1649fc2889ba22424dd30e4",
+    "tools/build-webos.sh": "475cb8a0b9470cf82ae58b0416add491ed4977654d7f018d101fb9be23c417a1",
+    "tools/setup-webos-sdk.mjs": "6e8185170f2bf52c13045d95ce8272eb9d7e61f3c5357433236aa903a33540c3",
+    "tools/webos-runtime.mjs": "d2d76855fd06a0140a0c9f49312a8a4502cb06a1e6ea3621524db53eea312717"
+  },
+  "reference": {
+    "preferred": "Locked Nix flake; exact system package resolution requires nix evaluation, not performed here.",
+    "ci": "ubuntu-24.04; CI-equivalent apt path is not version-pinned.",
+    "rust": {
+      "ci_and_flake": "1.93.0",
+      "msrv": "1.88",
+      "components": [
+        "rustfmt",
+        "clippy"
+      ],
+      "targets": [
+        "armv7-unknown-linux-gnueabi"
+      ]
+    },
+    "node": {
+      "ci_major": "24",
+      "flake_attribute": "nodejs_24",
+      "package_engine": ">=22",
+      "exact_version": "UNRESOLVED_WITHOUT_NIX_EVALUATION"
+    },
+    "pnpm": "pnpm@10.34.5",
+    "flake_inputs": {
+      "nixpkgs": {
+        "rev": "5adc50831c259f87faeb09ddf930d43597197473",
+        "narHash": "sha256-Q/8KLB6jNfpaUN1HAedE/u/Et9feE/zYSsutBLKrCFk="
+      },
+      "rust-overlay": {
+        "rev": "83dd732f2428827f35d997deae108a2ced5125f4",
+        "narHash": "sha256-mrM+zFDRO1pI85t2SEq5R739BIq7Nv5XkFtVZK9nkZM="
+      }
+    },
+    "nix_packages": [
+      "nodejs_24",
+      "pnpm_10",
+      "rust-bin.stable.1.93.0",
+      "pkg-config",
+      "SDL2",
+      "woff2",
+      "python3.withPackages(fonttools)",
+      "cmake",
+      "git",
+      "libGL (Linux)",
+      "mesa (Linux)",
+      "xvfb-run (Linux)",
+      "util-linux (Linux)",
+      "flock (Darwin)"
+    ],
+    "ci_apt_prepare": [
+      "libsdl2-dev",
+      "pkg-config",
+      "woff2",
+      "python3-fonttools",
+      "libgl1-mesa-dri",
+      "xvfb",
+      "xauth"
+    ],
+    "ci_apt_smoke": [
+      "libsdl2-2.0-0",
+      "libgl1-mesa-dri",
+      "xvfb",
+      "xauth"
+    ],
+    "ci_apt_cross": [
+      "pkg-config"
+    ],
+    "ci_actions": [
+      "Swatinem/rust-cache@v2",
+      "actions/checkout@v7",
+      "actions/download-artifact@v8",
+      "actions/github-script@v8",
+      "actions/setup-node@v7",
+      "actions/upload-artifact@v7",
+      "dtolnay/rust-toolchain@1.93.0",
+      "pnpm/action-setup@v6"
+    ]
+  },
+  "cargo": {
+    "lockfile_version": 4,
+    "locked_package_count": 116,
+    "direct_dependencies": [
+      {
+        "manifest": "Cargo.toml",
+        "name": "luma-tv-helper",
+        "spec": {
+          "path": "tv-helper"
+        },
+        "locked_version": "0.1.0"
+      },
+      {
+        "manifest": "Cargo.toml",
+        "name": "getrandom",
+        "spec": "0.2",
+        "locked_version": "0.2.17"
+      },
+      {
+        "manifest": "Cargo.toml",
+        "name": "gl",
+        "spec": "0.14",
+        "locked_version": "0.14.0"
+      },
+      {
+        "manifest": "Cargo.toml",
+        "name": "if-addrs",
+        "spec": "0.14",
+        "locked_version": "0.14.0"
+      },
+      {
+        "manifest": "Cargo.toml",
+        "name": "image",
+        "spec": {
+          "version": "0.25",
+          "default-features": false,
+          "features": [
+            "png",
+            "jpeg",
+            "webp"
+          ]
+        },
+        "locked_version": "0.25.10"
+      },
+      {
+        "manifest": "Cargo.toml",
+        "name": "libc",
+        "spec": {
+          "version": "0.2",
+          "optional": true
+        },
+        "locked_version": "0.2.191"
+      },
+      {
+        "manifest": "Cargo.toml",
+        "name": "luma-vector-geometry",
+        "spec": {
+          "path": "vector-geometry"
+        },
+        "locked_version": "0.1.0"
+      },
+      {
+        "manifest": "Cargo.toml",
+        "name": "owned_ttf_parser",
+        "spec": "0.25",
+        "locked_version": "0.25.1"
+      },
+      {
+        "manifest": "Cargo.toml",
+        "name": "qrcodegen",
+        "spec": "1.8",
+        "locked_version": "1.8.0"
+      },
+      {
+        "manifest": "Cargo.toml",
+        "name": "ring",
+        "spec": "0.17",
+        "locked_version": "0.17.14"
+      },
+      {
+        "manifest": "Cargo.toml",
+        "name": "sdl2",
+        "spec": {
+          "version": "0.38",
+          "features": [
+            "use-pkgconfig"
+          ]
+        },
+        "locked_version": "0.38.0"
+      },
+      {
+        "manifest": "Cargo.toml",
+        "name": "serde",
+        "spec": {
+          "version": "1",
+          "features": [
+            "derive"
+          ]
+        },
+        "locked_version": "1.0.229"
+      },
+      {
+        "manifest": "Cargo.toml",
+        "name": "serde_json",
+        "spec": "1",
+        "locked_version": "1.0.154"
+      },
+      {
+        "manifest": "Cargo.toml",
+        "name": "time",
+        "spec": {
+          "version": "0.3",
+          "features": [
+            "local-offset",
+            "formatting",
+            "parsing"
+          ]
+        },
+        "locked_version": "0.3.55"
+      },
+      {
+        "manifest": "Cargo.toml",
+        "name": "ureq",
+        "spec": {
+          "version": "3.4",
+          "default-features": false,
+          "features": [
+            "rustls"
+          ]
+        },
+        "locked_version": "3.5.0"
+      },
+      {
+        "manifest": "vector-geometry/Cargo.toml",
+        "name": "lyon_tessellation",
+        "spec": "1.0",
+        "locked_version": "1.0.23"
+      },
+      {
+        "manifest": "tools/vector-assets/Cargo.toml",
+        "name": "luma-vector-geometry",
+        "spec": {
+          "path": "../../vector-geometry"
+        },
+        "locked_version": "0.1.0"
+      },
+      {
+        "manifest": "tools/vector-assets/Cargo.toml",
+        "name": "serde",
+        "spec": {
+          "version": "1",
+          "features": [
+            "derive"
+          ]
+        },
+        "locked_version": "1.0.229"
+      },
+      {
+        "manifest": "tools/vector-assets/Cargo.toml",
+        "name": "serde_json",
+        "spec": "1",
+        "locked_version": "1.0.154"
+      },
+      {
+        "manifest": "tools/vector-assets/Cargo.toml",
+        "name": "usvg",
+        "spec": {
+          "version": "0.45",
+          "default-features": false
+        },
+        "locked_version": "0.45.1"
+      },
+      {
+        "manifest": "tv-helper/Cargo.toml",
+        "name": "libc",
+        "spec": {
+          "version": "0.2",
+          "optional": true
+        },
+        "locked_version": "0.2.191"
+      },
+      {
+        "manifest": "tv-helper/Cargo.toml",
+        "name": "serde",
+        "spec": {
+          "version": "1",
+          "features": [
+            "derive"
+          ]
+        },
+        "locked_version": "1.0.229"
+      },
+      {
+        "manifest": "tv-helper/Cargo.toml",
+        "name": "serde_json",
+        "spec": "1",
+        "locked_version": "1.0.154"
+      }
+    ],
+    "workspace_members": [
+      "vector-geometry",
+      "tools/vector-assets",
+      "tv-helper"
+    ],
+    "features": {
+      "default": [],
+      "webos": [
+        "dep:libc",
+        "luma-tv-helper/webos"
+      ]
+    }
+  },
+  "node": {
+    "dev_dependencies": {
+      "@changesets/cli": "3.0.3",
+      "@webos-tools/cli": "3.2.6",
+      "oxfmt": "0.73.0",
+      "oxlint": "1.88.0",
+      "sharp": "0.35.5"
+    },
+    "pnpm_lockfile_version": "9.0",
+    "only_built_dependencies": [
+      "sharp"
+    ],
+    "ignored_built_dependencies": [
+      "@webos-tools/cli",
+      "cpu-features",
+      "ssh2"
+    ]
+  },
+  "webos": {
+    "sdk_urls": [
+      "https://github.com/webosbrew/native-toolchain/releases/download/webos-d7ed7ee.6/arm-webos-linux-gnueabi_sdk-buildroot_darwin-arm64.tar.bz2",
+      "https://github.com/webosbrew/native-toolchain/releases/download/webos-d7ed7ee.6/arm-webos-linux-gnueabi_sdk-buildroot_darwin-x86_64.tar.bz2",
+      "https://github.com/openlgtv/buildroot-nc4/releases/download/webos-b17b4cc/arm-webos-linux-gnueabi_sdk-buildroot.tar.gz",
+      "https://github.com/webosbrew/native-toolchain/releases/download/webos-d7ed7ee.6/arm-webos-linux-gnueabi_sdk-buildroot_linux-aarch64.tar.bz2"
+    ],
+    "sdk_archive_sha256": null,
+    "sdk_archive_checksum_status": "NOT_PINNED_IN_REPOSITORY",
+    "sdl_release": "release-2.30.12-webos.5",
+    "sdl_archive_sha256": "4ad566453d113bdd9ee96878176b97d28d9fa70503a62d83d55a351545abb334",
+    "sdl_library_sha256": "f564f7da624cec47168300d017f3ec822f41b5096f0ce1c96873eecd8614d446",
+    "target": "armv7-unknown-linux-gnueabi",
+    "rustflags": "-C target-cpu=cortex-a9 -C target-feature=-neon,-soft-float",
+    "pkg_config": "isolated PKG_CONFIG_LIBDIR=.build/sdl-webos/pkgconfig; PKG_CONFIG_PATH empty; PKG_CONFIG_SYSROOT_DIR=/"
+  },
+  "fonts": [
+    {
+      "name": "noto-sans-sc.ttf",
+      "expected_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+      "actual_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+      "matches": true
+    },
+    {
+      "name": "noto-sans-kr.ttf",
+      "expected_sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+      "actual_sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+      "matches": true
+    },
+    {
+      "name": "noto-ofl.txt",
+      "expected_sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "actual_sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "matches": true
+    }
+  ],
+  "expected_commands": [
+    {
+      "phase": "enter-reference-shell",
+      "command": "nix develop",
+      "manual": true,
+      "may_fetch_or_build": true,
+      "status": "NOT_RUN"
+    },
+    {
+      "phase": "node-dependencies",
+      "command": "pnpm install --frozen-lockfile",
+      "manual": true,
+      "may_fetch_or_build": true,
+      "status": "NOT_RUN"
+    },
+    {
+      "phase": "format",
+      "command": "pnpm format:check",
+      "manual": true,
+      "status": "BLOCKED_NATIVE_TOOLCHAIN"
+    },
+    {
+      "phase": "lint-version",
+      "command": "pnpm check",
+      "manual": true,
+      "status": "BLOCKED_NATIVE_TOOLCHAIN"
+    },
+    {
+      "phase": "unit-tests",
+      "command": "pnpm test",
+      "manual": true,
+      "status": "BLOCKED_NATIVE_TOOLCHAIN"
+    },
+    {
+      "phase": "assets",
+      "command": "pnpm assets",
+      "manual": true,
+      "status": "BLOCKED_NATIVE_TOOLCHAIN"
+    },
+    {
+      "phase": "desktop-build",
+      "command": "cargo build --locked --package luma --no-default-features",
+      "manual": true,
+      "status": "BLOCKED_NATIVE_TOOLCHAIN"
+    },
+    {
+      "phase": "desktop-smoke",
+      "command": "LIBGL_ALWAYS_SOFTWARE=1 LUMA_SMOKE_SKIP_BUILD=1 xvfb-run -a -s '-screen 0 1920x1080x24' node tests/smoke.mjs",
+      "manual": true,
+      "status": "BLOCKED_NATIVE_TOOLCHAIN"
+    },
+    {
+      "phase": "desktop-smoke",
+      "command": "LIBGL_ALWAYS_SOFTWARE=1 LUMA_SMOKE_SKIP_BUILD=1 xvfb-run -a -s '-screen 0 1920x1080x24' node tests/brands-smoke.mjs",
+      "manual": true,
+      "status": "BLOCKED_NATIVE_TOOLCHAIN"
+    },
+    {
+      "phase": "desktop-smoke",
+      "command": "LIBGL_ALWAYS_SOFTWARE=1 LUMA_SMOKE_SKIP_BUILD=1 xvfb-run -a -s '-screen 0 1920x1080x24' node tests/weather-smoke.mjs",
+      "manual": true,
+      "status": "BLOCKED_NATIVE_TOOLCHAIN"
+    },
+    {
+      "phase": "desktop-smoke",
+      "command": "LIBGL_ALWAYS_SOFTWARE=1 LUMA_SMOKE_SKIP_BUILD=1 xvfb-run -a -s '-screen 0 1920x1080x24' node tests/translations-smoke.mjs",
+      "manual": true,
+      "status": "BLOCKED_NATIVE_TOOLCHAIN"
+    },
+    {
+      "phase": "optional-cross-sdk",
+      "command": "pnpm sdk",
+      "manual": true,
+      "may_fetch_or_build": true,
+      "status": "NOT_RUN"
+    },
+    {
+      "phase": "optional-cross-build",
+      "command": "WEBOS_NDK=\"$PWD/.build/toolchain/arm-webos-linux-gnueabi_sdk-buildroot\" pnpm build",
+      "manual": true,
+      "status": "NOT_RUN"
+    },
+    {
+      "phase": "optional-cross-package",
+      "command": "node tools/package.mjs && node tools/repository.mjs",
+      "manual": true,
+      "status": "NOT_RUN"
+    }
+  ],
+  "do_not_run_without_separate_approval": [
+    "pnpm deploy",
+    "ares-install",
+    "ares-launch",
+    "tv/*.sh on a device",
+    "firmware/DNS/service/compositor mutation"
+  ],
+  "current_host_probe": {
+    "node": {
+      "available": true,
+      "version": "v22.22.3",
+      "exit_code": 0
+    },
+    "npm": {
+      "available": true,
+      "version": "10.9.8",
+      "exit_code": 0
+    },
+    "corepack": {
+      "available": true,
+      "version": "0.34.6",
+      "exit_code": 0
+    },
+    "python3": {
+      "available": true,
+      "version": "Python 3.11.2",
+      "exit_code": 0
+    },
+    "git": {
+      "available": true,
+      "version": "git version 2.39.5",
+      "exit_code": 0
+    },
+    "nix": {
+      "available": false,
+      "version": null
+    },
+    "pnpm": {
+      "available": false,
+      "version": null
+    },
+    "cargo": {
+      "available": false,
+      "version": null
+    },
+    "rustc": {
+      "available": false,
+      "version": null
+    },
+    "pkg-config": {
+      "available": false,
+      "version": null
+    },
+    "sdl2-config": {
+      "available": false,
+      "version": null
+    },
+    "cmake": {
+      "available": false,
+      "version": null
+    },
+    "woff2_decompress": {
+      "available": false,
+      "version": null
+    },
+    "xvfb-run": {
+      "available": false,
+      "version": null
+    }
+  },
+  "reproducibility_gaps": [
+    "CI action refs are major tags, not immutable commit SHAs.",
+    "CI apt packages and setup-node major are not exact version pins.",
+    "Nix derivation resolution was not evaluated; flake input SHAs are pinned.",
+    "webOS SDK archive checksum is not pinned in setup-webos-sdk.mjs.",
+    "Current host Node 22 is not the CI/Nix Node 24 reference.",
+    "Native Rust/Cargo/SDL/pnpm gates remain BLOCKED in this workspace."
+  ]
+}

@@ -1,17 +1,23 @@
 {
-  "schema": "luma-sanitized-receipt/1",
+  "schema": "luma-sanitized-receipt/2",
   "label": "pnpm-check",
   "evidence_class": "BLOCKED",
   "caveat": "Command unavailable; no test bodies ran.",
-  "command_argv": [],
+  "command_argv": [
+    "pnpm",
+    "check"
+  ],
   "exit_code": 127,
-  "status": null,
+  "status": "BLOCKED",
   "started_utc": "2026-11-02T14:06:26.306689+00:00",
-  "duration_ms": null,
-  "stdout_sha256": null,
-  "stdout_bytes": null,
-  "stderr_sha256": null,
-  "stderr_bytes": null,
-  "head_sha": null,
-  "raw_receipt_sha256": "9f5d55c07f959db1f8e62d8fb6b736631ecbfc019733329989369c5cdc5cf40e"
+  "finished_utc": "2026-11-02T14:06:26.307394+00:00",
+  "duration_ms": 0.701,
+  "timed_out": false,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 0,
+  "stderr_sha256": "610c72b75e24a88675597bac63957c2ff2a5d879c0c0bb36395db1f1566261d0",
+  "stderr_bytes": 26,
+  "head_sha": "e5608cd053be5376a54a806129a332952dfabcef",
+  "raw_receipt_sha256": "9f5d55c07f959db1f8e62d8fb6b736631ecbfc019733329989369c5cdc5cf40e",
+  "evidence_scope": "host command only; not physical-TV evidence"
 }

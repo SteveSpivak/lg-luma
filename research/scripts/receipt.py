@@ -55,6 +55,12 @@ def main() -> int:
         except FileNotFoundError:
             exit_code = 127
             stderr.write(f"Command unavailable: {argv[0]}\n".encode())
+        except PermissionError:
+            exit_code = 126
+            stderr.write(f"Command not executable: {argv[0]}\n".encode())
+        except OSError as error:
+            exit_code = 127
+            stderr.write(f"Command unavailable: {argv[0]} ({type(error).__name__})\n".encode())
         except subprocess.TimeoutExpired:
             exit_code = 124
             timed_out = True
@@ -70,7 +76,7 @@ def main() -> int:
         "argv": argv,
         "exit_code": exit_code,
         "timed_out": timed_out,
-        "execution_status": "TIMEOUT" if timed_out else ("BLOCKED" if exit_code == 127 else ("PASS" if exit_code == 0 else "FAIL")),
+        "execution_status": "TIMEOUT" if timed_out else ("BLOCKED" if exit_code in (126, 127) else ("PASS" if exit_code == 0 else "FAIL")),
         "evidence_scope": "host command only; not physical-TV evidence",
         "outputs": {p.name: {"sha256": sha256(p), "bytes": p.stat().st_size} for p in (stdout_path, stderr_path)},
     }

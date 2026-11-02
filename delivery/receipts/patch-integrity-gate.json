@@ -1,0 +1,24 @@
+{
+  "schema": "luma-sanitized-receipt/2",
+  "label": "patch-integrity-gate",
+  "evidence_class": "FAIL",
+  "caveat": "Harness rejected a tar directory member before any apply command ran.",
+  "command_argv": [
+    "python3",
+    "-B",
+    "research/scripts/check_patch_integrity.py"
+  ],
+  "exit_code": 1,
+  "status": "FAIL",
+  "started_utc": "2026-11-02T16:58:40.641331+00:00",
+  "finished_utc": "2026-11-02T16:58:40.706195+00:00",
+  "duration_ms": 64.844,
+  "timed_out": false,
+  "stdout_sha256": "3bc9f0c04e8b124c3f4e64dca61380bec60aa875bba0ca8eea21101a8344eed5",
+  "stdout_bytes": 171,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "b94cea3b43560e4bda595bc13d88d658a532331f",
+  "raw_receipt_sha256": "d53eafb72acd6f630a146b377463e19b15fb3a2fdeac8044eca23a8b2fa76d9a",
+  "evidence_scope": "host command only; not physical-TV evidence"
+}

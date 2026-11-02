@@ -1,0 +1,31 @@
+{
+  "schema": "luma-sanitized-receipt/2",
+  "label": "research-tests-followup",
+  "evidence_class": "MEASURED_HOST",
+  "caveat": "Python research/tooling contracts only; native Rust/SDL and TV NOT_RUN.",
+  "command_argv": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "research/tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "status": "PASS",
+  "started_utc": "2026-11-02T17:05:47.167818+00:00",
+  "finished_utc": "2026-11-02T17:05:47.283080+00:00",
+  "duration_ms": 115.256,
+  "timed_out": false,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 0,
+  "stderr_sha256": "65539dcae355abb8065627c4ddfe0e01fb235ea9f3603156fc12c63c88267d4a",
+  "stderr_bytes": 3175,
+  "head_sha": "b94cea3b43560e4bda595bc13d88d658a532331f",
+  "raw_receipt_sha256": "d8076ddba6d376ccf9db7ea2f89cae19d475b82ba40ca0cef46be2d6f9a10e3c",
+  "evidence_scope": "host command only; not physical-TV evidence"
+}

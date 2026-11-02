@@ -1,0 +1,25 @@
+{
+  "schema": "luma-sanitized-receipt/2",
+  "label": "handoff-update-fetch",
+  "evidence_class": "OBSERVED",
+  "caveat": "Fetched requested updated handoff ref; no merge or checkout.",
+  "command_argv": [
+    "git",
+    "fetch",
+    "origin",
+    "refs/heads/arena/luma-research-handoff-20261102:refs/remotes/origin/arena/luma-research-handoff-20261102"
+  ],
+  "exit_code": 0,
+  "status": "PASS",
+  "started_utc": "2026-11-02T16:44:33.685007+00:00",
+  "finished_utc": "2026-11-02T16:44:34.353204+00:00",
+  "duration_ms": 668.197,
+  "timed_out": false,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 0,
+  "stderr_sha256": "3808e2cc820ac07e28ec03bbbf8ebab46f0f02afbc23cdc9f1daa9bfa2d092da",
+  "stderr_bytes": 149,
+  "head_sha": "b94cea3b43560e4bda595bc13d88d658a532331f",
+  "raw_receipt_sha256": "44396d0a60a0a1c76412176674dd84243afe170c82d472a8be1b6500037afce0",
+  "evidence_scope": "host command only; not physical-TV evidence"
+}

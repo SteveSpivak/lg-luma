@@ -1,17 +1,28 @@
 {
-  "schema": "luma-sanitized-receipt/1",
+  "schema": "luma-sanitized-receipt/2",
   "label": "baseline-node",
   "evidence_class": "MEASURED_HOST",
   "caveat": "Host test run only; pnpm-dependent release case failed.",
-  "command_argv": [],
+  "command_argv": [
+    "node",
+    "--test",
+    "tests/release.test.mjs",
+    "tests/self-update.test.mjs",
+    "tests/home-wrapper.test.mjs",
+    "tests/wallpaper-upload.test.mjs",
+    "tests/tile-editor.test.mjs"
+  ],
   "exit_code": 1,
-  "status": null,
+  "status": "FAIL",
   "started_utc": "2026-11-02T14:06:24.648599+00:00",
-  "duration_ms": null,
-  "stdout_sha256": null,
-  "stdout_bytes": null,
-  "stderr_sha256": null,
-  "stderr_bytes": null,
-  "head_sha": null,
-  "raw_receipt_sha256": "a5aea01c1ce32d6ad1f5730cb3ac0e7b12bbab0b398d8b40501924034e397b65"
+  "finished_utc": "2026-11-02T14:06:26.227885+00:00",
+  "duration_ms": 1579.278,
+  "timed_out": false,
+  "stdout_sha256": "1582dc894ae92a19b7d37c47de35d70f96e132aba1609218108816e040935625",
+  "stdout_bytes": 7312,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "e5608cd053be5376a54a806129a332952dfabcef",
+  "raw_receipt_sha256": "a5aea01c1ce32d6ad1f5730cb3ac0e7b12bbab0b398d8b40501924034e397b65",
+  "evidence_scope": "host command only; not physical-TV evidence"
 }

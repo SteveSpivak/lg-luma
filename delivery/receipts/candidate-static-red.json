@@ -1,17 +1,27 @@
 {
-  "schema": "luma-sanitized-receipt/1",
+  "schema": "luma-sanitized-receipt/2",
   "label": "candidate-static-red",
   "evidence_class": "OBSERVED",
   "caveat": "Intentional red contract before candidate generation.",
-  "command_argv": [],
+  "command_argv": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "research.tests.test_candidate_patch",
+    "-v"
+  ],
   "exit_code": 1,
-  "status": null,
+  "status": "FAIL",
   "started_utc": "2026-11-02T15:10:05.949455+00:00",
-  "duration_ms": null,
-  "stdout_sha256": null,
-  "stdout_bytes": null,
-  "stderr_sha256": null,
-  "stderr_bytes": null,
-  "head_sha": null,
-  "raw_receipt_sha256": "220d9e13cf092b868516a9f92b4e7a739b82f6d6d11522dfcf879dd921e1f67c"
+  "finished_utc": "2026-11-02T15:10:06.064240+00:00",
+  "duration_ms": 114.78,
+  "timed_out": false,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 0,
+  "stderr_sha256": "239277f0294e9602aaee77e1db7ce6960400f8602a634915c9404e5ca98339e3",
+  "stderr_bytes": 1600,
+  "head_sha": "e5608cd053be5376a54a806129a332952dfabcef",
+  "raw_receipt_sha256": "220d9e13cf092b868516a9f92b4e7a739b82f6d6d11522dfcf879dd921e1f67c",
+  "evidence_scope": "host command only; not physical-TV evidence"
 }

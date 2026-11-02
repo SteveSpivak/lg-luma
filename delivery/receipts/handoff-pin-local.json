@@ -1,17 +1,24 @@
 {
-  "schema": "luma-sanitized-receipt/1",
+  "schema": "luma-sanitized-receipt/2",
   "label": "handoff-pin-local",
   "evidence_class": "OBSERVED",
-  "caveat": "Local remote-tracking ref resolves to the previously verified exact handoff SHA; no refetch.",
-  "command_argv": [],
+  "caveat": "Previous handoff pin; retained as history.",
+  "command_argv": [
+    "git",
+    "rev-parse",
+    "refs/remotes/origin/arena/luma-research-handoff-20261102"
+  ],
   "exit_code": 0,
-  "status": null,
+  "status": "PASS",
   "started_utc": "2026-11-02T15:47:23.258130+00:00",
-  "duration_ms": null,
-  "stdout_sha256": null,
-  "stdout_bytes": null,
-  "stderr_sha256": null,
-  "stderr_bytes": null,
-  "head_sha": null,
-  "raw_receipt_sha256": "c61a2c2275d8df9da6b4dc41332c84a16c2778eb3fbf3b090baff7d9e17aefd5"
+  "finished_utc": "2026-11-02T15:47:23.262073+00:00",
+  "duration_ms": 3.922,
+  "timed_out": false,
+  "stdout_sha256": "b88e12a49a663db7d70d574fe161847031ddc5b14e841e19bcf8cc2893c4d870",
+  "stdout_bytes": 41,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "e5608cd053be5376a54a806129a332952dfabcef",
+  "raw_receipt_sha256": "c61a2c2275d8df9da6b4dc41332c84a16c2778eb3fbf3b090baff7d9e17aefd5",
+  "evidence_scope": "host command only; not physical-TV evidence"
 }

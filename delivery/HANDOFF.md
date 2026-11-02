@@ -1,42 +1,34 @@
-# Luma source-backed audit handoff
+# Luma audit follow-up handoff
 
-**Implementation commit:** `b128814081b8e9800d94f4c2c44789a61b742b50` (additive audit/unapplied candidate; final manifest-recording commit may be HEAD). **Base:** `e5608cd053be5376a54a806129a332952dfabcef`. **Verified handoff:** `0aa7bd6ac099fc457179debbf749f0227c714158`. Branch: `arena/0bee657b-lg-luma` only.
+**Base:** `e5608cd053be5376a54a806129a332952dfabcef`. **Updated handoff:** `2a40c7bb3af080981653f975b5c1e983e4f78ef5`. **Audit start HEAD:** `b94cea3b43560e4bda595bc13d88d658a532331f`. Branch: `arena/0bee657b-lg-luma` only. Implementation commit is recorded in `manifest.json`; no push/merge was performed.
 
-## Bottom line
+## Current verdict
 
-- Native source and protected Home/platform paths are unchanged. No TV was contacted; physical evidence is **NOT_RUN**.
-- Luma already owns a coherent Rust/SDL state→scene→renderer architecture, guarded navigation, settings/storage, bounded workers and damage/cache diagnostics. Reuse it; do not import a browser runtime or reference recovery scripts.
-- Real video is **not implemented**. Separate supported-player handoff exists; inline video/media-plane feasibility is BLOCKED pending authorized API/copy/lifecycle evidence.
-- One bounded default-OFF focus-depth candidate is supplied **unapplied**. It is not a compiled or device-validated implementation.
+- Updated handoff verified: **18/18 blobs**, no extras. Offline verifier rerun once: **exit 0**, **11/11 Node assertions**, two Python parses and four JSON parses.
+- Focus-depth patch integrity gate: **PASS**. Forward/reverse check+apply exited 0; reverse-on-baseline, double-apply and stale-context controls exited 1 as expected. Application source stayed byte-identical. Patch remains **unapplied**; native behavior is still BLOCKED.
+- Final Python research/tooling suite: **31/31**, exit 0. This is not native Rust/SDL validation.
+- Manual build-environment specification prepared from Cargo/pnpm/Nix/CI pins. **Nothing installed, downloaded, built or deployed.**
+- Native source/protected paths unchanged. No TV contacted; physical evidence **NOT_RUN**.
 
 ## Read first
 
-1. `manifest.json` — hashes, provenance, actual exits, blocker IDs and evidence classes.
-2. `BLOCKERS.json` — open gates and next actions.
-3. `../research/luma-audit/architecture.md` — ownership map and source anchors.
-4. `../research/luma-audit/capability-ledger.json` — OBSERVED / UNKNOWN / PROPOSED / BLOCKED inventory.
-5. `../research/luma-audit/ux-settings.md`, `rendering-performance.md`, `video-feasibility.md`.
-6. `../research/luma-audit/focus-experiment.md`, `patches/focus-depth.patch`, `rollback.md`.
-7. `../research/luma-audit/device-validation-plan.md` — separate approval gate; currently NOT-READY.
-8. `../research/luma-audit/references.md`, `receipts/index.json` — access/provenance and sanitized raw-receipt hashes.
+1. `SCORECARD.md` — short evidence-backed status and next smallest experiment.
+2. `manifest.json` — exact SHAs, hashes, exits, evidence classes and blocker IDs.
+3. `PATCH-INTEGRITY.md` — historical failure diagnosis and final isolated gate.
+4. `BUILD-ENVIRONMENT.md` / `build-environment.json` — manual reference environment and reproducibility gaps.
+5. `PERFORMANCE-PROPOSALS.md` — wallpaper spikes, vector cache, input/p99 diagnostics, focus candidate, video ordering.
+6. `BLOCKERS.json` — B03/B05 resolved; B01/B02/B04/B06/B07/B08 remain open.
+7. Existing audit: `../research/luma-audit/` (architecture, capability ledger, rendering, UX/settings, video, device plan, references).
 
-## Actual execution summary
+## Tooling accuracy fixes
 
-| Gate | Result | Meaning |
-|---|---:|---|
-| Handoff blob integrity | 17/17 match | Content matches pinned handoff tree |
-| Offline verifier | exit 1 | Python/JSON parse passed; Node stats import missing `streamMetrics.mjs`; assertions did not run |
-| Original named Node baseline | exit 1, 36/37 | Release case could not spawn absent pnpm; not repaired |
-| Supported Node suites | exit 0, 19/19 | Companion pages only |
-| Supported release subset | exit 0, 17/17 | Not the full baseline |
-| Independent synthetic evidence/arithmetic tests | exit 0, 16/16 | Unchanged bundled processor + independent helpers; no device measurement |
-| Candidate static scope/default-off contract | exit 0 | Text contract only |
-| Candidate apply check | exit 1, stopped after two failures | Missing new-file mode header; generator corrected, corrected apply NOT_RUN |
-| Native build/tests | BLOCKED / exit 127 availability | 334 static Rust test attributes indexed, none claimed to pass |
-| Physical TV | NOT_RUN | No deployment, measurement or mutation |
+- Receipt collector now reads the actual runner schema (`argv`, `head`, `outputs`) and backfills historical sanitized receipts from raw files; earlier null provenance fields are corrected without rerunning old tests.
+- Handoff verifier is reusable and checks exact commit/ref, every pinned blob and extra files.
+- Patch gate uses an external non-Git scratch directory, post-apply hash assertions and expected negative controls; ignored `.build` no-op behavior is explicitly rejected.
+- Offline diagnostics analyzer derives nearest-rank p99 from existing timelines and keeps missing native/GPU/focus data UNKNOWN.
 
-## Next gate
+## Next gates
 
-Restore the documented Rust/SDL/pnpm environment; rerun original baselines without rewriting known failures; obtain the missing authorized statistics module; explicitly resume corrected-patch apply/reverse validation; then compile and run native candidate/regression tests. Only after those gates and separate owner approval should any device preflight/canary occur. Video requires its own approval and evidence.
+Restore the manual reference environment; rerun original baselines unchanged; run supplied Rust focus/damage tests and the bounded desktop focus A/B. Then add instrumentation-only cold-wallpaper/vector active-set and input-to-visible-call/p99 measurements before worker decode, eviction or video work. Device and video require separate approval.
 
-All calculations/diffs/hashes/receipts are script-generated. Raw outputs remain outside the checkout under `/home/user/luma-research-evidence`; sanitized hash-linked receipts are here. No credentials, firmware archives, HARs, protected media or proprietary Apple code/assets were collected.
+Raw outputs remain outside the checkout under `/home/user/luma-research-evidence`; sanitized hash-linked receipts are in `receipts/`. No credentials, firmware archives, HARs, protected media or proprietary Apple code/assets were collected.

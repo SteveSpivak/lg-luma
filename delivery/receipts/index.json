@@ -5,154 +5,224 @@
       "label": "baseline-git",
       "path": "receipts/baseline-git.json",
       "exit_code": 0,
-      "status": null,
+      "status": "PASS",
       "evidence_class": "OBSERVED"
     },
     {
       "label": "toolchain",
       "path": "receipts/toolchain.json",
       "exit_code": 0,
-      "status": null,
+      "status": "PASS",
       "evidence_class": "OBSERVED"
     },
     {
       "label": "baseline-node",
       "path": "receipts/baseline-node.json",
       "exit_code": 1,
-      "status": null,
+      "status": "FAIL",
       "evidence_class": "MEASURED_HOST"
     },
     {
       "label": "pnpm-test",
       "path": "receipts/pnpm-test.json",
       "exit_code": 127,
-      "status": null,
+      "status": "BLOCKED",
       "evidence_class": "BLOCKED"
     },
     {
       "label": "pnpm-check",
       "path": "receipts/pnpm-check.json",
       "exit_code": 127,
-      "status": null,
+      "status": "BLOCKED",
       "evidence_class": "BLOCKED"
     },
     {
       "label": "pnpm-format-check",
       "path": "receipts/pnpm-format-check.json",
       "exit_code": 127,
-      "status": null,
+      "status": "BLOCKED",
       "evidence_class": "BLOCKED"
     },
     {
       "label": "cargo-test",
       "path": "receipts/cargo-test.json",
       "exit_code": 127,
-      "status": null,
+      "status": "BLOCKED",
       "evidence_class": "BLOCKED"
     },
     {
       "label": "supported-node",
       "path": "receipts/supported-node.json",
       "exit_code": 0,
-      "status": null,
+      "status": "PASS",
       "evidence_class": "MEASURED_HOST"
     },
     {
       "label": "release-node-supported",
       "path": "receipts/release-node-supported.json",
       "exit_code": 0,
-      "status": null,
+      "status": "PASS",
       "evidence_class": "MEASURED_HOST"
     },
     {
       "label": "missing-pnpm-cause",
       "path": "receipts/missing-pnpm-cause.json",
       "exit_code": 0,
-      "status": null,
+      "status": "PASS",
       "evidence_class": "OBSERVED"
     },
     {
       "label": "handoff-pin-local",
       "path": "receipts/handoff-pin-local.json",
       "exit_code": 0,
-      "status": null,
-      "evidence_class": "OBSERVED"
-    },
-    {
-      "label": "handoff-integrity",
-      "path": "receipts/handoff-integrity.json",
-      "exit_code": null,
-      "status": null,
+      "status": "PASS",
       "evidence_class": "OBSERVED"
     },
     {
       "label": "verify-offline",
       "path": "receipts/verify-offline.json",
       "exit_code": 1,
-      "status": null,
+      "status": "FAIL",
       "evidence_class": "BLOCKED"
     },
     {
       "label": "candidate-static-red",
       "path": "receipts/candidate-static-red.json",
       "exit_code": 1,
-      "status": null,
+      "status": "FAIL",
       "evidence_class": "OBSERVED"
     },
     {
       "label": "candidate-apply-check",
       "path": "receipts/candidate-apply-check.json",
       "exit_code": 1,
-      "status": null,
+      "status": "FAIL",
       "evidence_class": "FAIL"
     },
     {
       "label": "research-tests-green",
       "path": "receipts/research-tests-green.json",
       "exit_code": 1,
-      "status": null,
+      "status": "FAIL",
       "evidence_class": "FAIL"
     },
     {
       "label": "build-audit",
       "path": "receipts/build-audit.json",
       "exit_code": 1,
-      "status": null,
+      "status": "FAIL",
       "evidence_class": "FAIL"
     },
     {
       "label": "build-audit-corrected",
       "path": "receipts/build-audit-corrected.json",
       "exit_code": 0,
-      "status": null,
+      "status": "PASS",
       "evidence_class": "OBSERVED"
     },
     {
       "label": "offline-evidence-and-metrics",
       "path": "receipts/offline-evidence-and-metrics.json",
       "exit_code": 1,
-      "status": null,
+      "status": "FAIL",
       "evidence_class": "FAIL"
     },
     {
       "label": "offline-evidence-and-metrics-corrected",
       "path": "receipts/offline-evidence-and-metrics-corrected.json",
       "exit_code": 0,
-      "status": null,
+      "status": "PASS",
       "evidence_class": "MEASURED_HOST"
     },
     {
       "label": "candidate-static-contract",
       "path": "receipts/candidate-static-contract.json",
       "exit_code": 0,
-      "status": null,
+      "status": "PASS",
       "evidence_class": "OBSERVED"
     },
     {
       "label": "protected-source-diff",
       "path": "receipts/protected-source-diff.json",
       "exit_code": 0,
-      "status": null,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "handoff-update-fetch",
+      "path": "receipts/handoff-update-fetch.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "handoff-update-integrity",
+      "path": "receipts/handoff-update-integrity.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "verify-offline-updated",
+      "path": "receipts/verify-offline-updated.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "MEASURED_HOST"
+    },
+    {
+      "label": "patch-integrity-gate",
+      "path": "receipts/patch-integrity-gate.json",
+      "exit_code": 1,
+      "status": "FAIL",
+      "evidence_class": "FAIL"
+    },
+    {
+      "label": "patch-integrity-gate-corrected",
+      "path": "receipts/patch-integrity-gate-corrected.json",
+      "exit_code": 1,
+      "status": "FAIL",
+      "evidence_class": "FAIL"
+    },
+    {
+      "label": "patch-integrity-isolated",
+      "path": "receipts/patch-integrity-isolated.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "research-tests-followup",
+      "path": "receipts/research-tests-followup.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "MEASURED_HOST"
+    },
+    {
+      "label": "build-environment-spec",
+      "path": "receipts/build-environment-spec.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "research-tests-final",
+      "path": "receipts/research-tests-final.json",
+      "exit_code": 1,
+      "status": "FAIL",
+      "evidence_class": "MEASURED_HOST"
+    },
+    {
+      "label": "research-tests-final-corrected",
+      "path": "receipts/research-tests-final-corrected.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "MEASURED_HOST"
+    },
+    {
+      "label": "protected-source-diff-followup",
+      "path": "receipts/protected-source-diff-followup.json",
+      "exit_code": 0,
+      "status": "PASS",
       "evidence_class": "OBSERVED"
     }
   ]

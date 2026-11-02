@@ -1,0 +1,24 @@
+{
+  "schema": "luma-sanitized-receipt/2",
+  "label": "patch-integrity-isolated",
+  "evidence_class": "OBSERVED",
+  "caveat": "External non-Git scratch: forward/reverse and three negative controls passed; source hashes unchanged. Not native validation.",
+  "command_argv": [
+    "python3",
+    "-B",
+    "research/scripts/check_patch_integrity.py"
+  ],
+  "exit_code": 0,
+  "status": "PASS",
+  "started_utc": "2026-11-02T17:03:09.393861+00:00",
+  "finished_utc": "2026-11-02T17:03:09.508932+00:00",
+  "duration_ms": 115.065,
+  "timed_out": false,
+  "stdout_sha256": "d41122612f0a8758ac691958c3065557c83248c8d3234033b51ab41a24d08a6b",
+  "stdout_bytes": 304,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "b94cea3b43560e4bda595bc13d88d658a532331f",
+  "raw_receipt_sha256": "f9fe06c345113b263f0324a2fe423343b8c6ceb0e2af6c5eb8cdcf38fba75412",
+  "evidence_scope": "host command only; not physical-TV evidence"
+}

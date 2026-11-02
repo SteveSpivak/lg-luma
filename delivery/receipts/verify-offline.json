@@ -1,17 +1,23 @@
 {
-  "schema": "luma-sanitized-receipt/1",
+  "schema": "luma-sanitized-receipt/2",
   "label": "verify-offline",
   "evidence_class": "BLOCKED",
-  "caveat": "Verifier ran once; Python/JSON passed, Node import failed before assertions.",
-  "command_argv": [],
+  "caveat": "Previous verifier run; missing streamMetrics.mjs. Historical only.",
+  "command_argv": [
+    "bash",
+    "research/arena-handoff/scripts/verify-offline.sh"
+  ],
   "exit_code": 1,
-  "status": null,
+  "status": "FAIL",
   "started_utc": "2026-11-02T14:56:48.513849+00:00",
-  "duration_ms": null,
-  "stdout_sha256": null,
-  "stdout_bytes": null,
-  "stderr_sha256": null,
-  "stderr_bytes": null,
-  "head_sha": null,
-  "raw_receipt_sha256": "72f9b12304a7892e52e74a0b9b7ae620e917035af80ff065c306e35d1b87aead"
+  "finished_utc": "2026-11-02T14:56:48.729538+00:00",
+  "duration_ms": 215.68,
+  "timed_out": false,
+  "stdout_sha256": "5f57b411ceaf73e12b905c34ae3efb89aea24350c6585e513ce2bd23edfe834a",
+  "stdout_bytes": 1823,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "e5608cd053be5376a54a806129a332952dfabcef",
+  "raw_receipt_sha256": "72f9b12304a7892e52e74a0b9b7ae620e917035af80ff065c306e35d1b87aead",
+  "evidence_scope": "host command only; not physical-TV evidence"
 }

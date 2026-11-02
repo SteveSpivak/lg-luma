@@ -1,17 +1,24 @@
 {
-  "schema": "luma-sanitized-receipt/1",
+  "schema": "luma-sanitized-receipt/2",
   "label": "toolchain",
   "evidence_class": "OBSERVED",
   "caveat": "Availability probe; absent native tools are BLOCKED, not PASS.",
-  "command_argv": [],
+  "command_argv": [
+    "bash",
+    "-c",
+    "for t in node npm corepack python3 git curl gh rustc cargo rustup pnpm nix pkg-config sdl2-config Xvfb xvfb-run; do printf \"%s: \" \"$t\"; command -v \"$t\" || echo MISSING; done; node --version; python3 --version; git --version; uname -sm; test ! -d node_modules && echo \"node_modules: absent\"; test ! -d .build && echo \".build: absent\""
+  ],
   "exit_code": 0,
-  "status": null,
+  "status": "PASS",
   "started_utc": "2026-11-02T14:06:24.231242+00:00",
-  "duration_ms": null,
-  "stdout_sha256": null,
-  "stdout_bytes": null,
-  "stderr_sha256": null,
-  "stderr_bytes": null,
-  "head_sha": null,
-  "raw_receipt_sha256": "4546be75f3b406f2ecdf15bef8ed04d6405da817f96394fe5d7abc332a5b24be"
+  "finished_utc": "2026-11-02T14:06:24.597736+00:00",
+  "duration_ms": 366.494,
+  "timed_out": false,
+  "stdout_sha256": "a14a5258d52f755f11269f27c75a33326a24ae690407f97cb1a53e4d055655ec",
+  "stdout_bytes": 401,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "e5608cd053be5376a54a806129a332952dfabcef",
+  "raw_receipt_sha256": "4546be75f3b406f2ecdf15bef8ed04d6405da817f96394fe5d7abc332a5b24be",
+  "evidence_scope": "host command only; not physical-TV evidence"
 }

@@ -6,3 +6,7 @@ dist/
 .env
 .env.*
 target/
+
+# Python research tooling caches
+__pycache__/
+*.pyc

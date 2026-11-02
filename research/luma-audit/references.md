@@ -5,7 +5,8 @@
 | Reference | Requested SHA | Access / evidence verdict |
 |---|---|---|
 | Luma base | `e5608cd053be5376a54a806129a332952dfabcef` | PROVEN: checkout and GitHub commit resolve exactly; authoritative source. |
-| Updated handoff | `0aa7bd6ac099fc457179debbf749f0227c714158` | PROVEN: fetched exact branch tip; all 17 extracted files match pinned Git blob IDs. |
+| Updated handoff | `2a40c7bb3af080981653f975b5c1e983e4f78ef5` | PROVEN: fetched exact requested commit; all 18 extracted files match pinned Git blob IDs, no extras. Adds only `streamMetrics.mjs` relative to `0aa7bd6ac099fc457179debbf749f0227c714158`. |
+| Previous handoff | `0aa7bd6ac099fc457179debbf749f0227c714158` | Historical 17-file snapshot; verifier exit 1 due missing dependency. Superseded for offline execution. |
 | Nuvio performance methods | `fe27abf4df1b13cc5eb910733325db63934eb33a` | Remote BLOCKED after API 403 and git 128/HTTP403. Bundled stats/tests/known-fail snapshot is usable as a handoff-pinned snapshot, not independently verified origin content. |
 | Nuvio V5 UX | `8acd6c9809adc1ecc5eb901a7e81f3596c765088` | BLOCKED / UNKNOWN implementation. No full V5 source/tests in bundle. Do not attribute upstream behavior to this pin. |
 | Official NuvioTVSmart | `657c8a308d0c36aca1625a5e9293b3ba651f017b` | PROVEN commit/tree; selected source blobs verified against tree. GPL-3.0; behavior studied, no code copied. |
@@ -17,7 +18,7 @@ No further requests were made to blocked repositories after the offline bundle a
 
 ## Offline execution
 
-`bash research/arena-handoff/scripts/verify-offline.sh` exited **1**. Python parsed both bundled Python files; four JSON documents parsed. Node failed before any statistical test assertion because `offline-lab/lab/techniques/streamMetrics.mjs` is absent. This is a bundle dependency failure, not a mathematics failure or a PASS. It was run once and not patched/retried.
+Historical verifier at `0aa7bd6…` exited **1** because `offline-lab/lab/techniques/streamMetrics.mjs` was absent. After the owner added it at `2a40c7bb…`, the verifier was rerun **once** and exited **0**: two Python parses, four JSON parses and **11/11 Node assertions** passed (nearest-rank, t-CI, paired d, MAD outliers, drift, ABBA pairing, verdicts, blockers, sample-size guidance, frame arithmetic, end-to-end assembly). Rust/Cargo/SDL/TV remain NOT_RUN by that script.
 
 The unchanged bundled evidence processor was exercised with synthetic data only: 16 research tests passed after correcting one arithmetic expectation in our new test. These cover unknown/host values, redaction, invalid environment, verified clock binding, unit/firmware mismatch, estimated-memory exclusion, unmatched IDs and fail-closed static preflight/protection rules. This is not the full upstream lens suite or full JSON-Schema validation; `jsonschema` is absent and was not installed.
 

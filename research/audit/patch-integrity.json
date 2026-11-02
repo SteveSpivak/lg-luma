@@ -1,0 +1,141 @@
+{
+  "schema": "luma-patch-integrity/1",
+  "base_sha": "e5608cd053be5376a54a806129a332952dfabcef",
+  "checkout_head_sha": "b94cea3b43560e4bda595bc13d88d658a532331f",
+  "patch_sha256": "8230cce60f85db4965f0731e702216dbb5fe7442ee0a33ba4768f9dc0b24a257",
+  "patch_bytes": 3779,
+  "paths": [
+    "src/focus_experiment.rs",
+    "src/main.rs",
+    "src/view.rs"
+  ],
+  "base_tree_sha": "c434dc8fbe08eac709c4b8330ec118d04d963501",
+  "src_tree_sha": "9a49f3bbbfdcc5c90ebcaea69f3d89cfe2a28d66",
+  "candidate_file_sha256": {
+    "src/focus_experiment.rs": "a972f972bd6dc9c1fff6907d2fcfc05aa95f486531735234b3b58ca2f48c6d7c",
+    "src/main.rs": "295e7718068050d9a4789bd811ac56909f1922ea156b89c228969b00fda36558",
+    "src/view.rs": "3324c3baf488c2b402d35296289704289e8ca47f72bb2b485bbb100fd22a173d"
+  },
+  "forward_apply": true,
+  "reverse_apply": true,
+  "application_source_unchanged": true,
+  "scratch_outside_git_repository": true,
+  "all_passed": true,
+  "failure": null,
+  "steps": [
+    {
+      "name": "reverse_on_baseline_rejected",
+      "argv": [
+        "git",
+        "apply",
+        "--reverse",
+        "--check",
+        "<CHECKOUT>/delivery/patches/focus-depth.patch"
+      ],
+      "expected": "nonzero exit; no application",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "1dca7af9be8ac623d1044f34f665f2aab80e0809428a46895612a146cf57564f",
+      "stdout": "",
+      "stderr": "error: src/focus_experiment.rs: No such file or directory\nerror: patch failed: src/view.rs:817\nerror: src/view.rs: patch does not apply\nerror: patch failed: src/main.rs:9\nerror: src/main.rs: patch does not apply\n"
+    },
+    {
+      "name": "forward_check",
+      "argv": [
+        "git",
+        "apply",
+        "--check",
+        "<CHECKOUT>/delivery/patches/focus-depth.patch"
+      ],
+      "expected": "exit 0",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "forward_apply",
+      "argv": [
+        "git",
+        "apply",
+        "<CHECKOUT>/delivery/patches/focus-depth.patch"
+      ],
+      "expected": "exit 0",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "double_apply_rejected",
+      "argv": [
+        "git",
+        "apply",
+        "--check",
+        "<CHECKOUT>/delivery/patches/focus-depth.patch"
+      ],
+      "expected": "nonzero exit; no application",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "013d2d7a587f905ae62dc3a66e81e4b09b84e170e45338d221c418fd8fa80bc2",
+      "stdout": "",
+      "stderr": "error: patch failed: src/main.rs:9\nerror: src/main.rs: patch does not apply\nerror: patch failed: src/view.rs:817\nerror: src/view.rs: patch does not apply\nerror: src/focus_experiment.rs: already exists in working directory\n"
+    },
+    {
+      "name": "reverse_check",
+      "argv": [
+        "git",
+        "apply",
+        "--reverse",
+        "--check",
+        "<CHECKOUT>/delivery/patches/focus-depth.patch"
+      ],
+      "expected": "exit 0",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "reverse_apply",
+      "argv": [
+        "git",
+        "apply",
+        "--reverse",
+        "<CHECKOUT>/delivery/patches/focus-depth.patch"
+      ],
+      "expected": "exit 0",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "stale_source_rejected",
+      "argv": [
+        "git",
+        "apply",
+        "--check",
+        "<CHECKOUT>/delivery/patches/focus-depth.patch"
+      ],
+      "expected": "nonzero exit; no application",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "9b396feb0b7ef01aa117af3842c251eb4b493ffb4697026a3118628583ee34f0",
+      "stdout": "",
+      "stderr": "error: patch failed: src/view.rs:817\nerror: src/view.rs: patch does not apply\n"
+    }
+  ],
+  "scope": "Git patch integrity only; Rust compilation, native behavior and TV tests NOT_RUN."
+}

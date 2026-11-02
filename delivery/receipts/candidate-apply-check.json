@@ -1,17 +1,25 @@
 {
-  "schema": "luma-sanitized-receipt/1",
+  "schema": "luma-sanitized-receipt/2",
   "label": "candidate-apply-check",
   "evidence_class": "FAIL",
-  "caveat": "First apply check failed on missing new-file mode header; not native validation.",
-  "command_argv": [],
+  "caveat": "Historical apply failure: missing new-file mode header; exact failed bytes were not retained.",
+  "command_argv": [
+    "git",
+    "apply",
+    "--check",
+    "delivery/patches/focus-depth.patch"
+  ],
   "exit_code": 1,
-  "status": null,
+  "status": "FAIL",
   "started_utc": "2026-11-02T15:17:04.961639+00:00",
-  "duration_ms": null,
-  "stdout_sha256": null,
-  "stdout_bytes": null,
-  "stderr_sha256": null,
-  "stderr_bytes": null,
-  "head_sha": null,
-  "raw_receipt_sha256": "c8fb4476525db920ac13a2b6fcea8a8dea9009bdccfcf1f9444e4685d111fe39"
+  "finished_utc": "2026-11-02T15:17:04.965454+00:00",
+  "duration_ms": 3.802,
+  "timed_out": false,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 0,
+  "stderr_sha256": "8406467937a711cd03503de2296f1d25183cd93c59d55dcb0ec8c0d6aa0b75a0",
+  "stderr_bytes": 43,
+  "head_sha": "e5608cd053be5376a54a806129a332952dfabcef",
+  "raw_receipt_sha256": "c8fb4476525db920ac13a2b6fcea8a8dea9009bdccfcf1f9444e4685d111fe39",
+  "evidence_scope": "host command only; not physical-TV evidence"
 }

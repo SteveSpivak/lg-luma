@@ -21,7 +21,8 @@ def replace_once(text, old, new):
     return text.replace(old, new, 1)
 
 
-def main():
+def candidate_patch() -> str:
+    """Return the exact patch bytes without writing files or applying anything."""
     main_rs = source("src/main.rs")
     view_rs = source("src/view.rs")
     main_new = replace_once(main_rs, "mod font;\n", "mod focus_experiment;\nmod font;\n")
@@ -119,9 +120,13 @@ mod tests {
                                     tofile="b/"+path, n=3)
         mode_header = "new file mode 100644\n" if not before else ""
         chunks.append(f"diff --git a/{path} b/{path}\n" + mode_header + "".join(diff))
+    return "".join(chunks)
+
+
+def main():
     out = ROOT / "delivery/patches/focus-depth.patch"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text("".join(chunks))
+    out.write_text(candidate_patch())
     print(out)
 
 if __name__ == "__main__":

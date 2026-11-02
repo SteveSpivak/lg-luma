@@ -1,17 +1,24 @@
 {
-  "schema": "luma-sanitized-receipt/1",
+  "schema": "luma-sanitized-receipt/2",
   "label": "build-audit-corrected",
   "evidence_class": "OBSERVED",
   "caveat": "Pinned source/test inventory and protection checks; no native execution.",
-  "command_argv": [],
+  "command_argv": [
+    "python3",
+    "-B",
+    "research/scripts/build_audit.py"
+  ],
   "exit_code": 0,
-  "status": null,
+  "status": "PASS",
   "started_utc": "2026-11-02T15:26:14.488728+00:00",
-  "duration_ms": null,
-  "stdout_sha256": null,
-  "stdout_bytes": null,
-  "stderr_sha256": null,
-  "stderr_bytes": null,
-  "head_sha": null,
-  "raw_receipt_sha256": "e683f05f211346a18ff41a07ded800d5476489616d4a6dde9217dbda43c20ed5"
+  "finished_utc": "2026-11-02T15:26:15.745201+00:00",
+  "duration_ms": 1256.468,
+  "timed_out": false,
+  "stdout_sha256": "a828f4bc26bf3e0c3f2e7dd314e258140cb622c9ad090e445ac414757021650d",
+  "stdout_bytes": 132,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "e5608cd053be5376a54a806129a332952dfabcef",
+  "raw_receipt_sha256": "e683f05f211346a18ff41a07ded800d5476489616d4a6dde9217dbda43c20ed5",
+  "evidence_scope": "host command only; not physical-TV evidence"
 }

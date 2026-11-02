@@ -2,7 +2,7 @@
   "schema": "luma-audit-delivery/2",
   "base_sha": "e5608cd053be5376a54a806129a332952dfabcef",
   "handoff_sha": "2a40c7bb3af080981653f975b5c1e983e4f78ef5",
-  "checkout_head_sha_at_generation": "bb0c2e4bacc232cde50c9c6e88dbc09abe56ddcf",
+  "checkout_head_sha_at_generation": "ae0e46ba136b0d76380edce48e6f0870514c577f",
   "implementation_commit_sha": "bb0c2e4bacc232cde50c9c6e88dbc09abe56ddcf",
   "commit_semantics": "implementation_commit_sha identifies the commit containing follow-up audit/tooling and the unapplied candidate; a subsequent manifest-recording commit may be HEAD.",
   "candidate_status": "GIT_INTEGRITY_VERIFIED_UNAPPLIED_NATIVE_BLOCKED",
@@ -393,6 +393,20 @@
       "exit_code": 1,
       "status": "FAIL",
       "evidence_class": "BLOCKED"
+    },
+    {
+      "label": "dedicated-branch-push-final",
+      "path": "receipts/dedicated-branch-push-final.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "remote-branch-verify-final",
+      "path": "receipts/remote-branch-verify-final.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
     }
   ],
   "files": {
@@ -472,6 +486,10 @@
       "sha256": "09a6ca42a8c50306532a1dd2ffe79ea972bf448c0719f787bedef5bb0c4dc200",
       "bytes": 902
     },
+    "delivery/receipts/dedicated-branch-push-final.json": {
+      "sha256": "6fabc973f0d3b2d13bdd5584f20c20ab139a70a1fd8112babeeeb89787b04b39",
+      "bytes": 934
+    },
     "delivery/receipts/dedicated-branch-push.json": {
       "sha256": "e651d10410dd0bf3468744d676c025280b66d0e06067c54a583593fb56bd73e8",
       "bytes": 905
@@ -489,8 +507,8 @@
       "bytes": 1026
     },
     "delivery/receipts/index.json": {
-      "sha256": "2572358d0cd9886b8cbdcb184fd34380fc1ce2c23e9b55a39d2f35717d61f64d",
-      "bytes": 6731
+      "sha256": "502869d6ba571df9d36c8c3963bedea07031aed9f9da80c4000b53dbc5ac29d7",
+      "bytes": 7127
     },
     "delivery/receipts/missing-pnpm-cause.json": {
       "sha256": "205b4be3234bc11bd4ae9765e471787f1b53dcfae4096171b64757faf7a3b8ed",
@@ -547,6 +565,10 @@
     "delivery/receipts/remote-branch-check.json": {
       "sha256": "e3d85a2e694760e1030626bc0485bbcc3fb5f3872aefc8b7b01306c9dae83cbb",
       "bytes": 916
+    },
+    "delivery/receipts/remote-branch-verify-final.json": {
+      "sha256": "11e6f017b0265bac222aa27f704d9cd36de75bb55a83887b321fadb0a19524d3",
+      "bytes": 925
     },
     "delivery/receipts/remote-branch-verify.json": {
       "sha256": "80639623e2234d25e87ad59e90f59dff5b625d88ae7cff133bff2087340cb6b3",

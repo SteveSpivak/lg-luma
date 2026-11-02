@@ -252,6 +252,20 @@
       "exit_code": 1,
       "status": "FAIL",
       "evidence_class": "BLOCKED"
+    },
+    {
+      "label": "dedicated-branch-push-final",
+      "path": "receipts/dedicated-branch-push-final.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "remote-branch-verify-final",
+      "path": "receipts/remote-branch-verify-final.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
     }
   ]
 }

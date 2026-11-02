@@ -1,0 +1,25 @@
+{
+  "schema": "luma-sanitized-receipt/2",
+  "label": "remote-branch-verify-final",
+  "evidence_class": "OBSERVED",
+  "caveat": "Final remote dedicated branch SHA verified after prep push.",
+  "command_argv": [
+    "git",
+    "ls-remote",
+    "origin",
+    "refs/heads/arena/0bee657b-lg-luma"
+  ],
+  "exit_code": 0,
+  "status": "PASS",
+  "started_utc": "2026-11-02T18:45:43.227608+00:00",
+  "finished_utc": "2026-11-02T18:45:43.493891+00:00",
+  "duration_ms": 266.273,
+  "timed_out": false,
+  "stdout_sha256": "e50eb29a9f40b03a8d1eaf1e1d11bfaacfcde0c65a2331a4235875a92181d465",
+  "stdout_bytes": 75,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "ae0e46ba136b0d76380edce48e6f0870514c577f",
+  "raw_receipt_sha256": "b1ac9cac55b447aebfc890b4fc103204bb1860dfceebb4421b8612e197b7534f",
+  "evidence_scope": "host command only; not physical-TV evidence"
+}

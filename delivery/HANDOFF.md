@@ -1,6 +1,6 @@
 # Luma source-backed audit handoff
 
-**Implementation commit:** recorded in `manifest.json` after the additive audit/candidate commit. **Base:** `e5608cd053be5376a54a806129a332952dfabcef`. **Verified handoff:** `0aa7bd6ac099fc457179debbf749f0227c714158`. Branch: `arena/0bee657b-lg-luma` only.
+**Implementation commit:** `b128814081b8e9800d94f4c2c44789a61b742b50` (additive audit/unapplied candidate; final manifest-recording commit may be HEAD). **Base:** `e5608cd053be5376a54a806129a332952dfabcef`. **Verified handoff:** `0aa7bd6ac099fc457179debbf749f0227c714158`. Branch: `arena/0bee657b-lg-luma` only.
 
 ## Bottom line
 

@@ -2,8 +2,8 @@
   "schema": "luma-audit-delivery/1",
   "base_sha": "e5608cd053be5376a54a806129a332952dfabcef",
   "handoff_sha": "0aa7bd6ac099fc457179debbf749f0227c714158",
-  "checkout_head_sha_at_generation": "e5608cd053be5376a54a806129a332952dfabcef",
-  "implementation_commit_sha": null,
+  "checkout_head_sha_at_generation": "b128814081b8e9800d94f4c2c44789a61b742b50",
+  "implementation_commit_sha": "b128814081b8e9800d94f4c2c44789a61b742b50",
   "commit_semantics": "implementation_commit_sha identifies the commit containing the unapplied candidate patch and audit; a subsequent manifest-recording commit may be HEAD.",
   "candidate_status": "PROPOSED_UNAPPLIED_NATIVE_BLOCKED",
   "native_source_unchanged": true,
@@ -270,8 +270,8 @@
       "bytes": 4460
     },
     "delivery/HANDOFF.md": {
-      "sha256": "c8030e974241241139c80f65f71edc6ee1264caa847d3976a16eb8c58343555c",
-      "bytes": 3522
+      "sha256": "62632c0fca9fff601b3d8298b96c21912cb0fef9ae4dff4abc1b44aa0ba48feb",
+      "bytes": 3577
     },
     "delivery/patches/focus-depth.patch": {
       "sha256": "8230cce60f85db4965f0731e702216dbb5fe7442ee0a33ba4768f9dc0b24a257",

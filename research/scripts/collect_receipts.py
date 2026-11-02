@@ -46,6 +46,10 @@ LABELS = {
  "research-tests-final":("MEASURED_HOST","Final Python research/tooling contracts only; native Rust/SDL and TV NOT_RUN."),
  "research-tests-final-corrected":("MEASURED_HOST","Corrected UNKNOWN-result schema consistency; Python contracts only; native/TV NOT_RUN."),
  "protected-source-diff-followup":("OBSERVED","Native/protected paths unchanged against base after follow-up research/tooling edits."),
+ "remote-branch-check":("OBSERVED","Dedicated remote branch was absent before authorized push."),
+ "dedicated-branch-push":("OBSERVED","Pushed only arena/0bee657b-lg-luma; no main push or merge."),
+ "remote-branch-verify":("OBSERVED","Remote dedicated branch SHA verified after push."),
+ "native-preflight":("BLOCKED","Read-only native desktop preflight; required tools/inputs missing. No installs or native tests."),
 }
 RAW_NAMES={"pnpm-test":"gate-pnpm_test","pnpm-check":"gate-pnpm_check","pnpm-format-check":"gate-pnpm_format_check","cargo-test":"gate-cargo_test_--locked_--workspace_--all-features"}
 

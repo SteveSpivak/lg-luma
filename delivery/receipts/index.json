@@ -224,6 +224,34 @@
       "exit_code": 0,
       "status": "PASS",
       "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "remote-branch-check",
+      "path": "receipts/remote-branch-check.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "dedicated-branch-push",
+      "path": "receipts/dedicated-branch-push.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "remote-branch-verify",
+      "path": "receipts/remote-branch-verify.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "native-preflight",
+      "path": "receipts/native-preflight.json",
+      "exit_code": 1,
+      "status": "FAIL",
+      "evidence_class": "BLOCKED"
     }
   ]
 }

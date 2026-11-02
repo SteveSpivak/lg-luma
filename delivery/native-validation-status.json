@@ -1,0 +1,125 @@
+{
+  "schema": "luma-native-validation-status/1",
+  "branch": "arena/0bee657b-lg-luma",
+  "head_sha": "921d92fb26e4defe0f5e5c3a1b114f2151822908",
+  "ready": false,
+  "status": "BLOCKED",
+  "missing_required": [
+    "SDL2-development (pkg-config sdl2)",
+    "Xvfb",
+    "cargo",
+    "clippy-driver",
+    "cmake",
+    "node_modules (pnpm install --frozen-lockfile)",
+    "pkg-config",
+    "pnpm",
+    "python3-fontTools",
+    "rustc",
+    "rustfmt",
+    "sdl2-config",
+    "woff2_decompress",
+    "xauth",
+    "xvfb-run"
+  ],
+  "missing_optional": [
+    "nix",
+    "rustup"
+  ],
+  "tools": {
+    "node": {
+      "available": true,
+      "version": "v22.22.3",
+      "exit_code": 0
+    },
+    "pnpm": {
+      "available": false,
+      "version": null
+    },
+    "cargo": {
+      "available": false,
+      "version": null
+    },
+    "rustc": {
+      "available": false,
+      "version": null
+    },
+    "rustfmt": {
+      "available": false,
+      "version": null
+    },
+    "clippy-driver": {
+      "available": false,
+      "version": null
+    },
+    "pkg-config": {
+      "available": false,
+      "version": null
+    },
+    "sdl2-config": {
+      "available": false,
+      "version": null
+    },
+    "cmake": {
+      "available": false,
+      "version": null
+    },
+    "woff2_decompress": {
+      "available": false,
+      "version": null
+    },
+    "python3": {
+      "available": true,
+      "version": "Python 3.11.2",
+      "exit_code": 0
+    },
+    "xvfb-run": {
+      "available": false,
+      "version": null
+    },
+    "Xvfb": {
+      "available": false,
+      "version": null
+    },
+    "xauth": {
+      "available": false,
+      "version": null
+    },
+    "git": {
+      "available": true,
+      "version": "git version 2.39.5",
+      "exit_code": 0
+    },
+    "nix": {
+      "available": false,
+      "version": null
+    },
+    "rustup": {
+      "available": false,
+      "version": null
+    }
+  },
+  "inputs": {
+    "node_modules": false,
+    "generated_assets": false,
+    "desktop_binary": false,
+    "sdl2_pkg_config": {
+      "available": false,
+      "version": null,
+      "reason": "pkg-config missing"
+    },
+    "python_fonttools": {
+      "available": false,
+      "version": null
+    }
+  },
+  "automatic_install": false,
+  "native_tests_run": false,
+  "physical_tv_commands": 0,
+  "runbook": "delivery/NATIVE-VALIDATION.md",
+  "setup_commands_manual_only": [
+    "nix develop",
+    "pnpm install --frozen-lockfile",
+    "pnpm assets",
+    "cargo build --locked --package luma --no-default-features"
+  ]
+}

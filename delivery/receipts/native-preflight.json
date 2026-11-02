@@ -1,0 +1,24 @@
+{
+  "schema": "luma-sanitized-receipt/2",
+  "label": "native-preflight",
+  "evidence_class": "BLOCKED",
+  "caveat": "Read-only native desktop preflight; required tools/inputs missing. No installs or native tests.",
+  "command_argv": [
+    "python3",
+    "-B",
+    "research/scripts/native_preflight.py"
+  ],
+  "exit_code": 1,
+  "status": "FAIL",
+  "started_utc": "2026-11-02T18:30:08.036181+00:00",
+  "finished_utc": "2026-11-02T18:30:08.150813+00:00",
+  "duration_ms": 114.626,
+  "timed_out": false,
+  "stdout_sha256": "3de15be483ce6988cdbeceda159840a9887f8c1696ef67b08ccfeaeadfc1971e",
+  "stdout_bytes": 384,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "921d92fb26e4defe0f5e5c3a1b114f2151822908",
+  "raw_receipt_sha256": "f2b5ceb022fc46d4a7f79ad8da629a8d50df4e4a5bda5777faf35772b052b6cc",
+  "evidence_scope": "host command only; not physical-TV evidence"
+}

@@ -50,10 +50,12 @@ def main():
         {'id':'patch-integrity-isolated','exit':0,'status':'PASS_SOURCE_INTEGRITY','scope':'Forward/reverse apply and three negative controls in external non-Git scratch'},
         {'id':'research-tests-final-corrected','exit':0,'passed':31,'total':31,'status':'PASS_HOST_SYNTHETIC','scope':'Python research/tooling contracts; no native rendering'},
         {'id':'build-environment-spec','exit':0,'status':'PASS_READ_ONLY_SPEC','scope':'Manual environment derivation; no installs/downloads/builds'},
+        {'id':'native-preflight','exit':1,'status':'BLOCKED','scope':'Read-only native desktop preflight; required tools/inputs missing; no native tests'},
         {'id':'native-regressions','exit':127,'status':'BLOCKED','scope':'cargo test unavailable'}
       ],
       'candidate_patch':{'path':'delivery/patches/focus-depth.patch','sha256':sha(D/'patches/focus-depth.patch'),'default':'OFF','enable':'LUMA_FOCUS_DEPTH=1','persistent_preference':False,'paths':['src/main.rs','src/view.rs','src/focus_experiment.rs'],'apply_verified':patch_gate['all_passed'] and patch_gate['forward_apply'],'reverse_apply_verified':patch_gate['all_passed'] and patch_gate['reverse_apply'],'native_tests':'NOT_RUN'},
       'build_environment':{'spec':'delivery/build-environment.json','guide':'delivery/BUILD-ENVIRONMENT.md','automatic_install':False},
+      'native_validation':{'runbook':'delivery/NATIVE-VALIDATION.md','status_file':'delivery/native-validation-status.json','status':load(D/'native-validation-status.json')['status'],'native_tests_run':False},
       'performance_proposals':'delivery/PERFORMANCE-PROPOSALS.md',
       'reference_provenance':{'report':'research/luma-audit/references.md','machine_readable':'research/audit/reference-provenance.json'},
       'open_blockers':[b['id'] for b in blockers if b['status']=='OPEN'],

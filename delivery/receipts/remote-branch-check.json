@@ -1,0 +1,25 @@
+{
+  "schema": "luma-sanitized-receipt/2",
+  "label": "remote-branch-check",
+  "evidence_class": "OBSERVED",
+  "caveat": "Dedicated remote branch was absent before authorized push.",
+  "command_argv": [
+    "git",
+    "ls-remote",
+    "origin",
+    "refs/heads/arena/0bee657b-lg-luma"
+  ],
+  "exit_code": 0,
+  "status": "PASS",
+  "started_utc": "2026-11-02T18:26:06.798798+00:00",
+  "finished_utc": "2026-11-02T18:26:07.218513+00:00",
+  "duration_ms": 419.716,
+  "timed_out": false,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "921d92fb26e4defe0f5e5c3a1b114f2151822908",
+  "raw_receipt_sha256": "4f30efce33765b500a2e641608ae94893e209b23a38504c0901d489eaa8526e4",
+  "evidence_scope": "host command only; not physical-TV evidence"
+}

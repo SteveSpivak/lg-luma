@@ -2,8 +2,8 @@
   "schema": "luma-audit-delivery/2",
   "base_sha": "e5608cd053be5376a54a806129a332952dfabcef",
   "handoff_sha": "2a40c7bb3af080981653f975b5c1e983e4f78ef5",
-  "checkout_head_sha_at_generation": "47c166c70a6acae9f4ee3fd92cec5fc2098bdde1",
-  "implementation_commit_sha": "47c166c70a6acae9f4ee3fd92cec5fc2098bdde1",
+  "checkout_head_sha_at_generation": "921d92fb26e4defe0f5e5c3a1b114f2151822908",
+  "implementation_commit_sha": null,
   "commit_semantics": "implementation_commit_sha identifies the commit containing follow-up audit/tooling and the unapplied candidate; a subsequent manifest-recording commit may be HEAD.",
   "candidate_status": "GIT_INTEGRITY_VERIFIED_UNAPPLIED_NATIVE_BLOCKED",
   "native_source_unchanged": true,
@@ -86,6 +86,12 @@
       "scope": "Manual environment derivation; no installs/downloads/builds"
     },
     {
+      "id": "native-preflight",
+      "exit": 1,
+      "status": "BLOCKED",
+      "scope": "Read-only native desktop preflight; required tools/inputs missing; no native tests"
+    },
+    {
       "id": "native-regressions",
       "exit": 127,
       "status": "BLOCKED",
@@ -111,6 +117,12 @@
     "spec": "delivery/build-environment.json",
     "guide": "delivery/BUILD-ENVIRONMENT.md",
     "automatic_install": false
+  },
+  "native_validation": {
+    "runbook": "delivery/NATIVE-VALIDATION.md",
+    "status_file": "delivery/native-validation-status.json",
+    "status": "BLOCKED",
+    "native_tests_run": false
   },
   "performance_proposals": "delivery/PERFORMANCE-PROPOSALS.md",
   "reference_provenance": {
@@ -353,6 +365,34 @@
       "exit_code": 0,
       "status": "PASS",
       "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "remote-branch-check",
+      "path": "receipts/remote-branch-check.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "dedicated-branch-push",
+      "path": "receipts/dedicated-branch-push.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "remote-branch-verify",
+      "path": "receipts/remote-branch-verify.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED"
+    },
+    {
+      "label": "native-preflight",
+      "path": "receipts/native-preflight.json",
+      "exit_code": 1,
+      "status": "FAIL",
+      "evidence_class": "BLOCKED"
     }
   ],
   "files": {
@@ -365,8 +405,12 @@
       "bytes": 5543
     },
     "delivery/HANDOFF.md": {
-      "sha256": "b2378865db2364af0e85c0c64ede500e3cf3d348ee6b3ad3471d2c1086ce8cf8",
-      "bytes": 3086
+      "sha256": "22d71f0af0aa70d58d75987168020d7ad04064d2783920d7f7a67fc1f8fdcaba",
+      "bytes": 3284
+    },
+    "delivery/NATIVE-VALIDATION.md": {
+      "sha256": "e242b52c0f27dac0bf4b76bde75a77c591400743f5d8e21ebd1865b3f3791d61",
+      "bytes": 6700
     },
     "delivery/PATCH-INTEGRITY.md": {
       "sha256": "5192c0703dc027d047edef740b4bae6b41a8f10260de78c29796290d0fc055ea",
@@ -383,6 +427,10 @@
     "delivery/build-environment.json": {
       "sha256": "29f5f6fa488c204d5ebacedd67056ef0407fbaab8c82a48bdc46fc33fa4d37f9",
       "bytes": 14731
+    },
+    "delivery/native-validation-status.json": {
+      "sha256": "03e21389cb6b6d8ffa6e825d0d848726789fa4b12c2971dcd2b191a68b53462e",
+      "bytes": 2528
     },
     "delivery/patches/focus-depth.patch": {
       "sha256": "8230cce60f85db4965f0731e702216dbb5fe7442ee0a33ba4768f9dc0b24a257",
@@ -424,6 +472,10 @@
       "sha256": "09a6ca42a8c50306532a1dd2ffe79ea972bf448c0719f787bedef5bb0c4dc200",
       "bytes": 902
     },
+    "delivery/receipts/dedicated-branch-push.json": {
+      "sha256": "e651d10410dd0bf3468744d676c025280b66d0e06067c54a583593fb56bd73e8",
+      "bytes": 905
+    },
     "delivery/receipts/handoff-pin-local.json": {
       "sha256": "c566756880a1e9452d7ffc797ce96838d2f38149dc463507f67a4cb2107f935f",
       "bytes": 906
@@ -437,12 +489,16 @@
       "bytes": 1026
     },
     "delivery/receipts/index.json": {
-      "sha256": "2692f9ecd2e850a9f782766e99c06b335c97278b73a6fb8cf6081503d828fe8a",
-      "bytes": 6000
+      "sha256": "2572358d0cd9886b8cbdcb184fd34380fc1ce2c23e9b55a39d2f35717d61f64d",
+      "bytes": 6731
     },
     "delivery/receipts/missing-pnpm-cause.json": {
       "sha256": "205b4be3234bc11bd4ae9765e471787f1b53dcfae4096171b64757faf7a3b8ed",
       "bytes": 1060
+    },
+    "delivery/receipts/native-preflight.json": {
+      "sha256": "c5d9de560879673dc1f83e155d3bcd74f842b17a51e5e8d357ada9c5ffaa6112",
+      "bytes": 937
     },
     "delivery/receipts/offline-evidence-and-metrics-corrected.json": {
       "sha256": "d6d5901145ec4bad02d030c495b1132e74bd8006fa68e3b28c268b2c8fa7c6d6",
@@ -487,6 +543,14 @@
     "delivery/receipts/release-node-supported.json": {
       "sha256": "dd605e9d600aa8de34b34d1a088b3924c321cf94dbcdbfd7a958423520a6c007",
       "bytes": 1007
+    },
+    "delivery/receipts/remote-branch-check.json": {
+      "sha256": "e3d85a2e694760e1030626bc0485bbcc3fb5f3872aefc8b7b01306c9dae83cbb",
+      "bytes": 916
+    },
+    "delivery/receipts/remote-branch-verify.json": {
+      "sha256": "80639623e2234d25e87ad59e90f59dff5b625d88ae7cff133bff2087340cb6b3",
+      "bytes": 908
     },
     "delivery/receipts/research-tests-final-corrected.json": {
       "sha256": "071ed54d36ef6d0f2876aabee244a2c164e37a1b2fa0687fd05073a50df887d4",
@@ -673,16 +737,16 @@
       "bytes": 9599
     },
     "research/scripts/build_manifest.py": {
-      "sha256": "a7fef4c68999e23c0e5d8bd8e47886972835c723a22ce41c0a270d2d7c4673f7",
-      "bytes": 5354
+      "sha256": "68f0abe6610fa094fab3bcb74d459f942b8c3901c9043e7090270c9560492e4a",
+      "bytes": 5720
     },
     "research/scripts/check_patch_integrity.py": {
       "sha256": "3f9f22f39ed015cc79a749036abf5a3fdb731b3ff9129697cf59f89dbd5966c1",
       "bytes": 8785
     },
     "research/scripts/collect_receipts.py": {
-      "sha256": "4d25b9a2a1aaa7f44e36b02d99f0c76a8c9f0e7519d6ad540ceca3f74a0d8a8f",
-      "bytes": 6802
+      "sha256": "baeb35785b077e660c0250b03fa03a9c450740aaa44ea0415e4312cb94934850",
+      "bytes": 7220
     },
     "research/scripts/collect_reference_provenance.py": {
       "sha256": "e4d3ebd24e8dc17bdf0f3c75acdd5ae39f538a033679b04c34559956ea6cf4de",
@@ -695,6 +759,10 @@
     "research/scripts/native_metrics.py": {
       "sha256": "73a72cac1ef35220282a95bbdb6d44e791c36955316817c108d4dff7c474c1eb",
       "bytes": 3382
+    },
+    "research/scripts/native_preflight.py": {
+      "sha256": "dc777e21c8037cdaa9d622c92ec1d7628db85a4de9ab0a1e691399e86cca7d81",
+      "bytes": 4761
     },
     "research/scripts/pin_reference.py": {
       "sha256": "f1638cfd4c1ae966e17186b219054a310f8e4cb39ed2d5a8a2623cf58a361eb1",

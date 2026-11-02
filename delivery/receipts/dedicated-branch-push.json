@@ -1,0 +1,25 @@
+{
+  "schema": "luma-sanitized-receipt/2",
+  "label": "dedicated-branch-push",
+  "evidence_class": "OBSERVED",
+  "caveat": "Pushed only arena/0bee657b-lg-luma; no main push or merge.",
+  "command_argv": [
+    "git",
+    "push",
+    "origin",
+    "arena/0bee657b-lg-luma"
+  ],
+  "exit_code": 0,
+  "status": "PASS",
+  "started_utc": "2026-11-02T18:26:35.964025+00:00",
+  "finished_utc": "2026-11-02T18:26:38.793865+00:00",
+  "duration_ms": 2829.836,
+  "timed_out": false,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 0,
+  "stderr_sha256": "8c8c6390cf3a697ec6ffc51e283899f1bb52a753380821d3d362c274618a42ab",
+  "stderr_bytes": 316,
+  "head_sha": "921d92fb26e4defe0f5e5c3a1b114f2151822908",
+  "raw_receipt_sha256": "eaf4171d4230cd29ed7790a13e58d0390eb0f2588d7972879f90622a32886d3f",
+  "evidence_scope": "host command only; not physical-TV evidence"
+}

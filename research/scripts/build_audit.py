@@ -6,6 +6,7 @@ import json
 import re
 import subprocess
 from native_metrics import calculations
+from protected_paths import filter_protected
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = "e5608cd053be5376a54a806129a332952dfabcef"
@@ -44,7 +45,7 @@ def main():
         blob=hashlib.sha1(f"blob {len(data)}\0".encode()+data).hexdigest()
         rows.append({"path":path,"sha256":hashlib.sha256(data).hexdigest(),"git_blob_sha1":blob,"matches_handoff":blob==git("rev-parse",f"{HANDOFF}:{path}").strip()})
     write("handoff-integrity.json", {"schema":"luma-handoff-integrity/1","commit_sha":HANDOFF,"all_match":all(r["matches_handoff"] for r in rows),"files":rows})
-    protected = [p for p in paths if p.startswith(('src/','tv-helper/','tv/','vector-geometry/','assets/','tools/','tests/')) or p in ('Cargo.toml','Cargo.lock','package.json','appinfo.json')]
+    protected = filter_protected(paths)
     changed=[]
     for path in protected:
         before=subprocess.check_output(["git","show",f"{BASE}:{path}"],cwd=ROOT)

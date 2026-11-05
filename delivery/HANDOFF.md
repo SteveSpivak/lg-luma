@@ -12,6 +12,10 @@
 
 ## Read first
 
+0. **`NEXT-AGENT-PACKET.md`** — if you are a new agent starting from this
+   checkout, read this first. It has the `luma_cli.py` orientation/forensics/
+   math CLI, the documentation map, the code-review workflow, and the
+   environment's git-history-reset gotcha with its recovery recipe.
 1. `SCORECARD.md` — short evidence-backed status and next smallest experiment.
 2. `manifest.json` — exact SHAs, hashes, exits, evidence classes and blocker IDs.
 3. `PATCH-INTEGRITY.md` — historical failure diagnosis and final isolated gate.

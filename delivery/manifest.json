@@ -2,7 +2,7 @@
   "schema": "luma-audit-delivery/2",
   "base_sha": "e5608cd053be5376a54a806129a332952dfabcef",
   "handoff_sha": "2a40c7bb3af080981653f975b5c1e983e4f78ef5",
-  "checkout_head_sha_at_generation": "4d172a984ec9ca4a0ebde8de0551c6cd4fa5017b",
+  "checkout_head_sha_at_generation": "1bef79683968841426d89f066bd5bf1c0e3bbe31",
   "implementation_commit_sha": null,
   "commit_semantics": "implementation_commit_sha identifies the commit containing follow-up audit/tooling and the unapplied candidate; a subsequent manifest-recording commit may be HEAD.",
   "candidate_status": "GIT_INTEGRITY_VERIFIED_UNAPPLIED_NATIVE_BLOCKED",
@@ -106,6 +106,14 @@
       "scope": "Python comparison math/facts plus existing research contracts; no native build, rendering or TV"
     },
     {
+      "id": "cli-tests",
+      "exit": 0,
+      "passed": 76,
+      "total": 76,
+      "status": "PASS_HOST_SYNTHETIC",
+      "scope": "Adds luma_cli.py orientation/forensics/math coverage to the full Python suite; no native build, rendering or TV"
+    },
+    {
       "id": "native-regressions",
       "exit": 127,
       "status": "BLOCKED",
@@ -149,6 +157,24 @@
     "independent_of_candidate": true,
     "imported_into_checkout": false,
     "native_or_visual_result": "NOT_RUN"
+  },
+  "dev_tooling": {
+    "cli": "research/scripts/luma_cli.py",
+    "packet": "delivery/NEXT-AGENT-PACKET.md",
+    "commands": [
+      "map",
+      "docs",
+      "components",
+      "review",
+      "math",
+      "gates",
+      "forensics",
+      "status",
+      "test"
+    ],
+    "installs_anything": false,
+    "contacts_device": false,
+    "note": "Thin wrapper over existing scripts/modules; protected_paths.py is the single source of truth build_audit.py also imports, replacing a hand-duplicated literal."
   },
   "performance_proposals": "delivery/PERFORMANCE-PROPOSALS.md",
   "reference_provenance": {
@@ -478,7 +504,7 @@
       "exit_code": 0,
       "status": "PASS",
       "evidence_class": "OBSERVED",
-      "source": "raw"
+      "source": "committed_historical"
     },
     {
       "label": "reference-tests",
@@ -486,7 +512,7 @@
       "exit_code": 1,
       "status": "FAIL",
       "evidence_class": "MEASURED_HOST",
-      "source": "raw"
+      "source": "committed_historical"
     },
     {
       "label": "protected-source-diff-reference",
@@ -494,11 +520,35 @@
       "exit_code": 0,
       "status": "PASS",
       "evidence_class": "OBSERVED",
-      "source": "raw"
+      "source": "committed_historical"
     },
     {
       "label": "branch-history-recovery",
       "path": "receipts/branch-history-recovery.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
+    },
+    {
+      "label": "branch-history-recovery-2",
+      "path": "receipts/branch-history-recovery-2.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED",
+      "source": "raw"
+    },
+    {
+      "label": "cli-dev-tests",
+      "path": "receipts/cli-dev-tests.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "MEASURED_HOST",
+      "source": "raw"
+    },
+    {
+      "label": "cli-protected-source-diff",
+      "path": "receipts/cli-protected-source-diff.json",
       "exit_code": 0,
       "status": "PASS",
       "evidence_class": "OBSERVED",
@@ -510,7 +560,7 @@
       "exit_code": 0,
       "status": "PASS",
       "evidence_class": "OBSERVED",
-      "source": "raw"
+      "source": "committed_historical"
     },
     {
       "label": "reference-tests-corrected",
@@ -518,7 +568,7 @@
       "exit_code": 0,
       "status": "PASS",
       "evidence_class": "MEASURED_HOST",
-      "source": "raw"
+      "source": "committed_historical"
     }
   ],
   "files": {
@@ -531,12 +581,16 @@
       "bytes": 5543
     },
     "delivery/HANDOFF.md": {
-      "sha256": "f4fe13c6ba4ddead0c309c2f6d2fe46a8dc44da296749bad00b51cb4f5b4769d",
-      "bytes": 5048
+      "sha256": "717e0a446adc31c5332801aa116fa920b5657d5bed294016f433773817c6040e",
+      "bytes": 5340
     },
     "delivery/NATIVE-VALIDATION.md": {
       "sha256": "e242b52c0f27dac0bf4b76bde75a77c591400743f5d8e21ebd1865b3f3791d61",
       "bytes": 6700
+    },
+    "delivery/NEXT-AGENT-PACKET.md": {
+      "sha256": "eb9bf86b1ab393f43e5d859b82d58cf37e60a078dfbdbce8a0ca9de5618a1cc5",
+      "bytes": 12982
     },
     "delivery/PATCH-INTEGRITY.md": {
       "sha256": "5192c0703dc027d047edef740b4bae6b41a8f10260de78c29796290d0fc055ea",
@@ -555,7 +609,7 @@
       "bytes": 14731
     },
     "delivery/native-validation-status.json": {
-      "sha256": "03e21389cb6b6d8ffa6e825d0d848726789fa4b12c2971dcd2b191a68b53462e",
+      "sha256": "ccdcde877a781c65fb50f2ef69ad286fafc86fb10570ce37fe2675e08ebd1849",
       "bytes": 2528
     },
     "delivery/patches/focus-depth.patch": {
@@ -569,6 +623,10 @@
     "delivery/receipts/baseline-node.json": {
       "sha256": "2922ee5565140474ecf3e020ccf877d282fb3254014ccd36d88c05100c7ec77c",
       "bytes": 1031
+    },
+    "delivery/receipts/branch-history-recovery-2.json": {
+      "sha256": "4a302164ed286a392354b575ccf18adfc65590fddc820034e1be4619c46e2e5f",
+      "bytes": 965
     },
     "delivery/receipts/branch-history-recovery.json": {
       "sha256": "9380f6246190a30d1171c24e0d584a9c344991527bfc77ed295f8051f8817926",
@@ -602,6 +660,14 @@
       "sha256": "09a6ca42a8c50306532a1dd2ffe79ea972bf448c0719f787bedef5bb0c4dc200",
       "bytes": 902
     },
+    "delivery/receipts/cli-dev-tests.json": {
+      "sha256": "ad71b1befef03f95c74fbca61a66d778cde940691a352078c476ab907b39ee4a",
+      "bytes": 1038
+    },
+    "delivery/receipts/cli-protected-source-diff.json": {
+      "sha256": "0127f7cd08b170b86b8a79413173d18a15f19a10089619b62d21d7e9a6650c0e",
+      "bytes": 1137
+    },
     "delivery/receipts/dedicated-branch-push-final.json": {
       "sha256": "6fabc973f0d3b2d13bdd5584f20c20ab139a70a1fd8112babeeeb89787b04b39",
       "bytes": 934
@@ -623,8 +689,8 @@
       "bytes": 1026
     },
     "delivery/receipts/index.json": {
-      "sha256": "debc892151ecb95a43cedf3186417d36ec121eb9db5bc404e1563680a1e50f2b",
-      "bytes": 9949
+      "sha256": "ad5601f66096cee8d36c8aea7572b04a0e772ab355bb211bc0684d8043dc71d4",
+      "bytes": 10686
     },
     "delivery/receipts/missing-pnpm-cause.json": {
       "sha256": "205b4be3234bc11bd4ae9765e471787f1b53dcfae4096171b64757faf7a3b8ed",
@@ -895,24 +961,24 @@
       "bytes": 3868
     },
     "research/scripts/build_audit.py": {
-      "sha256": "86bac4d7c420f574ceb5c985bc71f0a51985016633880a729f2ba93d76030fa4",
-      "bytes": 3559
+      "sha256": "37acc5a6503cd1a8fa838e5aec64d0f09b165eac7bd5536bd15613c72ff33f08",
+      "bytes": 3451
     },
     "research/scripts/build_environment.py": {
       "sha256": "a58041367c2d86e6879a14cff059567d53d2999fb887236799c2c00acc115edd",
       "bytes": 9599
     },
     "research/scripts/build_manifest.py": {
-      "sha256": "6401daa69e6cf4f9cc932eedd6988b2049ea1340aba665fea859503aaacc47c3",
-      "bytes": 6720
+      "sha256": "b47cee5a3ba952a27201d88af4dd1518aba22102a297566651ec669e5660dbb1",
+      "bytes": 7343
     },
     "research/scripts/check_patch_integrity.py": {
       "sha256": "3f9f22f39ed015cc79a749036abf5a3fdb731b3ff9129697cf59f89dbd5966c1",
       "bytes": 8785
     },
     "research/scripts/collect_receipts.py": {
-      "sha256": "0ae0341f85c8d7a015497eb0da1bc9b13c2d24820eaa1fbe7c799ba3cbcbed12",
-      "bytes": 9382
+      "sha256": "0f385be25279f0940238c0d10ce618590f579355377d7e0e9b801d5e40ea9a26",
+      "bytes": 9840
     },
     "research/scripts/collect_reference_provenance.py": {
       "sha256": "e4d3ebd24e8dc17bdf0f3c75acdd5ae39f538a033679b04c34559956ea6cf4de",
@@ -921,6 +987,10 @@
     "research/scripts/compare_reference_launcher.py": {
       "sha256": "ce07c3856ce806c496bbd56abd25c1078f0e10f6628b2f4e10dd1e048f2731db",
       "bytes": 21473
+    },
+    "research/scripts/luma_cli.py": {
+      "sha256": "15a82b3a757cf68a9d680da978eacf21897127f3cf739f9bd2c58bb185ece1d3",
+      "bytes": 18819
     },
     "research/scripts/make_candidate.py": {
       "sha256": "6fc9e4e8eae34b5363d2756b349334ba0bc04416f216aada97f02ef31c60f58d",
@@ -937,6 +1007,10 @@
     "research/scripts/pin_reference.py": {
       "sha256": "f1638cfd4c1ae966e17186b219054a310f8e4cb39ed2d5a8a2623cf58a361eb1",
       "bytes": 5111
+    },
+    "research/scripts/protected_paths.py": {
+      "sha256": "7ce58e124fe21be7cb7437654207a4c17b44f4d85129322f097d89cd530ced20",
+      "bytes": 967
     },
     "research/scripts/receipt.py": {
       "sha256": "550291920560f95bdfbea65482a74e3ab37c84c703059da1124ad4e96de80975",
@@ -961,6 +1035,10 @@
     "research/tests/test_followup_gates.py": {
       "sha256": "87b7221ec9a1d13b2b9c081346f10f0196e6ffe2c207b19ef5969b8388281433",
       "bytes": 3325
+    },
+    "research/tests/test_luma_cli.py": {
+      "sha256": "fda709a42fdca005aad8b3abf99e067b05ff2df63d5fda5ee3390875f2222745",
+      "bytes": 8549
     },
     "research/tests/test_native_diagnostics_analysis.py": {
       "sha256": "7e3254e009e6cad5ac206bf9ff1916cbee6645688a409302bb9db605d4c24fb4",

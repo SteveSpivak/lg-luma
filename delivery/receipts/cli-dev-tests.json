@@ -1,0 +1,32 @@
+{
+  "schema": "luma-sanitized-receipt/2",
+  "label": "cli-dev-tests",
+  "evidence_class": "MEASURED_HOST",
+  "caveat": "Full Python research/tooling suite including new luma_cli.py coverage; no native build, rendering or TV.",
+  "command_argv": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "research/tests",
+    "-t",
+    "research/tests",
+    "-p",
+    "test_*.py"
+  ],
+  "exit_code": 0,
+  "status": "PASS",
+  "started_utc": "2026-11-05T17:09:41.450497+00:00",
+  "finished_utc": "2026-11-05T17:09:41.969194+00:00",
+  "duration_ms": 518.697,
+  "timed_out": false,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 0,
+  "stderr_sha256": "f4c92089c4b9a7cd9eeaf68ae4b7317b7bd31ec10821f3082e4474793e834ff3",
+  "stderr_bytes": 175,
+  "head_sha": "1bef79683968841426d89f066bd5bf1c0e3bbe31",
+  "raw_receipt_sha256": "73f6e4abbe8704f193196ae0152fbb4e18dbf60d767852a41d0c06dae1319a6c",
+  "evidence_scope": "host command only; not physical-TV evidence"
+}

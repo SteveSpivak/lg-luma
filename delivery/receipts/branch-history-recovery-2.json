@@ -1,0 +1,25 @@
+{
+  "schema": "luma-sanitized-receipt/2",
+  "label": "branch-history-recovery-2",
+  "evidence_class": "OBSERVED",
+  "caveat": "A second, independent sandbox reset of local git history during the same session; restored from origin again before any commit.",
+  "command_argv": [
+    "git",
+    "log",
+    "--format=%H%x20%s",
+    "-3"
+  ],
+  "exit_code": 0,
+  "status": "PASS",
+  "started_utc": "2026-11-05T17:09:41.406680+00:00",
+  "finished_utc": "2026-11-05T17:09:41.410460+00:00",
+  "duration_ms": 3.762,
+  "timed_out": false,
+  "stdout_sha256": "2df2b2843d538bc28ba49950669268d115a030c46a68651846876beed6d65309",
+  "stdout_bytes": 300,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "1bef79683968841426d89f066bd5bf1c0e3bbe31",
+  "raw_receipt_sha256": "d35e1189a1168ccd926a08f61e93bc15324a051730708b67d96c4af13fac8930",
+  "evidence_scope": "host command only; not physical-TV evidence"
+}

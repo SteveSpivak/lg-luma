@@ -56,6 +56,9 @@ LABELS = {
  "reference-tests":("MEASURED_HOST","Python contracts for comparison arithmetic and recorded facts; no native build, rendering or TV."),
  "protected-source-diff-reference":("OBSERVED","Native/protected paths unchanged after the reference comparison."),
  "branch-history-recovery":("OBSERVED","Local clone was re-created at base by the environment; branch history restored from origin before new work."),
+ "branch-history-recovery-2":("OBSERVED","A second, independent sandbox reset of local git history during the same session; restored from origin again before any commit."),
+ "cli-dev-tests":("MEASURED_HOST","Full Python research/tooling suite including new luma_cli.py coverage; no native build, rendering or TV."),
+ "cli-protected-source-diff":("OBSERVED","Native/protected paths unchanged after adding the CLI, packet and protected_paths.py extraction."),
  "reference-forensics-corrected":("OBSERVED","Corrected run: blob comparison pinned to the audit base instead of the moving branch tip. Read-only, nothing imported."),
  "reference-tests-corrected":("MEASURED_HOST","Preserved first failure was a real defect (tip-relative blobs); after pinning to the base, all Python contracts pass. No native/TV."),
 }

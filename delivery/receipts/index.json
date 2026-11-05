@@ -311,7 +311,7 @@
       "exit_code": 0,
       "status": "PASS",
       "evidence_class": "OBSERVED",
-      "source": "raw"
+      "source": "committed_historical"
     },
     {
       "label": "reference-tests",
@@ -319,7 +319,7 @@
       "exit_code": 1,
       "status": "FAIL",
       "evidence_class": "MEASURED_HOST",
-      "source": "raw"
+      "source": "committed_historical"
     },
     {
       "label": "protected-source-diff-reference",
@@ -327,11 +327,35 @@
       "exit_code": 0,
       "status": "PASS",
       "evidence_class": "OBSERVED",
-      "source": "raw"
+      "source": "committed_historical"
     },
     {
       "label": "branch-history-recovery",
       "path": "receipts/branch-history-recovery.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
+    },
+    {
+      "label": "branch-history-recovery-2",
+      "path": "receipts/branch-history-recovery-2.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED",
+      "source": "raw"
+    },
+    {
+      "label": "cli-dev-tests",
+      "path": "receipts/cli-dev-tests.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "MEASURED_HOST",
+      "source": "raw"
+    },
+    {
+      "label": "cli-protected-source-diff",
+      "path": "receipts/cli-protected-source-diff.json",
       "exit_code": 0,
       "status": "PASS",
       "evidence_class": "OBSERVED",
@@ -343,7 +367,7 @@
       "exit_code": 0,
       "status": "PASS",
       "evidence_class": "OBSERVED",
-      "source": "raw"
+      "source": "committed_historical"
     },
     {
       "label": "reference-tests-corrected",
@@ -351,7 +375,7 @@
       "exit_code": 0,
       "status": "PASS",
       "evidence_class": "MEASURED_HOST",
-      "source": "raw"
+      "source": "committed_historical"
     }
   ]
 }

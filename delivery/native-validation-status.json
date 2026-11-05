@@ -1,7 +1,7 @@
 {
   "schema": "luma-native-validation-status/1",
   "branch": "arena/0bee657b-lg-luma",
-  "head_sha": "921d92fb26e4defe0f5e5c3a1b114f2151822908",
+  "head_sha": "1bef79683968841426d89f066bd5bf1c0e3bbe31",
   "ready": false,
   "status": "BLOCKED",
   "missing_required": [

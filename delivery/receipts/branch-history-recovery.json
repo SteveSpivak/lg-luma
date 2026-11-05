@@ -1,0 +1,25 @@
+{
+  "schema": "luma-sanitized-receipt/2",
+  "label": "branch-history-recovery",
+  "evidence_class": "OBSERVED",
+  "caveat": "Local clone was re-created at base by the environment; branch history restored from origin before new work.",
+  "command_argv": [
+    "git",
+    "log",
+    "--format=%H%x20%s",
+    "-4"
+  ],
+  "exit_code": 0,
+  "status": "PASS",
+  "started_utc": "2026-11-05T16:20:17.529661+00:00",
+  "finished_utc": "2026-11-05T16:20:17.533255+00:00",
+  "duration_ms": 3.577,
+  "timed_out": false,
+  "stdout_sha256": "9ec466b8b75d6cb4cef3fa1cc1938bd958fecad37ff9f452adfb615fd06ee8bb",
+  "stdout_bytes": 424,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "4d172a984ec9ca4a0ebde8de0551c6cd4fa5017b",
+  "raw_receipt_sha256": "c038da59b36504057c4b584d0c60f86186ff1a8a524f002873928a3eef5f2635",
+  "evidence_scope": "host command only; not physical-TV evidence"
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "luma-sanitized-receipt/2",
+  "label": "reference-forensics",
+  "evidence_class": "OBSERVED",
+  "caveat": "Pinned upstream fork compared read-only outside the checkout; file/constant counts only, nothing imported.",
+  "command_argv": [
+    "python3",
+    "-B",
+    "research/scripts/compare_reference_launcher.py"
+  ],
+  "exit_code": 0,
+  "status": "PASS",
+  "started_utc": "2026-11-05T16:20:17.572005+00:00",
+  "finished_utc": "2026-11-05T16:20:17.937122+00:00",
+  "duration_ms": 365.12,
+  "timed_out": false,
+  "stdout_sha256": "eb83248a87a2aa14135387fe131ae8ee60e8170ac3babbc14f4b5102d1ed3bb6",
+  "stdout_bytes": 306,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "4d172a984ec9ca4a0ebde8de0551c6cd4fa5017b",
+  "raw_receipt_sha256": "750a24a4d7544b447c1ed07e0e2bd11bfe18b7aa1c7533e241900a34bb51f0bf",
+  "evidence_scope": "host command only; not physical-TV evidence"
+}

@@ -1,0 +1,1113 @@
+{
+  "assets": {
+    "available": true,
+    "blobs": 969,
+    "by_extension": {
+      "jpg": {
+        "bytes": 84116715,
+        "files": 607
+      },
+      "json": {
+        "bytes": 150849,
+        "files": 12
+      },
+      "mjs": {
+        "bytes": 119891,
+        "files": 23
+      },
+      "rs": {
+        "bytes": 1919100,
+        "files": 65
+      },
+      "svg": {
+        "bytes": 155847,
+        "files": 121
+      },
+      "ttf": {
+        "bytes": 43042372,
+        "files": 36
+      },
+      "txt": {
+        "bytes": 167009,
+        "files": 39
+      },
+      "webp": {
+        "bytes": 7309528,
+        "files": 1
+      }
+    },
+    "font_bytes": 43042372,
+    "image_bytes": 84116715,
+    "ofl_license_files": 36,
+    "total_bytes": 137489912
+  },
+  "blobs": {
+    "by_area": {
+      ".changeset": {
+        "common": 2,
+        "identical": 2,
+        "only_ours": 0,
+        "only_reference": 1
+      },
+      ".github": {
+        "common": 1,
+        "identical": 0,
+        "only_ours": 3,
+        "only_reference": 1
+      },
+      "assets": {
+        "common": 106,
+        "identical": 103,
+        "only_ours": 18,
+        "only_reference": 663
+      },
+      "docs": {
+        "common": 0,
+        "identical": 0,
+        "only_ours": 6,
+        "only_reference": 24
+      },
+      "extras": {
+        "common": 0,
+        "identical": 0,
+        "only_ours": 0,
+        "only_reference": 28
+      },
+      "native": {
+        "common": 0,
+        "identical": 0,
+        "only_ours": 0,
+        "only_reference": 18
+      },
+      "src": {
+        "common": 27,
+        "identical": 6,
+        "only_ours": 22,
+        "only_reference": 45
+      },
+      "tests": {
+        "common": 7,
+        "identical": 1,
+        "only_ours": 4,
+        "only_reference": 2
+      },
+      "tools": {
+        "common": 17,
+        "identical": 8,
+        "only_ours": 0,
+        "only_reference": 4
+      },
+      "tv": {
+        "common": 2,
+        "identical": 0,
+        "only_ours": 2,
+        "only_reference": 3
+      },
+      "vector-geometry": {
+        "common": 2,
+        "identical": 2,
+        "only_ours": 0,
+        "only_reference": 0
+      }
+    },
+    "changed": 53,
+    "common_paths": 179,
+    "identical": 126,
+    "identical_root_files": [
+      ".gitignore",
+      "flake.lock",
+      "license",
+      "pnpm-workspace.yaml"
+    ],
+    "only_ours": 70,
+    "only_reference": 790
+  },
+  "budgets": {
+    "code": {
+      "glyph_entries": 4096,
+      "glyph_geometry_bytes": 8388608,
+      "raster_bytes": 50331648,
+      "text_bytes": 33554432,
+      "text_entries": 512
+    },
+    "docs": {
+      "glyph_entries": 4096,
+      "glyph_geometry_mib": 8,
+      "raster_mib": 48,
+      "text_entries": 512,
+      "text_runs_mib": 32
+    },
+    "match": true
+  },
+  "components": [
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/aerial_video.rs",
+      "reference_lines": 287,
+      "status": "only_reference"
+    },
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/album.rs",
+      "reference_lines": 281,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/album_view.rs",
+      "reference_lines": 348,
+      "status": "only_reference"
+    },
+    {
+      "class": "tests",
+      "delta_lines": -305,
+      "ours_lines": 711,
+      "path": "src/app-artwork-tests.rs",
+      "reference_lines": 406,
+      "status": "both"
+    },
+    {
+      "class": "tests",
+      "delta_lines": null,
+      "ours_lines": 184,
+      "path": "src/app-subscription-tests.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "runtime",
+      "delta_lines": null,
+      "ours_lines": 151,
+      "path": "src/app-subscription.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "other",
+      "delta_lines": -258,
+      "ours_lines": 692,
+      "path": "src/app_artwork.rs",
+      "reference_lines": 434,
+      "status": "both"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": -4,
+      "ours_lines": 220,
+      "path": "src/branding.rs",
+      "reference_lines": 216,
+      "status": "both"
+    },
+    {
+      "class": "platform",
+      "delta_lines": null,
+      "ours_lines": 211,
+      "path": "src/companion.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "tests",
+      "delta_lines": null,
+      "ours_lines": 195,
+      "path": "src/damage-tests.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "runtime",
+      "delta_lines": null,
+      "ours_lines": 167,
+      "path": "src/damage.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "other",
+      "delta_lines": -31,
+      "ours_lines": 117,
+      "path": "src/diagnostics.rs",
+      "reference_lines": 86,
+      "status": "both"
+    },
+    {
+      "class": "runtime",
+      "delta_lines": null,
+      "ours_lines": 137,
+      "path": "src/egl_damage.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": 0,
+      "ours_lines": 126,
+      "path": "src/font.rs",
+      "reference_lines": 126,
+      "status": "both"
+    },
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/game.rs",
+      "reference_lines": 42,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/game_view.rs",
+      "reference_lines": 433,
+      "status": "only_reference"
+    },
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/hw_wallpaper.rs",
+      "reference_lines": 714,
+      "status": "only_reference"
+    },
+    {
+      "class": "other",
+      "delta_lines": -389,
+      "ours_lines": 756,
+      "path": "src/i18n.rs",
+      "reference_lines": 367,
+      "status": "both"
+    },
+    {
+      "class": "tests",
+      "delta_lines": null,
+      "ours_lines": 328,
+      "path": "src/input-refresh-tests.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "runtime",
+      "delta_lines": null,
+      "ours_lines": 55,
+      "path": "src/input-refresh.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/jellyfin.rs",
+      "reference_lines": 1528,
+      "status": "only_reference"
+    },
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/library.rs",
+      "reference_lines": 1010,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/library_view.rs",
+      "reference_lines": 401,
+      "status": "only_reference"
+    },
+    {
+      "class": "platform",
+      "delta_lines": -40,
+      "ours_lines": 362,
+      "path": "src/luna.rs",
+      "reference_lines": 322,
+      "status": "both"
+    },
+    {
+      "class": "runtime",
+      "delta_lines": 2173,
+      "ours_lines": 1959,
+      "path": "src/main.rs",
+      "reference_lines": 4132,
+      "status": "both"
+    },
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/media.rs",
+      "reference_lines": 187,
+      "status": "only_reference"
+    },
+    {
+      "class": "connectivity",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/mini.rs",
+      "reference_lines": 95,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/mini_view.rs",
+      "reference_lines": 152,
+      "status": "only_reference"
+    },
+    {
+      "class": "runtime",
+      "delta_lines": -22,
+      "ours_lines": 606,
+      "path": "src/model.rs",
+      "reference_lines": 584,
+      "status": "both"
+    },
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/moonlight.rs",
+      "reference_lines": 1910,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/motion.rs",
+      "reference_lines": 157,
+      "status": "only_reference"
+    },
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/movie.rs",
+      "reference_lines": 941,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/movie_view.rs",
+      "reference_lines": 1182,
+      "status": "only_reference"
+    },
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/music.rs",
+      "reference_lines": 491,
+      "status": "only_reference"
+    },
+    {
+      "class": "other",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/pad_watch.rs",
+      "reference_lines": 166,
+      "status": "only_reference"
+    },
+    {
+      "class": "connectivity",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/phone_link.rs",
+      "reference_lines": 591,
+      "status": "only_reference"
+    },
+    {
+      "class": "platform",
+      "delta_lines": null,
+      "ours_lines": 177,
+      "path": "src/platform-install.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "platform",
+      "delta_lines": -354,
+      "ours_lines": 951,
+      "path": "src/platform.rs",
+      "reference_lines": 597,
+      "status": "both"
+    },
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/player.rs",
+      "reference_lines": 666,
+      "status": "only_reference"
+    },
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/player_backend.rs",
+      "reference_lines": 776,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/player_view.rs",
+      "reference_lines": 731,
+      "status": "only_reference"
+    },
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/plex.rs",
+      "reference_lines": 945,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": 0,
+      "ours_lines": 97,
+      "path": "src/raster.rs",
+      "reference_lines": 97,
+      "status": "both"
+    },
+    {
+      "class": "tests",
+      "delta_lines": null,
+      "ours_lines": 934,
+      "path": "src/recents-tests.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": 218,
+      "path": "src/recents-view.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "runtime",
+      "delta_lines": null,
+      "ours_lines": 469,
+      "path": "src/recents.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": 1043,
+      "ours_lines": 1857,
+      "path": "src/renderer.rs",
+      "reference_lines": 2900,
+      "status": "both"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": 0,
+      "ours_lines": 40,
+      "path": "src/scroll-preview.rs",
+      "reference_lines": 40,
+      "status": "both"
+    },
+    {
+      "class": "runtime",
+      "delta_lines": null,
+      "ours_lines": 61,
+      "path": "src/sdl_events.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/settings_art.rs",
+      "reference_lines": 1132,
+      "status": "only_reference"
+    },
+    {
+      "class": "connectivity",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/smart_home.rs",
+      "reference_lines": 810,
+      "status": "only_reference"
+    },
+    {
+      "class": "connectivity",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/smart_home_pairing.rs",
+      "reference_lines": 367,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/smart_home_settings_view.rs",
+      "reference_lines": 462,
+      "status": "only_reference"
+    },
+    {
+      "class": "connectivity",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/smart_home_ws.rs",
+      "reference_lines": 446,
+      "status": "only_reference"
+    },
+    {
+      "class": "connectivity",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/stacks.rs",
+      "reference_lines": 258,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/stacks_view.rs",
+      "reference_lines": 225,
+      "status": "only_reference"
+    },
+    {
+      "class": "runtime",
+      "delta_lines": 2654,
+      "ours_lines": 2540,
+      "path": "src/state.rs",
+      "reference_lines": 5194,
+      "status": "both"
+    },
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/steam.rs",
+      "reference_lines": 430,
+      "status": "only_reference"
+    },
+    {
+      "class": "platform",
+      "delta_lines": -195,
+      "ours_lines": 405,
+      "path": "src/storage.rs",
+      "reference_lines": 210,
+      "status": "both"
+    },
+    {
+      "class": "tests",
+      "delta_lines": 191,
+      "ours_lines": 3271,
+      "path": "src/tests.rs",
+      "reference_lines": 3462,
+      "status": "both"
+    },
+    {
+      "class": "other",
+      "delta_lines": null,
+      "ours_lines": 98,
+      "path": "src/text_rendering.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "tests",
+      "delta_lines": null,
+      "ours_lines": 424,
+      "path": "src/tile-editor-tests.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "runtime",
+      "delta_lines": null,
+      "ours_lines": 483,
+      "path": "src/tile-editor.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/tvos_settings_view.rs",
+      "reference_lines": 2547,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/typography.rs",
+      "reference_lines": 296,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/ui_sound.rs",
+      "reference_lines": 63,
+      "status": "only_reference"
+    },
+    {
+      "class": "platform",
+      "delta_lines": null,
+      "ours_lines": 685,
+      "path": "src/update.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": 0,
+      "ours_lines": 84,
+      "path": "src/vector.rs",
+      "reference_lines": 84,
+      "status": "both"
+    },
+    {
+      "class": "media",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/video_catalog.rs",
+      "reference_lines": 381,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": 1143,
+      "ours_lines": 3898,
+      "path": "src/view.rs",
+      "reference_lines": 5041,
+      "status": "both"
+    },
+    {
+      "class": "runtime",
+      "delta_lines": null,
+      "ours_lines": 103,
+      "path": "src/wallpaper_cycle.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "tests",
+      "delta_lines": null,
+      "ours_lines": 549,
+      "path": "src/wallpapers-tests.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "tests",
+      "delta_lines": null,
+      "ours_lines": 829,
+      "path": "src/wallpapers-ui-tests.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "runtime",
+      "delta_lines": null,
+      "ours_lines": 655,
+      "path": "src/wallpapers.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "connectivity",
+      "delta_lines": 19,
+      "ours_lines": 344,
+      "path": "src/weather-service.rs",
+      "reference_lines": 363,
+      "status": "both"
+    },
+    {
+      "class": "tests",
+      "delta_lines": 53,
+      "ours_lines": 236,
+      "path": "src/weather-tests.rs",
+      "reference_lines": 289,
+      "status": "both"
+    },
+    {
+      "class": "connectivity",
+      "delta_lines": 86,
+      "ours_lines": 433,
+      "path": "src/weather.rs",
+      "reference_lines": 519,
+      "status": "both"
+    },
+    {
+      "class": "connectivity",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/weather_phrases.rs",
+      "reference_lines": 397,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/weather_sky.rs",
+      "reference_lines": 411,
+      "status": "only_reference"
+    },
+    {
+      "class": "platform",
+      "delta_lines": null,
+      "ours_lines": 67,
+      "path": "src/webhook.rs",
+      "reference_lines": null,
+      "status": "only_ours"
+    },
+    {
+      "class": "platform",
+      "delta_lines": 0,
+      "ours_lines": 125,
+      "path": "src/webos-compat.rs",
+      "reference_lines": 125,
+      "status": "both"
+    },
+    {
+      "class": "connectivity",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/widgets.rs",
+      "reference_lines": 1049,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/widgets_settings_view.rs",
+      "reference_lines": 284,
+      "status": "only_reference"
+    },
+    {
+      "class": "connectivity",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/widgets_state.rs",
+      "reference_lines": 1268,
+      "status": "only_reference"
+    },
+    {
+      "class": "rendering",
+      "delta_lines": null,
+      "ours_lines": null,
+      "path": "src/widgets_view.rs",
+      "reference_lines": 2269,
+      "status": "only_reference"
+    }
+  ],
+  "diagnostics": {
+    "ours_fields": [
+      "compose_ms",
+      "cpu_submission",
+      "glyph_ms",
+      "image_ms",
+      "interval_ms",
+      "max_ms",
+      "mean_ms",
+      "p95_ms",
+      "pacing",
+      "presented",
+      "redrawn",
+      "render_ms",
+      "samples",
+      "swap_ms",
+      "timeline",
+      "vector_ms",
+      "warmup_frames"
+    ],
+    "ours_has_timeline": true,
+    "ours_superset": true,
+    "reference_fields": [
+      "cpu_submission",
+      "max_ms",
+      "mean_ms",
+      "p95_ms",
+      "pacing",
+      "presented",
+      "samples",
+      "warmup_frames"
+    ],
+    "reference_has_timeline": false
+  },
+  "focus": {
+    "apps_resting_skip_condition": "state.page != Page::Apps || level > 0.",
+    "apps_resting_skips_shadow": true,
+    "constants": {
+      "CARD_RISE": 25.0,
+      "FOCUS_IN": 0.16,
+      "FOCUS_OUT": 0.16,
+      "FOCUS_POP": 0.55,
+      "FOCUS_SHEEN": 0.4,
+      "SCROLL": 0.18
+    },
+    "independent_of_our_experiment": true,
+    "reduced_motion_sites": {
+      "src/album.rs": 2,
+      "src/album_view.rs": 2,
+      "src/game_view.rs": 2,
+      "src/library.rs": 1,
+      "src/library_view.rs": 3,
+      "src/main.rs": 4,
+      "src/mini_view.rs": 1,
+      "src/model.rs": 2,
+      "src/motion.rs": 1,
+      "src/movie.rs": 4,
+      "src/movie_view.rs": 4,
+      "src/settings_art.rs": 1,
+      "src/state.rs": 41,
+      "src/tests.rs": 27,
+      "src/view.rs": 22,
+      "src/weather_sky.rs": 2,
+      "src/widgets_view.rs": 4
+    },
+    "reduced_motion_total": 123,
+    "shadow_calls": {
+      "all_numeric_args": 20,
+      "files": 10,
+      "interpolated": 28,
+      "per_file": {
+        "src/album_view.rs": {
+          "all_numeric_args": 2,
+          "interpolated": 1,
+          "total": 3
+        },
+        "src/game_view.rs": {
+          "all_numeric_args": 1,
+          "interpolated": 1,
+          "total": 2
+        },
+        "src/library_view.rs": {
+          "all_numeric_args": 0,
+          "interpolated": 2,
+          "total": 2
+        },
+        "src/mini_view.rs": {
+          "all_numeric_args": 0,
+          "interpolated": 2,
+          "total": 2
+        },
+        "src/movie_view.rs": {
+          "all_numeric_args": 3,
+          "interpolated": 4,
+          "total": 7
+        },
+        "src/player_view.rs": {
+          "all_numeric_args": 4,
+          "interpolated": 1,
+          "total": 5
+        },
+        "src/stacks_view.rs": {
+          "all_numeric_args": 0,
+          "interpolated": 1,
+          "total": 1
+        },
+        "src/tvos_settings_view.rs": {
+          "all_numeric_args": 1,
+          "interpolated": 5,
+          "total": 6
+        },
+        "src/view.rs": {
+          "all_numeric_args": 7,
+          "interpolated": 6,
+          "total": 13
+        },
+        "src/widgets_view.rs": {
+          "all_numeric_args": 2,
+          "interpolated": 5,
+          "total": 7
+        }
+      },
+      "total": 48
+    },
+    "zoom": "1 + 0.07 * focus_pop, disabled when reduced_motion"
+  },
+  "gates": {
+    "frame_pacing": "NOT_RUN",
+    "native_build": "BLOCKED (no toolchain in this environment)",
+    "physical_tv": "NOT_RUN (out of scope, no device contact)",
+    "reference_clone": "OBSERVED",
+    "rendering": "NOT_RUN",
+    "visual_difference": "NOT_RUN"
+  },
+  "generated_by": "research/scripts/compare_reference_launcher.py",
+  "hygiene": {
+    "drm_patterns": {
+      "drm": 0,
+      "hdcp": 0,
+      "playready": 0,
+      "widevine": 0
+    },
+    "lg_header_includes": {
+      "NDL_directmedia.h": 1,
+      "smp_api_is_own_facade": true,
+      "vendored_header_present": false
+    },
+    "netflix_mentions": 52,
+    "secret_patterns": {
+      "assigned_password": 0,
+      "aws_access_key": 0,
+      "github_token": 0,
+      "jwt_literal": 0,
+      "private_key_block": 0,
+      "slack_token": 0
+    }
+  },
+  "labels": {
+    "blob_and_line_counts": "OBSERVED (git, pinned trees)",
+    "constants": "OBSERVED (source literals)",
+    "native_runs": "NOT_RUN",
+    "perf_math": "MODEL (closed form from source constants; no GPU, TV or clock measurement)"
+  },
+  "ours": {
+    "app_id": "com.ecklf.luma",
+    "app_version": "2.16.2",
+    "base": "e5608cd053be5376a54a806129a332952dfabcef",
+    "compared_rev": "e5608cd053be5376a54a806129a332952dfabcef",
+    "files_total": 249,
+    "fork_of": "ecklf/lg-luma",
+    "rust_files": 54,
+    "shares_history_with_reference": false
+  },
+  "perf_math": {
+    "card": {
+      "height": 154.4,
+      "width": 256.0
+    },
+    "chase": {
+      "frames_96pct_at_60hz": 10.796229474713217,
+      "rate_per_s": 17.88888888888889,
+      "settle_96pct_s": 0.17993715791188694,
+      "settle_99pct_s": 0.25743187375088705,
+      "tau_s": 0.055900621118012424
+    },
+    "damage_delta_42_minus_34": 9062.399999999994,
+    "damage_px": {
+      "22": 60520.8,
+      "34": 73154.40000000001,
+      "42": 82216.8
+    },
+    "design": {
+      "ours_current": {
+        "alpha": 0.4,
+        "blur": 34,
+        "blur_over_dy": 2.4285714285714284,
+        "depth_index": 0.09067357512953368,
+        "dy": 14,
+        "softness": 0.22020725388601037
+      },
+      "ours_experiment": {
+        "alpha": 0.5,
+        "blur": 42,
+        "blur_over_dy": 2.1,
+        "depth_index": 0.12953367875647667,
+        "dy": 20,
+        "softness": 0.272020725388601
+      },
+      "reference_focused": {
+        "alpha": 0.24,
+        "blur": 40,
+        "blur_over_dy": 3.3333333333333335,
+        "composite_alpha": 0.4680000000000001,
+        "depth_index": 0.07772020725388601,
+        "dy": 12,
+        "halo_alpha": 0.3,
+        "halo_blur": 90,
+        "halo_dy": 16,
+        "softness": 0.25906735751295334
+      }
+    },
+    "full_frame": {
+      "bytes_1080p_rgba8": 8294400,
+      "bytes_4k_double_buffered": 66355200,
+      "bytes_4k_rgba8": 33177600,
+      "gbs_1080p_60hz": 0.497664,
+      "px_1080p": 2073600
+    },
+    "grid_fraction_of_1080p": {
+      "ours_current": 0.43660185185185185,
+      "ours_experiment": 0.44094135802469137,
+      "reference_apps": 0.10247222222222223,
+      "reference_home": 0.531675925925926
+    },
+    "grid_shadow_area_px": {
+      "ours_current": 905337.6,
+      "ours_experiment": 914336.0,
+      "reference_apps": 212486.40000000002,
+      "reference_home": 1102483.2000000002
+    },
+    "ratios": {
+      "experiment_over_current_focused": 1.1248778754773958,
+      "experiment_over_reference_full_focus": 0.3814644137224782,
+      "halo_over_card_face": 3.383257772020725
+    },
+    "shadow_area_px": {
+      "experiment_focused_blur42": 81056.0,
+      "ours_focused_blur34": 72057.6,
+      "ours_resting_blur22": 59520.0,
+      "reference_focused_blur40": 78758.40000000001,
+      "reference_halo_blur90": 133728.0,
+      "reference_resting_blur26": 63571.200000000004
+    },
+    "shadow_bandwidth_gbs_60hz_readwrite": {
+      "ours_current": 0.434562048,
+      "ours_experiment": 0.43888128,
+      "reference_apps": 0.10199347200000002,
+      "reference_home": 0.5291919360000001
+    },
+    "spring": {
+      "equivalent_damping": 0.41919598578759837,
+      "overshoot": 0.23444264670710635,
+      "peak": 1.2344426467071064,
+      "peak_k": 0.2677945044588987,
+      "settle_1pct_seconds": 0.5065687204586902,
+      "zoom_area_factor_at_peak": 1.1802888289142401,
+      "zoom_at_peak": 1.0864109852694974
+    }
+  },
+  "reference": {
+    "app_id": "com.denisefremov.luma",
+    "app_version": "2.2.160",
+    "commit": "40994fc144b5af481056d14e2fb93304aa1e2c82",
+    "commit_count": 5,
+    "commit_count_source": "GitHub commits API rel=last (one commit per page)",
+    "commits_signed": false,
+    "files_total": 969,
+    "full_name": "funnymataleao/luma-webos-launcher",
+    "history": "single import plus four edits; no incremental feature history",
+    "license": "MIT License",
+    "package_version": "2.2.160",
+    "rust_files": 65,
+    "rust_lines": 53366,
+    "tag": "v2.2.160",
+    "workflows": [
+      ".github/workflows/ci.yml"
+    ]
+  },
+  "schema": 1
+}

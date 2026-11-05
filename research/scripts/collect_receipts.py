@@ -11,7 +11,7 @@ import json
 import re
 
 ROOT = Path(__file__).resolve().parents[2]
-RAW = Path("/home/user/luma-research-evidence/20261102")
+RAW_DIRS = (Path("/home/user/luma-research-evidence/20261105"), Path("/home/user/luma-research-evidence/20261102"))
 OUT = ROOT / "delivery/receipts"
 LABELS = {
  "baseline-git":("OBSERVED","Checkout/remote base identity only."),
@@ -52,6 +52,12 @@ LABELS = {
  "native-preflight":("BLOCKED","Read-only native desktop preflight; required tools/inputs missing. No installs or native tests."),
  "dedicated-branch-push-final":("OBSERVED","Pushed only dedicated branch after native-validation prep; no main push or merge."),
  "remote-branch-verify-final":("OBSERVED","Final remote dedicated branch SHA verified after prep push."),
+ "reference-forensics":("OBSERVED","Pinned upstream fork compared read-only outside the checkout; file/constant counts only, nothing imported."),
+ "reference-tests":("MEASURED_HOST","Python contracts for comparison arithmetic and recorded facts; no native build, rendering or TV."),
+ "protected-source-diff-reference":("OBSERVED","Native/protected paths unchanged after the reference comparison."),
+ "branch-history-recovery":("OBSERVED","Local clone was re-created at base by the environment; branch history restored from origin before new work."),
+ "reference-forensics-corrected":("OBSERVED","Corrected run: blob comparison pinned to the audit base instead of the moving branch tip. Read-only, nothing imported."),
+ "reference-tests-corrected":("MEASURED_HOST","Preserved first failure was a real defect (tip-relative blobs); after pinning to the base, all Python contracts pass. No native/TV."),
 }
 RAW_NAMES={"pnpm-test":"gate-pnpm_test","pnpm-check":"gate-pnpm_check","pnpm-format-check":"gate-pnpm_format_check","cargo-test":"gate-cargo_test_--locked_--workspace_--all-features"}
 
@@ -83,21 +89,45 @@ def compact_receipt(raw, label, evidence_class, caveat, raw_sha256):
             "evidence_scope":raw["evidence_scope"]}
 
 
-def main():
-    OUT.mkdir(parents=True,exist_ok=True)
-    index=[]
-    for label,(evidence_class,caveat) in LABELS.items():
-        path=RAW/f"{RAW_NAMES.get(label,label)}.json"
-        if not path.exists():
-            index.append({"label":label,"status":"MISSING_RAW_RECEIPT"})
-            continue
-        raw_bytes=path.read_bytes()
-        raw=json.loads(raw_bytes)
-        compact=compact_receipt(raw,label,evidence_class,caveat,hashlib.sha256(raw_bytes).hexdigest())
-        (OUT/f"{label}.json").write_text(json.dumps(compact,indent=2)+"\n")
-        index.append({"label":label,"path":f"receipts/{label}.json","exit_code":raw["exit_code"],"status":raw["execution_status"],"evidence_class":evidence_class})
-    (OUT/"index.json").write_text(json.dumps({"schema":"luma-receipt-index/1","receipts":index},indent=2)+"\n")
-    print(json.dumps({"receipts":len(index),"missing":[r['label'] for r in index if r['status']=='MISSING_RAW_RECEIPT']}))
-    if any(r['status']=='MISSING_RAW_RECEIPT' for r in index): raise SystemExit(1)
+def find_raw(name):
+    for directory in RAW_DIRS:
+        path = directory / f"{name}.json"
+        if path.exists():
+            return path
+    return None
 
-if __name__=='__main__': main()
+
+def main():
+    OUT.mkdir(parents=True, exist_ok=True)
+    index = []
+    missing = []
+    for label, (evidence_class, caveat) in LABELS.items():
+        path = find_raw(RAW_NAMES.get(label, label))
+        committed = OUT / f"{label}.json"
+        if path is not None:
+            raw_bytes = path.read_bytes()
+            raw = json.loads(raw_bytes)
+            compact = compact_receipt(raw, label, evidence_class, caveat, hashlib.sha256(raw_bytes).hexdigest())
+            committed.write_text(json.dumps(compact, indent=2) + "\n")
+            index.append({"label": label, "path": f"receipts/{label}.json", "exit_code": raw["exit_code"],
+                          "status": raw["execution_status"], "evidence_class": evidence_class, "source": "raw"})
+        elif committed.exists():
+            # The raw log is gone (environment reset). Keep the previously committed,
+            # hash-linked receipt as history; never re-derive or re-run it here.
+            existing = json.loads(committed.read_text())
+            index.append({"label": label, "path": f"receipts/{label}.json", "exit_code": existing["exit_code"],
+                          "status": existing["status"], "evidence_class": existing["evidence_class"],
+                          "source": "committed_historical"})
+        else:
+            index.append({"label": label, "status": "MISSING_RAW_RECEIPT"})
+            missing.append(label)
+    (OUT / "index.json").write_text(json.dumps({"schema": "luma-receipt-index/1", "receipts": index}, indent=2) + "\n")
+    print(json.dumps({"receipts": len(index), "from_raw": sum(1 for r in index if r.get("source") == "raw"),
+                      "historical": sum(1 for r in index if r.get("source") == "committed_historical"),
+                      "missing": missing}))
+    if missing:
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,24 @@
+{
+  "schema": "luma-sanitized-receipt/2",
+  "label": "reference-forensics-corrected",
+  "evidence_class": "OBSERVED",
+  "caveat": "Corrected run: blob comparison pinned to the audit base instead of the moving branch tip. Read-only, nothing imported.",
+  "command_argv": [
+    "python3",
+    "-B",
+    "research/scripts/compare_reference_launcher.py"
+  ],
+  "exit_code": 0,
+  "status": "PASS",
+  "started_utc": "2026-11-05T16:20:34.122948+00:00",
+  "finished_utc": "2026-11-05T16:20:34.538353+00:00",
+  "duration_ms": 415.398,
+  "timed_out": false,
+  "stdout_sha256": "5c13bea95fc047b14d91a849aedbdf5f2eb822324a844b14bac04bb2d437f424",
+  "stdout_bytes": 306,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "head_sha": "4d172a984ec9ca4a0ebde8de0551c6cd4fa5017b",
+  "raw_receipt_sha256": "f9e2483defacef26cd9f0daabd17ec59441ea5d7e84d10fa00bdbdfb7447cc61",
+  "evidence_scope": "host command only; not physical-TV evidence"
+}

@@ -34,3 +34,7 @@ The independent Python arithmetic helpers follow inspected nearest-rank semantic
 - From firmware README: hashes/integrity before interpretation; static filenames/ELF headers/QML names do not establish runtime dependencies; scanner caps/exclusions prevent complete-inventory claims.
 
 Raw reference metadata and selected text live outside the checkout at `/home/user/luma-research-evidence/references`. Machine-readable sanitized pins, tree/blob IDs and SHA-256 hashes are in `../audit/reference-provenance.json`; sanitized command receipts are in `../../delivery/receipts/`. No credentials, firmware archives, proprietary images, HARs or protected media were collected.
+
+## Pinned comparison reference (sibling fork)
+
+`funnymataleao/luma-webos-launcher` @ `40994fc144b5af481056d14e2fb93304aa1e2c82` (tree `ff2314ecd0cc8955874447784005a1c430f4cebc`, tag `v2.2.160`, MIT, app id `com.denisefremov.luma`). Read-only clone outside the checkout; nothing imported. It is a sibling fork of `ecklf/lg-luma`, not a newer revision of this tree: 126 blobs are byte-identical, 53 shared files diverged, 41 Rust modules exist only there and 22 only here. Findings, arithmetic and the adopt/defer/reject list are in [REFERENCE-LAUNCHER-COMPARISON.md](REFERENCE-LAUNCHER-COMPARISON.md); machine-readable counts in `../audit/reference-launcher-facts.json`. All pixel/bandwidth/spring numbers there are MODEL arithmetic from source constants, not GPU, TV or clock measurements.

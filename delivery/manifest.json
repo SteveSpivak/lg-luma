@@ -2,8 +2,8 @@
   "schema": "luma-audit-delivery/2",
   "base_sha": "e5608cd053be5376a54a806129a332952dfabcef",
   "handoff_sha": "2a40c7bb3af080981653f975b5c1e983e4f78ef5",
-  "checkout_head_sha_at_generation": "ae0e46ba136b0d76380edce48e6f0870514c577f",
-  "implementation_commit_sha": "bb0c2e4bacc232cde50c9c6e88dbc09abe56ddcf",
+  "checkout_head_sha_at_generation": "4d172a984ec9ca4a0ebde8de0551c6cd4fa5017b",
+  "implementation_commit_sha": null,
   "commit_semantics": "implementation_commit_sha identifies the commit containing follow-up audit/tooling and the unapplied candidate; a subsequent manifest-recording commit may be HEAD.",
   "candidate_status": "GIT_INTEGRITY_VERIFIED_UNAPPLIED_NATIVE_BLOCKED",
   "native_source_unchanged": true,
@@ -92,6 +92,20 @@
       "scope": "Read-only native desktop preflight; required tools/inputs missing; no native tests"
     },
     {
+      "id": "reference-tests",
+      "exit": 1,
+      "status": "FAIL_REAL_DEFECT",
+      "scope": "First comparison suite caught tip-relative blob counting; fixed by pinning to the audit base"
+    },
+    {
+      "id": "reference-tests-corrected",
+      "exit": 0,
+      "passed": 63,
+      "total": 63,
+      "status": "PASS_HOST_SYNTHETIC",
+      "scope": "Python comparison math/facts plus existing research contracts; no native build, rendering or TV"
+    },
+    {
       "id": "native-regressions",
       "exit": 127,
       "status": "BLOCKED",
@@ -124,6 +138,18 @@
     "status": "BLOCKED",
     "native_tests_run": false
   },
+  "reference_comparison": {
+    "reference_repo": "funnymataleao/luma-webos-launcher",
+    "reference_commit": "40994fc144b5af481056d14e2fb93304aa1e2c82",
+    "reference_license": "MIT",
+    "compared_against": "e5608cd053be5376a54a806129a332952dfabcef",
+    "report": "research/luma-audit/REFERENCE-LAUNCHER-COMPARISON.md",
+    "facts": "research/audit/reference-launcher-facts.json",
+    "doc_code_budgets_match": true,
+    "independent_of_candidate": true,
+    "imported_into_checkout": false,
+    "native_or_visual_result": "NOT_RUN"
+  },
   "performance_proposals": "delivery/PERFORMANCE-PROPOSALS.md",
   "reference_provenance": {
     "report": "research/luma-audit/references.md",
@@ -147,266 +173,352 @@
       "path": "receipts/baseline-git.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "toolchain",
       "path": "receipts/toolchain.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "baseline-node",
       "path": "receipts/baseline-node.json",
       "exit_code": 1,
       "status": "FAIL",
-      "evidence_class": "MEASURED_HOST"
+      "evidence_class": "MEASURED_HOST",
+      "source": "committed_historical"
     },
     {
       "label": "pnpm-test",
       "path": "receipts/pnpm-test.json",
       "exit_code": 127,
       "status": "BLOCKED",
-      "evidence_class": "BLOCKED"
+      "evidence_class": "BLOCKED",
+      "source": "committed_historical"
     },
     {
       "label": "pnpm-check",
       "path": "receipts/pnpm-check.json",
       "exit_code": 127,
       "status": "BLOCKED",
-      "evidence_class": "BLOCKED"
+      "evidence_class": "BLOCKED",
+      "source": "committed_historical"
     },
     {
       "label": "pnpm-format-check",
       "path": "receipts/pnpm-format-check.json",
       "exit_code": 127,
       "status": "BLOCKED",
-      "evidence_class": "BLOCKED"
+      "evidence_class": "BLOCKED",
+      "source": "committed_historical"
     },
     {
       "label": "cargo-test",
       "path": "receipts/cargo-test.json",
       "exit_code": 127,
       "status": "BLOCKED",
-      "evidence_class": "BLOCKED"
+      "evidence_class": "BLOCKED",
+      "source": "committed_historical"
     },
     {
       "label": "supported-node",
       "path": "receipts/supported-node.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "MEASURED_HOST"
+      "evidence_class": "MEASURED_HOST",
+      "source": "committed_historical"
     },
     {
       "label": "release-node-supported",
       "path": "receipts/release-node-supported.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "MEASURED_HOST"
+      "evidence_class": "MEASURED_HOST",
+      "source": "committed_historical"
     },
     {
       "label": "missing-pnpm-cause",
       "path": "receipts/missing-pnpm-cause.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "handoff-pin-local",
       "path": "receipts/handoff-pin-local.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "verify-offline",
       "path": "receipts/verify-offline.json",
       "exit_code": 1,
       "status": "FAIL",
-      "evidence_class": "BLOCKED"
+      "evidence_class": "BLOCKED",
+      "source": "committed_historical"
     },
     {
       "label": "candidate-static-red",
       "path": "receipts/candidate-static-red.json",
       "exit_code": 1,
       "status": "FAIL",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "candidate-apply-check",
       "path": "receipts/candidate-apply-check.json",
       "exit_code": 1,
       "status": "FAIL",
-      "evidence_class": "FAIL"
+      "evidence_class": "FAIL",
+      "source": "committed_historical"
     },
     {
       "label": "research-tests-green",
       "path": "receipts/research-tests-green.json",
       "exit_code": 1,
       "status": "FAIL",
-      "evidence_class": "FAIL"
+      "evidence_class": "FAIL",
+      "source": "committed_historical"
     },
     {
       "label": "build-audit",
       "path": "receipts/build-audit.json",
       "exit_code": 1,
       "status": "FAIL",
-      "evidence_class": "FAIL"
+      "evidence_class": "FAIL",
+      "source": "committed_historical"
     },
     {
       "label": "build-audit-corrected",
       "path": "receipts/build-audit-corrected.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "offline-evidence-and-metrics",
       "path": "receipts/offline-evidence-and-metrics.json",
       "exit_code": 1,
       "status": "FAIL",
-      "evidence_class": "FAIL"
+      "evidence_class": "FAIL",
+      "source": "committed_historical"
     },
     {
       "label": "offline-evidence-and-metrics-corrected",
       "path": "receipts/offline-evidence-and-metrics-corrected.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "MEASURED_HOST"
+      "evidence_class": "MEASURED_HOST",
+      "source": "committed_historical"
     },
     {
       "label": "candidate-static-contract",
       "path": "receipts/candidate-static-contract.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "protected-source-diff",
       "path": "receipts/protected-source-diff.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "handoff-update-fetch",
       "path": "receipts/handoff-update-fetch.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "handoff-update-integrity",
       "path": "receipts/handoff-update-integrity.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "verify-offline-updated",
       "path": "receipts/verify-offline-updated.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "MEASURED_HOST"
+      "evidence_class": "MEASURED_HOST",
+      "source": "committed_historical"
     },
     {
       "label": "patch-integrity-gate",
       "path": "receipts/patch-integrity-gate.json",
       "exit_code": 1,
       "status": "FAIL",
-      "evidence_class": "FAIL"
+      "evidence_class": "FAIL",
+      "source": "committed_historical"
     },
     {
       "label": "patch-integrity-gate-corrected",
       "path": "receipts/patch-integrity-gate-corrected.json",
       "exit_code": 1,
       "status": "FAIL",
-      "evidence_class": "FAIL"
+      "evidence_class": "FAIL",
+      "source": "committed_historical"
     },
     {
       "label": "patch-integrity-isolated",
       "path": "receipts/patch-integrity-isolated.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "research-tests-followup",
       "path": "receipts/research-tests-followup.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "MEASURED_HOST"
+      "evidence_class": "MEASURED_HOST",
+      "source": "committed_historical"
     },
     {
       "label": "build-environment-spec",
       "path": "receipts/build-environment-spec.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "research-tests-final",
       "path": "receipts/research-tests-final.json",
       "exit_code": 1,
       "status": "FAIL",
-      "evidence_class": "MEASURED_HOST"
+      "evidence_class": "MEASURED_HOST",
+      "source": "committed_historical"
     },
     {
       "label": "research-tests-final-corrected",
       "path": "receipts/research-tests-final-corrected.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "MEASURED_HOST"
+      "evidence_class": "MEASURED_HOST",
+      "source": "committed_historical"
     },
     {
       "label": "protected-source-diff-followup",
       "path": "receipts/protected-source-diff-followup.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "remote-branch-check",
       "path": "receipts/remote-branch-check.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "dedicated-branch-push",
       "path": "receipts/dedicated-branch-push.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "remote-branch-verify",
       "path": "receipts/remote-branch-verify.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "native-preflight",
       "path": "receipts/native-preflight.json",
       "exit_code": 1,
       "status": "FAIL",
-      "evidence_class": "BLOCKED"
+      "evidence_class": "BLOCKED",
+      "source": "committed_historical"
     },
     {
       "label": "dedicated-branch-push-final",
       "path": "receipts/dedicated-branch-push-final.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
     },
     {
       "label": "remote-branch-verify-final",
       "path": "receipts/remote-branch-verify-final.json",
       "exit_code": 0,
       "status": "PASS",
-      "evidence_class": "OBSERVED"
+      "evidence_class": "OBSERVED",
+      "source": "committed_historical"
+    },
+    {
+      "label": "reference-forensics",
+      "path": "receipts/reference-forensics.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED",
+      "source": "raw"
+    },
+    {
+      "label": "reference-tests",
+      "path": "receipts/reference-tests.json",
+      "exit_code": 1,
+      "status": "FAIL",
+      "evidence_class": "MEASURED_HOST",
+      "source": "raw"
+    },
+    {
+      "label": "protected-source-diff-reference",
+      "path": "receipts/protected-source-diff-reference.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED",
+      "source": "raw"
+    },
+    {
+      "label": "branch-history-recovery",
+      "path": "receipts/branch-history-recovery.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED",
+      "source": "raw"
+    },
+    {
+      "label": "reference-forensics-corrected",
+      "path": "receipts/reference-forensics-corrected.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "OBSERVED",
+      "source": "raw"
+    },
+    {
+      "label": "reference-tests-corrected",
+      "path": "receipts/reference-tests-corrected.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence_class": "MEASURED_HOST",
+      "source": "raw"
     }
   ],
   "files": {
@@ -419,8 +531,8 @@
       "bytes": 5543
     },
     "delivery/HANDOFF.md": {
-      "sha256": "6472ab1bd4919174006056ba2a7c9593812fc55ce833e99c7aceb33abc9e0482",
-      "bytes": 3359
+      "sha256": "f4fe13c6ba4ddead0c309c2f6d2fe46a8dc44da296749bad00b51cb4f5b4769d",
+      "bytes": 5048
     },
     "delivery/NATIVE-VALIDATION.md": {
       "sha256": "e242b52c0f27dac0bf4b76bde75a77c591400743f5d8e21ebd1865b3f3791d61",
@@ -457,6 +569,10 @@
     "delivery/receipts/baseline-node.json": {
       "sha256": "2922ee5565140474ecf3e020ccf877d282fb3254014ccd36d88c05100c7ec77c",
       "bytes": 1031
+    },
+    "delivery/receipts/branch-history-recovery.json": {
+      "sha256": "9380f6246190a30d1171c24e0d584a9c344991527bfc77ed295f8051f8817926",
+      "bytes": 943
     },
     "delivery/receipts/build-audit-corrected.json": {
       "sha256": "3b2b2dd07b369c3570053210376c8a1eff1ad4b7c29133bd0be67f64b69a9e15",
@@ -507,8 +623,8 @@
       "bytes": 1026
     },
     "delivery/receipts/index.json": {
-      "sha256": "502869d6ba571df9d36c8c3963bedea07031aed9f9da80c4000b53dbc5ac29d7",
-      "bytes": 7127
+      "sha256": "debc892151ecb95a43cedf3186417d36ec121eb9db5bc404e1563680a1e50f2b",
+      "bytes": 9949
     },
     "delivery/receipts/missing-pnpm-cause.json": {
       "sha256": "205b4be3234bc11bd4ae9765e471787f1b53dcfae4096171b64757faf7a3b8ed",
@@ -554,9 +670,29 @@
       "sha256": "00388bcd2e321b627f62fab57d01fc7b51a685e9e461314a09a46793e7d0921f",
       "bytes": 1245
     },
+    "delivery/receipts/protected-source-diff-reference.json": {
+      "sha256": "120b451250a5b4dd36aaf7667895a04b31e37a6cb49a7838c3936d223bc6bf51",
+      "bytes": 1111
+    },
     "delivery/receipts/protected-source-diff.json": {
       "sha256": "9c7bbdcbab1d3460389f2f9afd2626f752c87ed1d43c8aedd7a0f36ec91bd552",
       "bytes": 1062
+    },
+    "delivery/receipts/reference-forensics-corrected.json": {
+      "sha256": "62cdbd098b578711b8e18af036a720032a5ef131f1124f80b7aa68a3836a87a5",
+      "bytes": 984
+    },
+    "delivery/receipts/reference-forensics.json": {
+      "sha256": "75a0e5c9de1879301c4c8477f946c987f8fd5df3aa7e154d097ac8d24ccf26bc",
+      "bytes": 961
+    },
+    "delivery/receipts/reference-tests-corrected.json": {
+      "sha256": "0f7f56e5181e6de2e575863aa3a734a46def77d427c08b47b138fa076c993486",
+      "bytes": 1077
+    },
+    "delivery/receipts/reference-tests.json": {
+      "sha256": "03be2505aedc81455659ded48f7c242ead82acbed517a7a28feb87e9051cc038",
+      "bytes": 1041
     },
     "delivery/receipts/release-node-supported.json": {
       "sha256": "dd605e9d600aa8de34b34d1a088b3924c321cf94dbcdbfd7a958423520a6c007",
@@ -694,6 +830,10 @@
       "sha256": "7931e5145da89966ba4cbc3c42bc30e39736a7883421f2cb0cbea14be19ad449",
       "bytes": 5021
     },
+    "research/audit/reference-launcher-facts.json": {
+      "sha256": "409b2b0690a78c94ef1c293b1c4b2e2d95ca488fe335e37c2b45ddd96572bf2e",
+      "bytes": 26623
+    },
     "research/audit/reference-provenance.json": {
       "sha256": "467bc522d3d6520e1b290d5ecca17f7e0d5e972e4fe1d1e0170ce3cbeca60603",
       "bytes": 6347
@@ -714,6 +854,10 @@
       "sha256": "8215c40ce2a52cc14ebcaf06672b4cb48818c67baedfa5c3d5b7a9604a99d69e",
       "bytes": 1035
     },
+    "research/luma-audit/REFERENCE-LAUNCHER-COMPARISON.md": {
+      "sha256": "ec867b8dc2d05c93730561b2a8166dcdd0b0e4cf7e7917da8c1f90f5d59dad50",
+      "bytes": 19254
+    },
     "research/luma-audit/architecture.md": {
       "sha256": "8fe3b114a69a98e7d7a737f7c7122bab957d99f578513c5fd8e2bffd1b959b85",
       "bytes": 8211
@@ -731,8 +875,8 @@
       "bytes": 2839
     },
     "research/luma-audit/references.md": {
-      "sha256": "1dace2996eaf64dcd7245dd517d2ae6de0c8aaea3e3c3435268355b11ccff44b",
-      "bytes": 4948
+      "sha256": "2da23897a2c95aa2b0dcc61d6b013c497beef750799e002c4417a688bdfcab7a",
+      "bytes": 5739
     },
     "research/luma-audit/rendering-performance.md": {
       "sha256": "f00a2df5a1f7d83ff56a886bead350c033f314196f4024cc1b46b2075d85c5a9",
@@ -759,20 +903,24 @@
       "bytes": 9599
     },
     "research/scripts/build_manifest.py": {
-      "sha256": "68f0abe6610fa094fab3bcb74d459f942b8c3901c9043e7090270c9560492e4a",
-      "bytes": 5720
+      "sha256": "6401daa69e6cf4f9cc932eedd6988b2049ea1340aba665fea859503aaacc47c3",
+      "bytes": 6720
     },
     "research/scripts/check_patch_integrity.py": {
       "sha256": "3f9f22f39ed015cc79a749036abf5a3fdb731b3ff9129697cf59f89dbd5966c1",
       "bytes": 8785
     },
     "research/scripts/collect_receipts.py": {
-      "sha256": "0e471d0d3b29f7fc1460d3cd74edd50f16cd18fd1abd9bf232aca1da60b2a988",
-      "bytes": 7455
+      "sha256": "0ae0341f85c8d7a015497eb0da1bc9b13c2d24820eaa1fbe7c799ba3cbcbed12",
+      "bytes": 9382
     },
     "research/scripts/collect_reference_provenance.py": {
       "sha256": "e4d3ebd24e8dc17bdf0f3c75acdd5ae39f538a033679b04c34559956ea6cf4de",
       "bytes": 2627
+    },
+    "research/scripts/compare_reference_launcher.py": {
+      "sha256": "ce07c3856ce806c496bbd56abd25c1078f0e10f6628b2f4e10dd1e048f2731db",
+      "bytes": 21473
     },
     "research/scripts/make_candidate.py": {
       "sha256": "6fc9e4e8eae34b5363d2756b349334ba0bc04416f216aada97f02ef31c60f58d",
@@ -793,6 +941,10 @@
     "research/scripts/receipt.py": {
       "sha256": "550291920560f95bdfbea65482a74e3ab37c84c703059da1124ad4e96de80975",
       "bytes": 3989
+    },
+    "research/scripts/reference_launcher.py": {
+      "sha256": "46e6016006c3570a4352aa99e36d9fa1bf45ebdd775211ea2e94faa2ea742503",
+      "bytes": 6718
     },
     "research/scripts/verify_handoff.py": {
       "sha256": "82289c108128738c6e5260d5442bbfcb34eb58fa4349887e18ce99f13555fa6d",
@@ -821,6 +973,14 @@
     "research/tests/test_offline_evidence.py": {
       "sha256": "fc6afc0b3e536a9781c45712a974be05f4a30d706854fc00a6f9a0efbdf49bad",
       "bytes": 5837
+    },
+    "research/tests/test_reference_facts.py": {
+      "sha256": "10175759243d12d019a9419c19b7ada12c14bdad2a538b613691f6765d78d51b",
+      "bytes": 7710
+    },
+    "research/tests/test_reference_math.py": {
+      "sha256": "98aaa4eb1b6160754f449f74e739e4e197d0ebbc5aad8c68d4f9859404e5a32c",
+      "bytes": 6202
     }
   },
   "evidence_policy": "OBSERVED source != MEASURED runtime. Host/synthetic/static results are not TV performance, GPU memory, native compilation or physical recovery evidence."

@@ -1,0 +1,153 @@
+{
+  "description": "Ground truth for Aegis scan_rs_file. needles are content-anchored and must match exactly one line.",
+  "anomaly_labels": [
+    [
+      "tautology.rs",
+      "    a == a",
+      true,
+      "simple tautology a == a"
+    ],
+    [
+      "tautology.rs",
+      "a == b && b == b",
+      true,
+      "nested tautology b == b"
+    ],
+    [
+      "tautology.rs",
+      "pub fn NOTATAUT",
+      false,
+      "control anchor (not a defect line)"
+    ],
+    [
+      "tautology.rs",
+      "    a != b",
+      false,
+      "a != b (legitimate)"
+    ],
+    [
+      "tautology.rs",
+      "\"a == a is printed",
+      false,
+      "marker inside STRING literal"
+    ],
+    [
+      "tautology.rs",
+      "// a == a appears",
+      false,
+      "marker inside COMMENT"
+    ],
+    [
+      "tautology.rs",
+      "    alpha",
+      true,
+      "multiline tautology (operands split)"
+    ],
+    [
+      "tautology.rs",
+      "a.len() == a.len()",
+      true,
+      "method-call tautology"
+    ],
+    [
+      "redundant.rs",
+      "    a && a",
+      true,
+      "redundant a && a"
+    ],
+    [
+      "redundant.rs",
+      "    a || a",
+      true,
+      "redundant a || a"
+    ],
+    [
+      "redundant.rs",
+      "    a && b",
+      false,
+      "a && b (legitimate)"
+    ],
+    [
+      "redundant.rs",
+      "v: &&str",
+      false,
+      "double-reference type &&str"
+    ],
+    [
+      "redundant.rs",
+      "let &&inner = v",
+      false,
+      "double-reference pattern &&inner"
+    ],
+    [
+      "unwraps.rs",
+      "        return v.unwrap();",
+      false,
+      "unwrap guarded by is_some() on PRIOR line"
+    ],
+    [
+      "unwraps.rs",
+      "    v.unwrap()",
+      true,
+      "unguarded Option::unwrap"
+    ],
+    [
+      "unwraps.rs",
+      "    r.unwrap()",
+      true,
+      "unguarded Result::unwrap"
+    ],
+    [
+      "unwraps.rs",
+      "r.expect(\"boom\")",
+      true,
+      "expect() panics too (same risk)"
+    ],
+    [
+      "unwraps.rs",
+      "v.unwrap_or(0)",
+      false,
+      "unwrap_or (safe)"
+    ],
+    [
+      "unwraps.rs",
+      "v.unwrap_or_else",
+      false,
+      "unwrap_or_else (safe)"
+    ],
+    [
+      "unwraps.rs",
+      "assert_eq!(v.unwrap()",
+      false,
+      "unwrap inside #[test] (idiomatic)"
+    ],
+    [
+      "unwraps.rs",
+      "// this comment mentions .unwrap()",
+      false,
+      ".unwrap() inside COMMENT"
+    ]
+  ],
+  "signature_labels": {
+    "plain": [
+      "a",
+      "b"
+    ],
+    "snake_case_params": [
+      "content_target",
+      "app_id"
+    ],
+    "mixed": [
+      "first",
+      "second_arg",
+      "third"
+    ],
+    "async_fn": [
+      "a"
+    ],
+    "with_self": [
+      "self",
+      "other"
+    ]
+  }
+}

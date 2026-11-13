@@ -190,6 +190,55 @@ lines are BLOCKED.
 | 9 `*.md` docs | documentation | various | — | none | — | paths say `scripts/…` | **ADAPT** |
 | `.github/workflows/council.yml` | source CI | `69970093…` | GitHub | runs CI | not copied | would collide with `ci.yml` | **REJECT** |
 
+### 3.1 What `lg-luma` already has, and what the toolkit duplicates — OBSERVED
+
+Inventory of existing infrastructure on `main` at `e5608cd`:
+
+* `tools/` — 16 build/packaging/asset scripts (`build-webos.sh`, `package.mjs`, `ipk.mjs`,
+  `repository.mjs`, `release-gate.mjs`, `setup-webos-sdk.mjs`, `webos-runtime.mjs`,
+  `sync-version.mjs`, asset generators)
+* `tests/` — 11 suites: 4 Xvfb smoke suites plus `node --test` unit tests
+* `pnpm` scripts wiring the real gates: `test` → `cargo test --workspace --all-features`,
+  `check` → `oxlint` + `cargo clippy … -D warnings`, `format:check` → `cargo fmt --check`
+  + `oxfmt --check`
+* `oxlint` 1.88 + `oxfmt` 0.73 in devDependencies, with `.oxlintrc.json` setting
+  `categories.correctness = "error"`
+* `.github/workflows/` — `ci.yml` (job DAG `prepare → smoke|package → build → release`),
+  `pr-test-ipk.yml`, `release-pr.yml`, `changeset-status.yml`
+* `flake.nix` for a reproducible dev shell; `.changeset/` + changesets for versioning
+* `agents.md`, `development.md` (79 KB), `assets.md` for agent instructions, plus an
+  existing hash-pinned skill system (`.agents/skills/`, `skills-lock.json`)
+
+| Toolkit capability | Already covered in `lg-luma` by | Verdict |
+| --- | --- | --- |
+| Stage orchestration / pipeline | `pnpm` scripts + the `ci.yml` job DAG | **REJECT** — a second orchestrator for a responsibility CI already owns |
+| Rust bug detection | `cargo clippy … -D warnings` in `pnpm check` | **REJECT** (§7e) |
+| TS/JS bug detection | `oxlint` with `correctness = error` in `pnpm check` | **REJECT** |
+| Formatting | `cargo fmt --check` + `oxfmt --check` in `pnpm format:check` | **REJECT** |
+| `nexus checkpoint` (save/restore) | `git stash`, `git worktree`, `git commit` | **REJECT** — reimplements git, and unsafely (§12) |
+| `nexus bench` (timing/MAD) | `hyperfine`, or CI timings | **REJECT** |
+| `repo_sync` cross-repo drift | nothing — but `lg-luma` is a single repository | **REJECT** — no cross-repo relationship exists here to drift against |
+| `arena_guard` receipts | CI artifacts, `dist/sha256sums`, `tools/release-gate.mjs` | **ISOLATE** — overlapping provenance model |
+| `nuvio_constraint_validator` | **17 real Rust tests** in `src/tests.rs` (source repo) | **REJECT as a substitute** (§5) |
+| `tool_latent_codec` | nothing | **ADAPT** — genuinely novel, but see §9 |
+| Agent instructions / handoff docs | `agents.md`, `development.md`, `.agents/skills/` | **REJECT** — duplicate, and would fork the instruction source of truth |
+| `council.yml` workflow | `ci.yml` | **REJECT** — a parallel CI abstraction |
+
+On that last Rust row, the real test suite is worth stating precisely. At `4debf5e`,
+`mod nuvio` in the source repo contains **17 `#[test]` functions: 12 ungated and 5
+`cfg`-gated**. The 5 gated ones split into disjoint sets:
+
+| Requires | Tests |
+| --- | --- |
+| `all(nuvio, nuvio_lab)` | `nuvio_lab_app_id_is_distinct_and_valid`, `nuvio_app_id_production_returns_webos`, `nuvio_app_id_lab_returns_lab`, `nuvio_lab_launch_params_match_contract` |
+| `all(nuvio, not(nuvio_lab))` | `nuvio_app_id_lab_without_feature_fails_closed` |
+
+Because the two gates are mutually exclusive, **no single `cargo test` invocation covers all
+17**. `--all-features` runs 16 and silently drops the fail-closed test; `--features nuvio`
+runs 13 and drops the four lab tests. Full coverage needs both invocations, and neither
+repository's CI runs either today (§2c). A Python mirror asserting against its own copy of
+the logic does not close that gap.
+
 ---
 
 ## 4. The toolkit does not run green from its actual location — PROVEN
@@ -785,6 +834,9 @@ its Stage 0 gate is genuinely fail-fast, but four findings block adoption:
 | All 37 source CI failures stop at `cargo fmt --check`; unit tests always skipped | PROVEN |
 | The 1 green run predates `nuvio_app_id` by 11 h 48 m and the fail-closed test by 7 days | PROVEN |
 | `nuvio_app_id` + its fail-closed test have never been compiled by any CI in either repo | PROVEN |
+| `mod nuvio` holds 17 tests: 12 ungated, 5 `cfg`-gated in two mutually exclusive sets | PROVEN |
+| No single `cargo test` invocation covers all 17 | PROVEN by inspection |
+| `lg-luma` already wires clippy, oxlint, oxfmt and rustfmt into `pnpm check` / `format:check` | OBSERVED |
 | Exact `rustfmt` diff from CI logs | BLOCKED (logs on unreachable hosts) |
 | Aegis Rust precision 0.571 / recall 0.444 on labelled fixtures | MEASURED |
 | Tautology category is dead code | PROVEN |

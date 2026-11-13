@@ -49,6 +49,31 @@ Three source files were **not** copied (correctly — see §3):
 * `COUNCIL_STARTER_KIT/.pre-commit-config.yaml`
 * `COUNCIL_STARTER_KIT/docs/xray/_data/execution_receipts.json`
 
+### Pins re-verified against the live remotes — PROVEN
+
+Re-checked with `git ls-remote` after the analysis was complete, in case either repository
+had moved:
+
+| Ref | Value | Changed? |
+| --- | --- | --- |
+| source `arena/5fe14abb-…` | `4debf5ed9eba06c0b71dca79b0c7f61aeacec112` | no |
+| source `main` | `40994fc144b5af481056d14e2fb93304aa1e2c82` | no |
+| target `lab/council-kit-snapshot-ff9a6b8-20261113` | `7fb8b953f4098bd0db836da343d39b2f1e9a9f3c` | no |
+| target `main` | `e5608cd053be5376a54a806129a332952dfabcef` | no |
+
+Source `main` is not an alternative source of the toolkit: it contains **no
+`COUNCIL_STARTER_KIT/` directory at all** (`git ls-tree … | wc -l` → 0), its last commit is
+`40994fc1` *"README: link the case study"* (2026-10-27), and it sits **64 commits behind**
+`arena/5fe14abb-…` with 0 commits of its own (`rev-list --left-right --count` → `0  64`).
+`4debf5e` is therefore the latest version of the toolkit anywhere in that repository.
+
+Blob-exactness was also re-verified a second time by an independent method — `git hash-object`
+on the working-tree files rather than comparing `ls-tree` output:
+
+```
+blob-exact=18  mismatched=0
+```
+
 ---
 
 ## 2. Two corrections to the brief's premises
@@ -212,7 +237,7 @@ Inventory of existing infrastructure on `main` at `e5608cd`:
 | Toolkit capability | Already covered in `lg-luma` by | Verdict |
 | --- | --- | --- |
 | Stage orchestration / pipeline | `pnpm` scripts + the `ci.yml` job DAG | **REJECT** — a second orchestrator for a responsibility CI already owns |
-| Rust bug detection | `cargo clippy … -D warnings` in `pnpm check` | **REJECT** (§7e) |
+| Rust bug detection | `cargo clippy … -D warnings` in `pnpm check` | **REJECT** (§7f) |
 | TS/JS bug detection | `oxlint` with `correctness = error` in `pnpm check` | **REJECT** |
 | Formatting | `cargo fmt --check` + `oxfmt --check` in `pnpm format:check` | **REJECT** |
 | `nexus checkpoint` (save/restore) | `git stash`, `git worktree`, `git commit` | **REJECT** — reimplements git, and unsafely (§12) |
@@ -476,7 +501,67 @@ src/view.rs:855        "if state.page == Page::Apps ..."   -> MATCHED 's && s'
 the right operand form a fake duplicate. Of the 440 unwrap warnings, **315 (71.6%)** are in
 `*-tests.rs` files, where `.unwrap()` is idiomatic.
 
-### 7d. Fixture-only metrics are not sufficient — MEASURED
+### 7d. Full-repository scan — MEASURED
+
+§7c covered `src/` only. The whole repository is polyglot (Rust + JavaScript + Python), and
+scanning all of it changes the picture:
+
+```
+$ REPO_ROOT=<repo> aegis_bug_hunter.py hunt --path .
+exit 0 | wall 278.3 ms | peak child RSS 21.8 MB
+files_scanned           : 65        (extensions: .js .jsx .py .rs .ts .tsx)
+functions_modeled       : 1036
+call_sites_cross_checked: 298
+total_anomalies_found   : 684
+anomalies listed        : 40        (rank_anomalies cap)
+```
+
+Uncapped, by category (670 from per-file scanning + 14 from cross-file call-arity analysis):
+
+| Count | Category | Verified verdict |
+| --- | --- | --- |
+| 546 | `RS_UNWRAP_WITHOUT_OPTION_GUARD` | dominated by test files (§7c) |
+| 111 | `TSJS_MISSING_OPTIONAL_CHAINING` | **false positives** |
+| 14 | `CALL_ARITY_MISMATCH_TYPEERROR` | **14/14 false positives** |
+| 13 | `REDUNDANT_BOOLEAN_SUBEXPRESSION` | **13/13 false positives** |
+
+Seven of these come from this evaluation directory's own intentionally-defective fixtures, so
+the repository-wide figure excluding them is 677.
+
+**The call-arity check is broken by design, not by regex.** It builds one global
+function-name map across all languages and matches call sites by bare name, so a Python or
+JavaScript call is validated against an unrelated Rust function:
+
+```
+assets/tile-editor/app.js:L83          Calls 'focus()'   with 1 args, but src/state.rs:L744 requires [3..3].
+lab/council-kit-eval/aegis_rust_eval.py:L94  Calls 'append()'  with 1 args, but src/scroll-preview.rs:L10 requires [3..3].
+lab/council-kit-eval/aegis_rust_eval.py:L30  Calls 'resolve()' with 0 args, but tv-helper/src/files.rs:L14 requires [2..2].
+tools/font-weights.py:L47              Calls 'replace()' with 2 args, but tv-helper/src/files.rs:L142 requires [3..3].
+```
+
+`list.append`, `str.replace`, `Path.resolve` and `element.focus` are compared against Rust
+signatures that happen to share a name. On a polyglot repository this category cannot
+produce a true positive, and it flagged this harness 11 times.
+
+`TSJS_MISSING_OPTIONAL_CHAINING` is equally indiscriminate — it fires on ordinary, correct
+JavaScript including an `import` statement:
+
+```
+assets/tile-editor/app.js:L1    import { checkListing, describe, loadListing, normalizeUrl, post } from './tiles.js';
+assets/tile-editor/app.js:L136  event.preventDefault();
+assets/tile-editor/app.js:L113  error.name === 'AbortError'
+```
+
+The 13 `REDUNDANT_BOOLEAN_SUBEXPRESSION` hits are all false positives: 11 are the
+single-character `'s && s'` artefact from §7c, and the other 2 are
+`control.rect.x && rect.x` / `control.rect.y && rect.y`, where the actual `&&` operands are
+comparisons rather than bare identifiers.
+
+Net: of the 27 findings in the two categories that can be checked exhaustively against real
+code, **0 are true positives**. The 546 unwrap findings are not individually enumerated here,
+but §7c measured 71.6% of them landing in test files.
+
+### 7e. Fixture-only metrics are not sufficient — MEASURED
 
 A minimal patch (word boundaries, `\2` backreference, single `==`, `expect()` coverage,
 string/comment stripping, `#[test]` exclusion, 2-line window) reaches a perfect fixture
@@ -508,7 +593,7 @@ This is recorded as a **verification result, not a success**: the patch was tune
 fixture set and overfit. Regex/line matching cannot distinguish `x == x` from
 `a.x == x` or from a comparison inside a closure. Only real parsing can.
 
-### 7e. Decision — REJECT the Rust rules, REUSE Clippy
+### 7f. Decision — REJECT the Rust rules, REUSE Clippy
 
 `lg-luma` already enforces Clippy with warnings as errors:
 
@@ -696,19 +781,25 @@ a clear message.
 
 `aegis hunt --path src` against the real 44-file `src/` tree, `REPO_ROOT=/home/user/lg-luma`:
 
-| Metric | Value |
-| --- | --- |
-| exit code | 0 |
-| wall time | 286.1 ms |
-| peak child RSS | 21.2 MB |
-| files scanned | 44 |
-| stdout | 9,958 bytes |
-| self-reported `scan_duration_ms` | 228.48 |
-| findings computed / emitted | 451 / 40 |
+| Metric | `hunt --path src` | `hunt --path .` (full repo) |
+| --- | --- | --- |
+| exit code | 0 | 0 |
+| wall time | 286.1 ms | 278.3 ms |
+| peak child RSS | 21.2 MB | 21.8 MB |
+| files scanned | 44 | 65 |
+| findings computed | 451 | 684 |
+| findings emitted | 40 | 40 |
+| functions modelled | — | 1036 |
+| call sites cross-checked | — | 298 |
 
-Full pipeline (Stage 0→6, excluding the crashing Stage 6): ~1.0 s. These are baselines for
-regression comparison; no candidate change to the application was made, so no
-baseline-vs-candidate comparison applies.
+Full pipeline (Stage 0→6, excluding the crashing Stage 6): ~1.0 s. Scanning is cheap; the
+problem is signal, not cost — 684 findings of which 0 in the exhaustively checkable
+categories are true (§7d). Note the fixed 40-finding output cap: at full-repo scale the tool
+computes 684 and surfaces 40, so 94.2% of its own output is discarded before any consumer
+sees it.
+
+These are baselines for regression comparison; no candidate change to the application was
+made, so no baseline-vs-candidate comparison applies.
 
 ---
 
@@ -781,10 +872,12 @@ its Stage 0 gate is genuinely fail-fast, but four findings block adoption:
    directories. (§4)
 2. **`drift` is not a gate.** Unconditional `return 0` with 8 populated drift categories.
    It must never be presented as enforcement. (§6)
-3. **The Rust heuristics are unsound.** One dead category, a broken backreference, 451
-   findings on real code of which the 11 boolean hits are 100% false positives and 71.6% of
-   the unwrap hits are in test files — while `pnpm check` already runs Clippy with
-   `-D warnings`. (§7)
+3. **The Rust heuristics are unsound, and so are the cross-language ones.** One dead
+   category, a broken backreference, and on a full-repository scan 684 findings of which
+   **0 are true positives** in the 27 that can be checked exhaustively: the call-arity check
+   matches calls by bare name across languages, so Python's `append()` is validated against a
+   Rust `append` in `src/scroll-preview.rs`. Meanwhile `pnpm check` already runs Clippy and
+   oxlint with `-D warnings`. (§7, §7d)
 4. **No CI exists to validate any of it.** Zero workflow runs in `lg-luma` with Actions
    provably disabled, and in the source repository all 37 CI failures stop at
    `cargo fmt --check` with unit tests skipped — so the Nuvio code and its fail-closed test
@@ -837,6 +930,14 @@ its Stage 0 gate is genuinely fail-fast, but four findings block adoption:
 | `mod nuvio` holds 17 tests: 12 ungated, 5 `cfg`-gated in two mutually exclusive sets | PROVEN |
 | No single `cargo test` invocation covers all 17 | PROVEN by inspection |
 | `lg-luma` already wires clippy, oxlint, oxfmt and rustfmt into `pnpm check` / `format:check` | OBSERVED |
+| All pins unchanged on re-check against the live remotes | PROVEN |
+| Source `main` contains no toolkit and is 64 commits behind the arena branch | PROVEN |
+| Blob-exactness re-confirmed by a second method (`git hash-object`): 18/18, 0 mismatched | PROVEN |
+| Full-repo scan: 65 files, 684 findings, 278 ms, 21.8 MB peak RSS | MEASURED |
+| `CALL_ARITY_MISMATCH_TYPEERROR` is 14/14 false positive (cross-language name matching) | MEASURED |
+| `TSJS_MISSING_OPTIONAL_CHAINING` fires on `import` statements and `event.preventDefault()` | MEASURED |
+| `REDUNDANT_BOOLEAN_SUBEXPRESSION` is 13/13 false positive repo-wide | MEASURED |
+| 0 true positives across the 27 exhaustively checkable findings | MEASURED |
 | Exact `rustfmt` diff from CI logs | BLOCKED (logs on unreachable hosts) |
 | Aegis Rust precision 0.571 / recall 0.444 on labelled fixtures | MEASURED |
 | Tautology category is dead code | PROVEN |

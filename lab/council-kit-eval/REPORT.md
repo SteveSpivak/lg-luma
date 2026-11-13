@@ -68,9 +68,21 @@ gh pr checks 1  -> "no checks reported on the 'research/council-kit-adoption-aud
 `.github/workflows/ci.yml` has been tracked since `e5608cd` (2026-10-31), yet GitHub
 registers **zero** workflows and **zero** runs.
 
-INFERRED cause: GitHub Actions is disabled for this repository. The
-`actions/permissions` endpoint returned `403 Resource not accessible by integration`, so the
-setting itself could not be read directly — the setting is INFERRED, the zero runs are OBSERVED.
+The same API call against the **source** repository returns three active workflows, so the
+endpoint itself works and the difference is repo-specific:
+
+```
+lg-luma              actions/workflows -> total_count = 0
+luma-webos-launcher  actions/workflows -> total_count = 3
+    CI                              state=active  .github/workflows/ci.yml
+    Arena offline lab validation    state=active  .github/workflows/arena-lab.yml
+    Agent evidence contract         state=active  .github/workflows/agent-evidence.yml
+```
+
+A controlled experiment settled it. A commit was pushed to this branch with PR #3 open, which
+satisfies the `on: pull_request` trigger in `ci.yml`. Result: no workflow run was created
+(see §2c). GitHub Actions is therefore **disabled** for `lg-luma` — upgraded from INFERRED
+to PROVEN by experiment.
 
 Consequence: **no CI evidence exists for PR #1 or PR #2**, and "reuse the pipeline" cannot
 produce results until Actions is enabled. This is the single largest blocker in the task.
@@ -90,6 +102,75 @@ nuvio_lab = []
 `cargo test --locked --features nuvio` and `--features nuvio,nuvio_lab` are **not
 meaningful in `lg-luma`**; they belong to the source repository. The brief's own caveat on
 this point is confirmed.
+
+### 2c. CI archaeology: `cargo test` has never run against the Nuvio code — PROVEN
+
+`lg-luma` is not the only repository without Rust test evidence. The source repository has
+run CI 56 times, and the history was reconstructed from the jobs API:
+
+```
+total=56  success=1  failure=37  cancelled=18        (workflow "CI", id 408422528)
+runs on branch main: 0
+```
+
+**Every one of the 37 failures dies at the same step.** Sampled across 8 runs spanning two
+branches (`arena/5fe14abb-…` and `governance/agent-evidence-contract-…`):
+
+```
+42296159711  failed=[…@Check formatting]  unit_tests_conclusion=[skipped]
+42295299623  failed=[…@Check formatting]  unit_tests_conclusion=[skipped]
+42291963017  failed=[…@Check formatting]  unit_tests_conclusion=[skipped]
+42215076698  failed=[…@Check formatting]  unit_tests_conclusion=[skipped]
+42214266561  failed=[…@Check formatting]  unit_tests_conclusion=[skipped]
+42197140917  failed=[…@Check formatting]  unit_tests_conclusion=[skipped]
+42189981711  failed=[…@Check formatting]  unit_tests_conclusion=[skipped]
+42212559998  failed=[…@Check formatting]  unit_tests_conclusion=[skipped]
+```
+
+`Check formatting` is `pnpm format:check` = `cargo fmt --all -- --check && oxfmt --check .`.
+Because it fails, `Run unit tests` is **skipped every time** — so `cargo test` never runs on
+the branch that contains the Nuvio work and the toolkit.
+
+The single success is not rescue either. Run `42134961928` (branch `arena/luma-phase1-tv`,
+`10f81539`, `workflow_dispatch`, 2026-11-06T00:11Z) is fully green through
+`Check formatting → Lint → Run unit tests → assets → rendering`. But that commit predates
+the code under evaluation:
+
+```
+git show 10f81539:src/platform.rs | grep 'fn nuvio_app_id'   -> (no match)
+git show 10f81539:src/tests.rs    | grep 'fails_closed'      -> (no match)
+git show 10f81539:Cargo.toml  [features] -> default = [], nuvio = [], webos = [...]
+                                          (no nuvio_lab)
+```
+
+Introducing commits, from `git log -S`:
+
+| What | Commit | Date (UTC) |
+| --- | --- | --- |
+| `pub fn nuvio_app_id` | `f1d895b` | 2026-11-06 11:59:18 |
+| `nuvio_app_id_lab_without_feature_fails_closed` | `ff9a6b8` | 2026-11-13 10:20:11 |
+| only green `cargo test` run | `10f81539` | 2026-11-06 00:11:07 |
+
+The green test run happened **11 h 48 min before `nuvio_app_id` existed** and **7 days before
+its fail-closed test existed**. The newest CI run anywhere is `2026-11-06T21:22:14Z`
+(`7c2e855d`), which is 7 days older than both `ff9a6b8` and `4debf5e`.
+
+Conclusion: **`nuvio_app_id` and `nuvio_app_id_lab_without_feature_fails_closed` have never
+been compiled or executed by any CI run in either repository.** This is independent of the
+`cfg`-filtering problem in §8c — the test is excluded twice over: the code has never reached
+a working `cargo test` at all, and the command that would run it (`--all-features`) filters
+it out by its own gate.
+
+Two further observations from the same history: the branch carries commit `a656c8c` *"fix:
+resolve all 17 app + 49 test compile errors on PR head"*, and the one green run used a
+*different* `ci.yml` (jobs `Rust checks and desktop rendering` / `Native webOS package`)
+than the current one (`Rust checks, rendering, and native package`), so the pipeline was
+restructured after its only green run.
+
+CI job logs could not be retrieved to obtain the exact `rustfmt` diff: the API redirects to
+`*.blob.core.windows.net` and `results-receiver.actions.githubusercontent.com`, neither of
+which is reachable from this environment. The failing step name is PROVEN; the offending
+lines are BLOCKED.
 
 ---
 
@@ -468,12 +549,14 @@ unambiguous; the execution that would confirm it is BLOCKED (§8a).
 
 This is the most consequential finding in the task, and it is independent of the toolkit.
 
-### 8d. Also OBSERVED: no CI has validated the current source HEAD
+### 8d. Also PROVEN: no CI has validated the current source HEAD
 
 The last CI run on `arena/5fe14abb-…` is `42296159711`, `conclusion=failure`,
-`head_sha=7c2e855d4680b917432f66074fb552035b6e02a9`. The branch HEAD is `4debf5e…`. So
-`4debf5e` — the commit containing the test fix — has **never** been through CI. Every run on
-that branch is `failure` or `cancelled`.
+`head_sha=7c2e855d4680b917432f66074fb552035b6e02a9`, created `2026-11-06T21:22:14Z`. The
+branch HEAD is `4debf5e…` (`2026-11-13T10:28:24Z`). So `4debf5e` — the commit containing the
+test fix — has **never** been through CI, and neither has `ff9a6b8`, the commit that
+introduced the fail-closed test. Every run on that branch is `failure` or `cancelled`, and
+all of them stop at `cargo fmt --check`. See §2c for the full reconstruction.
 
 ### 8e. The Rust mutation test — NOT_RUN
 
@@ -653,8 +736,10 @@ its Stage 0 gate is genuinely fail-fast, but four findings block adoption:
    findings on real code of which the 11 boolean hits are 100% false positives and 71.6% of
    the unwrap hits are in test files — while `pnpm check` already runs Clippy with
    `-D warnings`. (§7)
-4. **No CI exists to validate any of it.** Zero workflow runs in `lg-luma`, and the source
-   branch's own last run was a failure against a different commit. (§2a, §8d)
+4. **No CI exists to validate any of it.** Zero workflow runs in `lg-luma` with Actions
+   provably disabled, and in the source repository all 37 CI failures stop at
+   `cargo fmt --check` with unit tests skipped — so the Nuvio code and its fail-closed test
+   have never been compiled anywhere. (§2a, §2c, §8c, §8d)
 
 ### Minimum conditions to move HOLD → ready
 
@@ -668,6 +753,9 @@ its Stage 0 gate is genuinely fail-fast, but four findings block adoption:
   Clippy; fix the `\1`→`\2` backreference in `TSJS_REDUNDANT_BOOL_RE` regardless, since it
   affects the pre-existing TS/JS scanner.
 * Enable GitHub Actions on `lg-luma` and confirm at least one green run of `ci.yml`.
+* In the **source** repository, fix the persistent `cargo fmt --all -- --check` failure that
+  has blocked all 37 CI runs. Until `Check formatting` passes, `Run unit tests` is skipped
+  and no Rust claim about that branch can be validated by CI at all.
 * In the **source** repository, add a CI job running `cargo test --features nuvio` so
   `nuvio_app_id_lab_without_feature_fails_closed` actually executes, and run the Rust
   mutation test there. (§8c, §8e)
@@ -692,6 +780,12 @@ its Stage 0 gate is genuinely fail-fast, but four findings block adoption:
 | `expect_err()` replaced `unwrap_err()` in `4debf5e` | PROVEN (git diff) |
 | Fail-closed test is excluded by `--all-features` in CI | PROVEN by inspection |
 | `lg-luma` has zero CI runs and zero registered workflows | OBSERVED |
+| GitHub Actions is disabled in `lg-luma` (source repo shows 3 active workflows; a push with an open PR created no run) | PROVEN |
+| Source CI: 56 runs, 1 success, 37 failures, 18 cancelled, 0 on `main` | PROVEN |
+| All 37 source CI failures stop at `cargo fmt --check`; unit tests always skipped | PROVEN |
+| The 1 green run predates `nuvio_app_id` by 11 h 48 m and the fail-closed test by 7 days | PROVEN |
+| `nuvio_app_id` + its fail-closed test have never been compiled by any CI in either repo | PROVEN |
+| Exact `rustfmt` diff from CI logs | BLOCKED (logs on unreachable hosts) |
 | Aegis Rust precision 0.571 / recall 0.444 on labelled fixtures | MEASURED |
 | Tautology category is dead code | PROVEN |
 | `\|\|` backreference bug also affects the TS/JS scanner | PROVEN |
@@ -702,7 +796,6 @@ its Stage 0 gate is genuinely fail-fast, but four findings block adoption:
 | 91.1% of findings are lost upstream of the codec | MEASURED |
 | Aegis hunt: 286 ms, 21.2 MB peak RSS, 44 files | MEASURED |
 | Clippy `eq_op` / `nonminimal_bool` cover these cases | INFERRED (not executed) |
-| Actions is disabled rather than merely unused | INFERRED |
 | `cargo fmt/check/test/clippy`, `pnpm *`, Xvfb smoke, ARM/IPK | BLOCKED / NOT_RUN |
 | Rust mutation test (restore unsafe fallback, expect RED) | NOT_RUN |
 | Any TV or production operation | NOT_RUN (out of scope) |
